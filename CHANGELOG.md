@@ -7,10 +7,11 @@ make changes there.
 
 # Upcoming weddy release
 
-Weddy is **Caddy with the WeKan, Gitea and rclone plugins**, built
-with **xcaddy** from upstream Caddy master and the plugins, each with its history,
-and released with its source **with and without history** and binaries for
-**every platform**, built from the source without history. It can serve **many
-WeKan domains**, each with its own data, kept in WeKan's **Cloud Panel**.
+Weddy is **Caddy with the WeKan, FerretDB, Gitea and rclone
+plugins** - WeKan **written in Go**, no Node.js - built with **xcaddy** from
+upstream Caddy and the plugins, and released with its source **with and without
+history** and binaries for **every platform**. It serves **many WeKan domains**,
+each with its own data, and is built and tested **locally** with **EVERYTHING**
+tests: WeKan's and Gitea's own.
 
 [All changes so far](CHANGELOG-big.md#upcoming-weddy-release)

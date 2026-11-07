@@ -15,11 +15,12 @@ macOS, FreeBSD, OpenBSD and NetBSD, with the source as
 
 # Upcoming weddy release
 
-**In short:** Weddy is **Caddy with the WeKan, Gitea and rclone plugins**, built
-with **xcaddy** from upstream Caddy master and the plugins, each with its history,
-and released with its source **with and without history** and binaries for
-**every platform**, built from the source without history. It can serve **many
-WeKan domains**, each with its own data, kept in WeKan's **Cloud Panel**.
+**In short:** Weddy is **Caddy with the WeKan, FerretDB, Gitea and rclone
+plugins** - WeKan **written in Go**, no Node.js - built with **xcaddy** from
+upstream Caddy and the plugins, and released with its source **with and without
+history** and binaries for **every platform**. It serves **many WeKan domains**,
+each with its own data, and is built and tested **locally** with **EVERYTHING**
+tests: WeKan's and Gitea's own.
 
 This release adds the following new features:
 
@@ -38,7 +39,22 @@ WeKan through its launcher and an rclone remote from one Caddyfile.
 
 </details>
 
-**Many domains** - the Cloud Panel.
+**Local builds and EVERYTHING tests** - from the repositories beside Weddy.
+
+<details>
+<summary><a href="https://github.com/wekan/weddy/commit/a7e579f51a2d08d6066fe3222a7aa50024af49a4">FerretDB in the build, a local build, and EVERYTHING tests with WeKan's and Gitea's own</a>. Thanks to xet7.</summary>
+
+The source now has caddy-ferretdb-plugin and wekan/FerretDB `main-v1`: WeKan runs
+in Go inside Weddy over its embedded FerretDB. `build.sh local [all]` builds from
+WeKan's `.tools/w/` with uncommitted changes, using `.tools`' Go. `build.sh
+everything`, locally only, runs the script tests, every plugin's Go tests,
+Gitea's own tests for the Gitea Weddy compiles in (1717 passed, 18 skipped by
+Gitea itself), a local build, and WeKan's Playwright suite - copied into
+`tests/wekan/` with `build.sh sync-wekan-tests` - against it (18 passed).
+
+</details>
+
+**Many domains** - the Cloud Panel, in Weddy.
 
 - [Many WeKan domains from one Weddy, with the Cloud Panel](https://github.com/wekan/weddy/commit/ab862c2e81d0caa20f453ebe7f54d462b3a2c076). Thanks to xet7.
 

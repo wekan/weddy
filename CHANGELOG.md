@@ -10,6 +10,7 @@ make changes there.
 Weddy is **Caddy with the WeKan, Gitea and rclone plugins**, built
 with **xcaddy** from upstream Caddy master and the plugins, each with its history,
 and released with its source **with and without history** and binaries for
-**every platform**, built from the source without history.
+**every platform**, built from the source without history. It can serve **many
+WeKan domains**, each with its own data, kept in WeKan's **Cloud Panel**.
 
 [All changes so far](CHANGELOG-big.md#upcoming-weddy-release)

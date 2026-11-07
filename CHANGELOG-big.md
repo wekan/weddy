@@ -18,7 +18,8 @@ macOS, FreeBSD, OpenBSD and NetBSD, with the source as
 **In short:** Weddy is **Caddy with the WeKan, Gitea and rclone plugins**, built
 with **xcaddy** from upstream Caddy master and the plugins, each with its history,
 and released with its source **with and without history** and binaries for
-**every platform**, built from the source without history.
+**every platform**, built from the source without history. It can serve **many
+WeKan domains**, each with its own data, kept in WeKan's **Cloud Panel**.
 
 This release adds the following new features:
 
@@ -36,5 +37,9 @@ completes a release. Built locally, one Weddy served Gitea inside it in Finnish,
 WeKan through its launcher and an rclone remote from one Caddyfile.
 
 </details>
+
+**Many domains** - the Cloud Panel.
+
+- [Many WeKan domains from one Weddy, with the Cloud Panel](https://github.com/wekan/weddy/commit/ab862c2e81d0caa20f453ebe7f54d462b3a2c076). Thanks to xet7.
 
 Thanks to above GitHub users for their contributions and translators for their translations.

@@ -1,0 +1,8 @@
+# Gitea tests that tests/gitea/run.sh skips, one per line:
+#
+#   <package under gitea/> <TestName>   # why
+#   <package under gitea/> *            # why the whole package
+#
+# Only for failures that have nothing to do with how Weddy builds Gitea in
+# (a git version, the network, an outside service). Anything caused by the
+# embedding is fixed in caddy-gitea-plugin instead of being listed here.

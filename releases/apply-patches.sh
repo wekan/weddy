@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Assemble Weddy's source: four git repositories WITH their history, side by side,
+# Assemble Weddy's source: its git repositories WITH their history, side by side,
 # which the binaries and both source zips are made from.
 #
 #   apply-patches.sh <weddy-root> <dest-dir> [caddy-ref]
@@ -10,24 +10,27 @@
 #   <dest-dir>/caddy-gitea-plugin   wekan/caddy-gitea-plugin
 #   <dest-dir>/caddy-wekan-plugin   wekan/caddy-wekan-plugin
 #   <dest-dir>/caddy-rclone-plugin  wekan/caddy-rclone-plugin
+#   <dest-dir>/caddy-ferretdb-plugin wekan/caddy-ferretdb-plugin: WeKan's database
+#   <dest-dir>/FerretDB             wekan/FerretDB, branch main-v1, which it embeds
 #   <dest-dir>/weddy                this repository: its build scripts and the
 #                                   platform list
 #
 #   caddy-ref   upstream branch, tag or commit; empty = master, including changes not
 #               in a release yet - as wekan/gitea-patches builds Gitea's main.
 #
-# releases/build-weddy.sh then builds with xcaddy from these four directories.
+# releases/build-weddy.sh then builds with xcaddy from these directories.
 #
-# Environment: CADDY_URL, GITEA_PLUGIN_URL, WEKAN_PLUGIN_URL, RCLONE_PLUGIN_URL (a URL
-# or a local path) and GITEA_PLUGIN_REF, WEKAN_PLUGIN_REF, RCLONE_PLUGIN_REF (default:
-# their default branch) say where
-# the parts come from; PATCH_AUTHOR is the committer.
+# Environment: CADDY_URL, GITEA_PLUGIN_URL, WEKAN_PLUGIN_URL, RCLONE_PLUGIN_URL,
+# FERRETDB_PLUGIN_URL, FERRETDB_URL (a URL or a local path) and GITEA_PLUGIN_REF,
+# WEKAN_PLUGIN_REF, RCLONE_PLUGIN_REF, FERRETDB_PLUGIN_REF (default: their default
+# branch), FERRETDB_REF (default main-v1) say where the parts come from;
+# PATCH_AUTHOR is the committer.
 #
 # Commits made here are dated with Caddy's commit date, so the same inputs give the
 # same commit hashes. Prints, and under GitHub Actions also writes to GITHUB_ENV and
 # GITHUB_OUTPUT: SOURCE_REF, CADDY_COMMIT, CADDY_SHORT, CADDY_VERSION,
-# GITEA_PLUGIN_COMMIT, WEKAN_PLUGIN_COMMIT, RCLONE_PLUGIN_COMMIT, WEDDY_COMMIT,
-# PATCHES_APPLIED.
+# GITEA_PLUGIN_COMMIT, WEKAN_PLUGIN_COMMIT, RCLONE_PLUGIN_COMMIT,
+# FERRETDB_PLUGIN_COMMIT, FERRETDB_COMMIT, WEDDY_COMMIT, PATCHES_APPLIED.
 set -euo pipefail
 
 ROOT="$(cd "${1:?usage: apply-patches.sh <weddy-root> <dest-dir> [caddy-ref]}" && pwd)"
@@ -37,6 +40,8 @@ CADDY_URL="${CADDY_URL:-https://github.com/caddyserver/caddy.git}"
 GITEA_PLUGIN_URL="${GITEA_PLUGIN_URL:-https://github.com/wekan/caddy-gitea-plugin.git}"
 WEKAN_PLUGIN_URL="${WEKAN_PLUGIN_URL:-https://github.com/wekan/caddy-wekan-plugin.git}"
 RCLONE_PLUGIN_URL="${RCLONE_PLUGIN_URL:-https://github.com/wekan/caddy-rclone-plugin.git}"
+FERRETDB_PLUGIN_URL="${FERRETDB_PLUGIN_URL:-https://github.com/wekan/caddy-ferretdb-plugin.git}"
+FERRETDB_URL="${FERRETDB_URL:-https://github.com/wekan/FerretDB.git}"
 PATCH_AUTHOR="${PATCH_AUTHOR:-Lauri Ojansivu <x@xet7.org>}"
 NAME="${PATCH_AUTHOR% <*}"
 EMAIL="${PATCH_AUTHOR##*<}"; EMAIL="${EMAIL%>}"
@@ -92,15 +97,17 @@ clone_plugin() { # <url> <dir> <ref>
 GITEA_PLUGIN_COMMIT="$(clone_plugin "$GITEA_PLUGIN_URL" caddy-gitea-plugin "${GITEA_PLUGIN_REF:-}")"
 WEKAN_PLUGIN_COMMIT="$(clone_plugin "$WEKAN_PLUGIN_URL" caddy-wekan-plugin "${WEKAN_PLUGIN_REF:-}")"
 RCLONE_PLUGIN_COMMIT="$(clone_plugin "$RCLONE_PLUGIN_URL" caddy-rclone-plugin "${RCLONE_PLUGIN_REF:-}")"
-echo "caddy-gitea-plugin ${GITEA_PLUGIN_COMMIT}, caddy-wekan-plugin ${WEKAN_PLUGIN_COMMIT}, caddy-rclone-plugin ${RCLONE_PLUGIN_COMMIT}."
+FERRETDB_PLUGIN_COMMIT="$(clone_plugin "$FERRETDB_PLUGIN_URL" caddy-ferretdb-plugin "${FERRETDB_PLUGIN_REF:-}")"
+FERRETDB_COMMIT="$(clone_plugin "$FERRETDB_URL" FerretDB "${FERRETDB_REF:-main-v1}")"
+echo "caddy-gitea-plugin ${GITEA_PLUGIN_COMMIT}, caddy-wekan-plugin ${WEKAN_PLUGIN_COMMIT}, caddy-rclone-plugin ${RCLONE_PLUGIN_COMMIT}, caddy-ferretdb-plugin ${FERRETDB_PLUGIN_COMMIT}, FerretDB ${FERRETDB_COMMIT}."
 
 # 3. Weddy itself: the build scripts and platform list the binaries are made with.
 git clone --quiet "$ROOT" "$DEST/weddy"
 git -C "$DEST/weddy" remote set-url origin https://github.com/wekan/weddy.git
 WEDDY_COMMIT="$(git -C "$DEST/weddy" rev-parse HEAD)"
 
-out="$(printf 'SOURCE_REF=%s\nCADDY_COMMIT=%s\nCADDY_SHORT=%s\nCADDY_VERSION=%s\nGITEA_PLUGIN_COMMIT=%s\nWEKAN_PLUGIN_COMMIT=%s\nRCLONE_PLUGIN_COMMIT=%s\nWEDDY_COMMIT=%s\nPATCHES_APPLIED=%s\n' \
-  "$REF" "$COMMIT" "$SHORT" "$CADDY_VERSION" "$GITEA_PLUGIN_COMMIT" "$WEKAN_PLUGIN_COMMIT" "$RCLONE_PLUGIN_COMMIT" "$WEDDY_COMMIT" "$applied")"
+out="$(printf 'SOURCE_REF=%s\nCADDY_COMMIT=%s\nCADDY_SHORT=%s\nCADDY_VERSION=%s\nGITEA_PLUGIN_COMMIT=%s\nWEKAN_PLUGIN_COMMIT=%s\nRCLONE_PLUGIN_COMMIT=%s\nFERRETDB_PLUGIN_COMMIT=%s\nFERRETDB_COMMIT=%s\nWEDDY_COMMIT=%s\nPATCHES_APPLIED=%s\n' \
+  "$REF" "$COMMIT" "$SHORT" "$CADDY_VERSION" "$GITEA_PLUGIN_COMMIT" "$WEKAN_PLUGIN_COMMIT" "$RCLONE_PLUGIN_COMMIT" "$FERRETDB_PLUGIN_COMMIT" "$FERRETDB_COMMIT" "$WEDDY_COMMIT" "$applied")"
 printf '%s\n' "$out"
 [ -z "${GITHUB_ENV:-}" ] || printf '%s\n' "$out" >> "$GITHUB_ENV"
 if [ -n "${GITHUB_OUTPUT:-}" ]; then
@@ -118,5 +125,7 @@ if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
     echo "| wekan/caddy-gitea-plugin | \`${GITEA_PLUGIN_COMMIT}\` |"
     echo "| wekan/caddy-wekan-plugin | \`${WEKAN_PLUGIN_COMMIT}\` |"
     echo "| wekan/caddy-rclone-plugin | \`${RCLONE_PLUGIN_COMMIT}\` |"
+    echo "| wekan/caddy-ferretdb-plugin | \`${FERRETDB_PLUGIN_COMMIT}\` |"
+    echo "| wekan/FerretDB | \`${FERRETDB_COMMIT}\` |"
   } >> "$GITHUB_STEP_SUMMARY"
 fi

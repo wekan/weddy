@@ -1,0 +1,3 @@
+# WeKan's own specs (tests/playwright/specs/) that run against Weddy's WeKan:
+# the ones whose pages Weddy has so far. Add a spec here when its pages are done
+# (caddy-wekan-plugin's TEMPLATES.md); WEDDY_WEKAN_SPECS=all runs them all.

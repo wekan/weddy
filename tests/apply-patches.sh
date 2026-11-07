@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # releases/apply-patches.sh and releases/source-zips.py with stand-in repositories,
-# no network: the four parts with their history, Caddy's patches as commits on
+# no network: the parts with their history, Caddy's patches as commits on
 # branch weddy, reproducible commits, and zips with and without every .git.
 #
 #   bash tests/apply-patches.sh
@@ -17,7 +17,10 @@ repo() { # <dir> <file> <branch>
 repo "$WORK/caddy" caddy.go master
 git -C "$WORK/caddy" tag v2.11.7
 echo two > "$WORK/caddy/two"; git -C "$WORK/caddy" add -A; git -C "$WORK/caddy" commit -q -m two
-for p in gitea wekan rclone; do repo "$WORK/caddy-$p-plugin" "$p.go"; done
+for p in gitea wekan rclone ferretdb; do repo "$WORK/caddy-$p-plugin" "$p.go"; done
+repo "$WORK/FerretDB" ferretdb.go main
+git -C "$WORK/FerretDB" checkout -q -b main-v1; echo v1 > "$WORK/FerretDB/v1"; git -C "$WORK/FerretDB" add -A; git -C "$WORK/FerretDB" commit -q -m v1
+git -C "$WORK/FerretDB" checkout -q main
 
 # weddy itself, with one Caddy patch
 W="$WORK/weddy"; mkdir -p "$W"
@@ -30,10 +33,11 @@ git -C "$W" init -q -b main; git -C "$W" config user.name U; git -C "$W" config 
 git -C "$W" add -A; git -C "$W" commit -q -m weddy
 
 run() { CADDY_URL="$WORK/caddy" GITEA_PLUGIN_URL="$WORK/caddy-gitea-plugin" WEKAN_PLUGIN_URL="$WORK/caddy-wekan-plugin" \
-  RCLONE_PLUGIN_URL="$WORK/caddy-rclone-plugin" GITHUB_ENV= GITHUB_OUTPUT= GITHUB_STEP_SUMMARY= bash "$W/releases/apply-patches.sh" "$W" "$@"; }
+  RCLONE_PLUGIN_URL="$WORK/caddy-rclone-plugin" FERRETDB_PLUGIN_URL="$WORK/caddy-ferretdb-plugin" FERRETDB_URL="$WORK/FerretDB" GITHUB_ENV= GITHUB_OUTPUT= GITHUB_STEP_SUMMARY= bash "$W/releases/apply-patches.sh" "$W" "$@"; }
 out="$(run "$WORK/s1" 2>&1)" || { echo "$out"; fail=$((fail + 1)); }
 S="$WORK/s1"
-t "five parts" '[ "$(ls "$S" | tr "\n" " ")" = "caddy caddy-gitea-plugin caddy-rclone-plugin caddy-wekan-plugin weddy " ]'
+t "seven parts" '[ "$(ls "$S" | LC_ALL=C sort | tr "\n" " ")" = "FerretDB caddy caddy-ferretdb-plugin caddy-gitea-plugin caddy-rclone-plugin caddy-wekan-plugin weddy " ]'
+t "FerretDB: branch main-v1, not its default branch" '[ -f "$S/FerretDB/v1" ] && grep -q "^FERRETDB_COMMIT=[0-9a-f]\{40\}$" <<<"$out"'
 t "every part is a git repository with its history" 'for d in "$S"/*; do git -C "$d" rev-parse -q --verify HEAD >/dev/null || exit 1; done'
 t "Caddy: master by default, on branch weddy" 'grep -qx "SOURCE_REF=master" <<<"$out" && [ "$(git -C "$S/caddy" symbolic-ref --short HEAD)" = weddy ]'
 t "Caddy: the patch is a commit, with its own author" '[ "$(git -C "$S/caddy" log -1 --format="%s|%an")" = "Fix Caddy.|Patch Author" ]'
@@ -49,7 +53,7 @@ python3 -I "$ROOT/releases/source-zips.py" "$S" "$WORK/out" >/dev/null
 mkdir "$WORK/n" "$WORK/w"; ( cd "$WORK/n" && unzip -q "$WORK/out/weddy-source-without-history.zip" ); ( cd "$WORK/w" && unzip -q "$WORK/out/weddy-source-with-history.zip" )
 t "zips: the top directory is weddy/" '[ "$(ls "$WORK/n")" = weddy ]'
 t "negative: the zip without history has no .git anywhere" '[ -z "$(find "$WORK/n" -name .git)" ] && [ -f "$WORK/n/weddy/caddy/caddy.go" ]'
-t "the zip with history has every repository" '[ "$(find "$WORK/w" -maxdepth 3 -name .git | wc -l)" = 5 ] && [ -z "$(git -C "$WORK/w/weddy/caddy" status --porcelain)" ]'
+t "the zip with history has every repository" '[ "$(find "$WORK/w" -maxdepth 3 -name .git | wc -l)" = 7 ] && [ -z "$(git -C "$WORK/w/weddy/caddy" status --porcelain)" ]'
 python3 -I "$ROOT/releases/source-zips.py" "$S" "$WORK/out2" >/dev/null
 t "reproducible: a byte-identical zip without history" 'cmp -s "$WORK/out/weddy-source-without-history.zip" "$WORK/out2/weddy-source-without-history.zip"'
 

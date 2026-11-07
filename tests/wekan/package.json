@@ -1,0 +1,12 @@
+{
+  "name": "weddy-wekan-tests",
+  "private": true,
+  "description": "WeKan's browser and API tests, run against Weddy's WeKan. Node.js runs the tests only; Weddy itself has no Node.js.",
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "bcryptjs": "^3.0.2"
+  },
+  "dependencies": {
+    "mongodb": "^7.8.0"
+  }
+}

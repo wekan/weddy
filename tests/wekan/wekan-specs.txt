@@ -8,3 +8,15 @@
 23-rest-api-more.e2e.js: custom fields: create, get, delete
 23-rest-api-more.e2e.js: checklists and items: create, get, delete
 23-rest-api-more.e2e.js: comments: create and list
+17-rest-api.e2e.js: #5819 bulk labels merge (add keeps existing, remove drops, dedupe)
+17-rest-api.e2e.js: #5819 bulk labels rejects a label not on the board
+17-rest-api.e2e.js: #5819 label creation is BoardAdmin-gated (non-admin member denied)
+17-rest-api.e2e.js: #5998 add board member with named role=admin sets isAdmin
+17-rest-api.e2e.js: #5998 add board member rejects an invalid role
+17-rest-api.e2e.js: #5998 adding a board member requires board admin (non-admin member denied)
+17-rest-api.e2e.js: #5998 add card member: board member allowed, non-member rejected
+17-rest-api.e2e.js: #5846 set then clear a card due date
+17-rest-api.e2e.js: #3697 clearing members via REST stores an array, never null
+17-rest-api.e2e.js: #2875 create a card with no / empty members stores [] not null
+17-rest-api.e2e.js: #5650 board created via REST without owner is owned by the caller
+17-rest-api.e2e.js: #1894 a disabled user cannot be added to a board

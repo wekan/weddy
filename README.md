@@ -41,6 +41,17 @@ files.example.org {
 }
 ```
 
+# Many domains: the Cloud Panel
+
+One Weddy can replace a host of WeKan Docker containers: with the wekan option's
+`root` and `primary`, every domain is a WeKan of its own, in
+`<root>/domains/<domain>/` with its own database, and the first domain's WeKan has the
+**Cloud Panel** - the SuperAdmin's table of customer domains with their hosting dates,
+and a CloudFlare API key from which each domain gets a CloudFlare Origin certificate,
+or else a Let's Encrypt one. See
+[caddy-wekan-plugin](https://github.com/wekan/caddy-wekan-plugin#many-domains-one-weddy-a-wekan-per-customer-domain)
+and WeKan's [Cloud Panel](https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/Weddy/Cloud-Panel.md).
+
 # Releases
 
 Like [wekan/gitea-patches](https://github.com/wekan/gitea-patches), this repository

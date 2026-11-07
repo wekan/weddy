@@ -68,7 +68,8 @@ refused. `domains.json` and `cloudflare.json` no longer need writing by hand.
 
 </details>
 
-**WeKan in Go** - more of WeKan's REST API, and the language.
+**WeKan in Go** - more of WeKan's REST API, attachments, users, activities, and
+the language.
 
 <details>
 <summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/8787392d623870dfbf5ef358bbefb0e6b0eed240">Swimlanes and lists one by one, custom fields, checklists, comments and logout in the REST API</a>. Thanks to xet7.</summary>
@@ -80,10 +81,42 @@ run against Weddy ([tests/wekan/wekan-specs.txt](tests/wekan/wekan-specs.txt),
 
 </details>
 
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/0ef462652e9bca904d36d5ff6bfd4a4fdeb83ba8">Labels, board members with roles, card members, dates and bulk cards in the REST API</a>. Thanks to xet7.</summary>
+
+Only a board admin adds labels and members, with WeKan's roles and never a
+disabled user; card members are members of the board; dates are set and
+cleared; members and assignees are always arrays. Twelve more of WeKan's own
+REST tests run against Weddy (<a href="https://github.com/wekan/weddy/commit/b6153e6cdd88f1fabfd7915021adeb9fed66cdbd">wekan-specs.txt</a>), 36 tests in all.
+
+</details>
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/00a41ca8cdba5d9ebe424778e9bc61a6aeb3884a">Attachments as Node.js WeKan keeps them: upload, list, serve, download, delete</a>. Thanks to xet7.</summary>
+
+`files/attachments/<id>` and Meteor-Files' document, so either WeKan reads the
+other's; served only to a reader of the board, HTML and SVG always downloaded,
+a stored path never followed out of the directory, a delete kept as WeKan's
+soft delete.
+
+</details>
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/ff7bd89de45632b604d546a5c21e1c722679b939">Sign up, the profile, changing the password, and Admin Panel / People</a>. Thanks to xet7.</summary>
+
+The first account is the administrator; registration off is refused by the
+server; a new password is 8 to 512 characters; People toggles admin and active
+and registration, never on oneself.
+
+</details>
+
+- [Activities as Node.js WeKan records them, for its feed, notifications and rules](https://github.com/wekan/caddy-wekan-plugin/commit/2d9f1bf5bb2e560f3c450aed42d61efc31458bdf). Thanks to xet7.
+
 - [Change Language: every language WeKan has, named in itself, kept in profile.language](https://github.com/wekan/caddy-wekan-plugin/commit/d434a275bb08c350213ab7bca4cfd6e77a9b87a6). Thanks to xet7.
 
 **Release** - what a release says it is made of.
 
+- [Local builds build xcaddy for this computer, so Windows, macOS and the BSDs build too](https://github.com/wekan/weddy/commit/6a08aa37ae585b7aff817b4ff4f12b596c2211f7). Thanks to xet7.
 - [The release notes list caddy-ferretdb-plugin and wekan/FerretDB with their commits](https://github.com/wekan/weddy/commit/97cb0638e351f02dc87ea1a0cb830afe1b0f5eec). Thanks to xet7.
 
 **Many domains** - the Cloud Panel, in Weddy.

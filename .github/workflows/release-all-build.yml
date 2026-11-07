@@ -5,7 +5,8 @@ name: Release All build
 #
 #   1. source   assembles Weddy's source with releases/apply-patches.sh - upstream
 #               Caddy with dist/all/ as commits, and wekan/caddy-gitea-plugin,
-#               caddy-wekan-plugin and caddy-rclone-plugin, each with its history -
+#               caddy-wekan-plugin, caddy-rclone-plugin, caddy-ferretdb-plugin and
+#               wekan/FerretDB main-v1, each with its history -
 #               and attaches
 #                 weddy-source-with-history.zip     every part with its .git
 #                 weddy-source-without-history.zip  without any .git
@@ -137,7 +138,7 @@ jobs:
         run: |
           set -euo pipefail
           {
-            echo "Weddy: Caddy with the Caddy plugins of WeKan kanban, Gitea version control and rclone, built with xcaddy."
+            echo "Weddy: Caddy with the Caddy plugins of WeKan kanban (in Go, no Node.js), its FerretDB database, Gitea version control and rclone, built with xcaddy."
             echo ""
             echo "| Part | Commit |"
             echo "|---|---|"
@@ -145,6 +146,8 @@ jobs:
             echo "| [wekan/caddy-gitea-plugin](https://github.com/wekan/caddy-gitea-plugin) | \`${GITEA_PLUGIN_COMMIT}\` |"
             echo "| [wekan/caddy-wekan-plugin](https://github.com/wekan/caddy-wekan-plugin) | \`${WEKAN_PLUGIN_COMMIT}\` |"
             echo "| [wekan/caddy-rclone-plugin](https://github.com/wekan/caddy-rclone-plugin) | \`${RCLONE_PLUGIN_COMMIT}\` |"
+            echo "| [wekan/caddy-ferretdb-plugin](https://github.com/wekan/caddy-ferretdb-plugin) | \`${FERRETDB_PLUGIN_COMMIT}\` |"
+            echo "| [wekan/FerretDB](https://github.com/wekan/FerretDB) \`main-v1\` | \`${FERRETDB_COMMIT}\` |"
             echo ""
             echo "\`${WITH_HISTORY}\` is the source with every part's git history; \`${WITHOUT_HISTORY}\` is the same without it, and the binaries are built from it. Every file has a \`.sha256\` and a keyless cosign signature."
           } > notes.md

@@ -7,17 +7,26 @@ const fs = require('fs');
 const path = require('path');
 const base = require('./tests/playwright/playwright.config.js');
 
-const listed = process.env.WEDDY_WEKAN_SPECS === 'all'
-  ? ['tests/playwright/specs/**/*.e2e.js']
-  : fs.readFileSync(path.join(__dirname, 'wekan-specs.txt'), 'utf8').split('\n')
-    .map(l => l.replace(/#.*/, '').trim()).filter(Boolean)
-    .map(name => `tests/playwright/specs/${name}`);
+// A line of wekan-specs.txt is a spec file - all of it - or "file: test title",
+// one test of it.
+const lines = fs.readFileSync(path.join(__dirname, 'wekan-specs.txt'), 'utf8').split('\n')
+  .map(l => l.trim()).filter(l => l && !l.startsWith('#'))
+  .map(l => { const i = l.indexOf(': '); return i < 0 ? { file: l } : { file: l.slice(0, i), title: l.slice(i + 2) }; });
+const all = process.env.WEDDY_WEKAN_SPECS === 'all';
+const escape = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const listed = all ? ['tests/playwright/specs/**/*.e2e.js'] : [...new Set(lines.map(l => `tests/playwright/specs/${l.file}`))];
+// Playwright matches grep against the file path and the titles of a test.
+const grep = all ? undefined : new RegExp([
+  'weddy-specs[\\\\/]',
+  ...lines.map(l => escape(l.file) + (l.title ? '.*' + escape(l.title) : '')),
+].join('|'));
 
 module.exports = {
   ...base,
   globalSetup: path.join(__dirname, 'tests/playwright/global-setup.js'),
   testDir: __dirname,
   testMatch: ['weddy-specs/**/*.e2e.js', ...listed],
+  ...(grep ? { grep } : {}),
   outputDir: process.env.WEDDY_TEST_RESULTS || path.join(__dirname, 'test-results'),
   reporter: [['list'], ['html', { outputFolder: process.env.WEDDY_TEST_REPORT || path.join(__dirname, 'playwright-report'), open: 'never' }]],
 };

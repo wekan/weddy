@@ -1,3 +1,10 @@
 # WeKan's own specs (tests/playwright/specs/) that run against Weddy's WeKan:
-# the ones whose pages Weddy has so far. Add a spec here when its pages are done
+# the ones whose pages and API Weddy has so far. A line is a spec file - all of
+# it - or "file: test title", one test of it. Add a line when its part is done
 # (caddy-wekan-plugin's TEMPLATES.md); WEDDY_WEKAN_SPECS=all runs them all.
+17-rest-api.e2e.js: #1437 logout revokes the presented REST token
+23-rest-api-more.e2e.js: swimlanes: create, get, edit, delete
+23-rest-api-more.e2e.js: lists: create, get, edit, delete
+23-rest-api-more.e2e.js: custom fields: create, get, delete
+23-rest-api-more.e2e.js: checklists and items: create, get, delete
+23-rest-api-more.e2e.js: comments: create and list

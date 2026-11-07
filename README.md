@@ -58,6 +58,12 @@ together across many containers. Its pages are being written in Go; until they
 are, `<data>/cloud/domains.json` and `cloudflare.json` are written by hand. See
 [caddy-wekan-plugin](https://github.com/wekan/caddy-wekan-plugin#many-domains-one-weddy-a-wekan-per-customer-domain).
 
+# What is in progress
+
+[TODO.md](TODO.md) lists what Weddy does not do yet. When an item is done, it
+moves from there to the `# Upcoming weddy release` section of
+[CHANGELOG-big.md](CHANGELOG-big.md).
+
 # Releases
 
 Like [wekan/gitea-patches](https://github.com/wekan/gitea-patches), this repository

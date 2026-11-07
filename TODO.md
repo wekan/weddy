@@ -22,7 +22,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **Users, the rest**: invitation codes and invitations to a board, forgot
   password and e-mail verification (both need outgoing e-mail), avatars, and
   the rest of Admin Panel (settings, organizations, teams).
-- **Other login methods** besides password: LDAP, OAuth2/OIDC, CAS, SAML.
+- **LDAP, CAS and SAML login**: OAuth2/OIDC is done with WeKan's OAUTH2_*
+  settings; these three need a directory server or an identity provider to test
+  against, which the development sandbox does not have - build them with WeKan's
+  LDAP_*, CAS_* and SAML_* settings and a test server of each.
 - **The rest of WeKan's REST API**: checklist items' edit and delete, comment
   edit and delete, bulk delete, copy and move of cards, boards and lists, linked
   cards, rules, export and import, users and `/api/user/cards` (the other tests

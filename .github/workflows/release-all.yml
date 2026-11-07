@@ -1,0 +1,37 @@
+name: Release All
+
+# Build Weddy - Caddy with the WeKan, Gitea and rclone plugins, with xcaddy - for
+# every platform in releases/platforms.txt, from upstream Caddy master (or the ref
+# given) with dist/all/ applied, and publish it with its source with and without
+# history. The build is in release-all-build.yml.
+#
+#   gh workflow run release-all.yml -R wekan/weddy
+#   gh workflow run release-all.yml -R wekan/weddy -f ref=v2.11.9
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Upstream caddyserver/caddy branch, tag or commit (empty = master)'
+        required: false
+        type: string
+      tag:
+        description: 'Release tag (empty = v<Caddy version>-weddy-<date>-<Caddy commit>)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: weddy-release-${{ inputs.tag || inputs.ref || github.sha }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    uses: ./.github/workflows/release-all-build.yml
+    with:
+      mode: all
+      tag: ${{ inputs.tag }}
+      ref: ${{ inputs.ref }}

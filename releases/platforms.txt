@@ -1,0 +1,23 @@
+# Platforms Weddy is built for: <GOOS>/<GOARCH>, an ARM version as <GOARCH>-<GOARM>.
+# All are built with CGO off. A platform that does not compile is skipped and
+# reported, not fatal - that is the moment a patch in dist/ is worth writing.
+linux/amd64
+linux/arm64
+linux/arm-7
+linux/arm-6
+linux/arm-5
+linux/386
+linux/riscv64
+linux/ppc64le
+linux/s390x
+linux/loong64
+windows/amd64
+windows/arm64
+darwin/amd64
+darwin/arm64
+freebsd/amd64
+freebsd/arm64
+openbsd/amd64
+openbsd/arm64
+netbsd/amd64
+netbsd/arm64

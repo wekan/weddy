@@ -1,0 +1,209 @@
+name: Release All build
+
+# Shared by "Release All" (release-all.yml) and "Release All Missing"
+# (release-all-missing.yml). It is called, never run by itself.
+#
+#   1. source   assembles Weddy's source with releases/apply-patches.sh - upstream
+#               Caddy with dist/all/ as commits, and wekan/caddy-gitea-plugin,
+#               caddy-wekan-plugin and caddy-rclone-plugin, each with its history -
+#               and attaches
+#                 weddy-source-with-history.zip     every part with its .git
+#                 weddy-source-without-history.zip  without any .git
+#   2. build    one job per OS group of releases/platforms.txt builds Weddy with
+#               xcaddy from the CONTENT of weddy-source-without-history.zip, and
+#               attaches each group as soon as it is done: weddy-<version>-<os>-<arch>
+#               and its .xz, each with a .sha256 and a keyless cosign signature.
+#
+# mode: all      build everything; files of the same name are replaced.
+#       missing  complete a release: rebuild only the groups it lacks a file of,
+#                from the source zip already on it, and upload only absent files.
+
+on:
+  workflow_call:
+    inputs:
+      mode:
+        required: true
+        type: string
+      tag:
+        required: false
+        type: string
+        default: ''
+      ref:
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: write
+  id-token: write
+
+env:
+  GH_REPO: ${{ github.repository }}
+  WITH_HISTORY: weddy-source-with-history.zip
+  WITHOUT_HISTORY: weddy-source-without-history.zip
+  XCADDY_VERSION: v0.4.7
+
+jobs:
+  source:
+    name: ${{ inputs.mode == 'all' && 'assemble the source' || 'plan the missing files' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    outputs:
+      tag: ${{ steps.tag.outputs.tag }}
+      groups: ${{ steps.plan.outputs.groups }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          path: _weddy
+          fetch-depth: 0   # the source with history has Weddy's history too
+
+      - name: Find the release to complete
+        id: existing
+        if: ${{ inputs.mode == 'missing' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          if [ -z "$TAG" ]; then
+            TAG="$(gh release list --exclude-drafts --limit 1 --json tagName --jq '.[0].tagName // empty')"
+            [ -n "$TAG" ] || { echo "::error::There is no release yet. Run Release All first."; exit 1; }
+          fi
+          gh release view "$TAG" --json assets --jq '.assets[].name' | sort > existing.txt
+          # The source on the release is what its binaries are built from; without
+          # it the plugin commits are unknown, so it is not rebuilt.
+          grep -qxF "$WITHOUT_HISTORY" existing.txt || { echo "::error::$TAG has no $WITHOUT_HISTORY. Run Release All."; exit 1; }
+          gh release download "$TAG" --pattern "$WITHOUT_HISTORY" --pattern "$WITHOUT_HISTORY.sha256"
+          sha256sum -c "$WITHOUT_HISTORY.sha256"
+          mkdir -p out && mv "$WITHOUT_HISTORY" "$WITHOUT_HISTORY.sha256" out/
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Assemble the source
+        if: ${{ inputs.mode == 'all' }}
+        env:
+          REF: ${{ inputs.ref }}
+        run: bash _weddy/releases/apply-patches.sh _weddy src "$REF"
+
+      - name: Name the release
+        id: tag
+        env:
+          TAG: ${{ inputs.mode == 'all' && inputs.tag || steps.existing.outputs.tag }}
+        run: |
+          set -euo pipefail
+          [ -n "$TAG" ] || TAG="v${CADDY_VERSION}-weddy-$(date -u +%Y%m%d)-${CADDY_SHORT}"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "TAG=$TAG" >> "$GITHUB_ENV"
+
+      - name: Zip the source, with and without history
+        if: ${{ inputs.mode == 'all' }}
+        run: |
+          set -euo pipefail
+          python3 -I _weddy/releases/source-zips.py src out
+          ( cd out && sha256sum -c *.sha256 )
+
+      - name: Plan the groups to build
+        id: plan
+        env:
+          MODE: ${{ inputs.mode }}
+        run: |
+          set -euo pipefail
+          [ -f existing.txt ] || : > existing.txt
+          groups=""
+          for group in $(grep -v '^\s*#' _weddy/releases/platforms.txt | grep . | cut -d/ -f1 | sort -u); do
+            missing=0
+            for p in $(grep -v '^\s*#' _weddy/releases/platforms.txt | grep "^$group/"); do
+              bin="weddy-$TAG-${p//\//-}"; [ "$group" = windows ] && bin="$bin.exe"
+              for f in "$bin" "$bin.sha256" "$bin.xz" "$bin.xz.sha256"; do grep -qxF "$f" existing.txt || missing=$((missing + 1)); done
+            done
+            if [ "$MODE" = all ] || [ "$missing" -gt 0 ]; then groups="$groups\"$group\","; fi
+            echo "  $group: $missing file(s) missing"
+          done
+          echo "groups=[${groups%,}]" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: source
+          path: out/${{ env.WITHOUT_HISTORY }}
+          retention-days: 3
+          compression-level: 0
+
+      - uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
+        if: ${{ inputs.mode == 'all' }}
+
+      - name: Create the release and attach the source
+        if: ${{ inputs.mode == 'all' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          {
+            echo "Weddy: Caddy with the Caddy plugins of WeKan kanban, Gitea version control and rclone, built with xcaddy."
+            echo ""
+            echo "| Part | Commit |"
+            echo "|---|---|"
+            echo "| [caddyserver/caddy](https://github.com/caddyserver/caddy) \`${SOURCE_REF}\` + ${PATCHES_APPLIED} patch commit(s) | \`${CADDY_COMMIT}\` |"
+            echo "| [wekan/caddy-gitea-plugin](https://github.com/wekan/caddy-gitea-plugin) | \`${GITEA_PLUGIN_COMMIT}\` |"
+            echo "| [wekan/caddy-wekan-plugin](https://github.com/wekan/caddy-wekan-plugin) | \`${WEKAN_PLUGIN_COMMIT}\` |"
+            echo "| [wekan/caddy-rclone-plugin](https://github.com/wekan/caddy-rclone-plugin) | \`${RCLONE_PLUGIN_COMMIT}\` |"
+            echo ""
+            echo "\`${WITH_HISTORY}\` is the source with every part's git history; \`${WITHOUT_HISTORY}\` is the same without it, and the binaries are built from it. Every file has a \`.sha256\` and a keyless cosign signature."
+          } > notes.md
+          for f in out/*; do cosign sign-blob "$f" --bundle "$f.sigstore.json" --yes; done
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --target "$GITHUB_SHA" --title "$TAG" --prerelease --notes-file notes.md
+          gh release upload "$TAG" out/* --clobber
+
+  build:
+    name: build ${{ matrix.group }}
+    needs: source
+    if: ${{ needs.source.outputs.groups != '[]' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix:
+        group: ${{ fromJSON(needs.source.outputs.groups) }}
+    env:
+      TAG: ${{ needs.source.outputs.tag }}
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: source
+          path: ${{ runner.temp }}/zip
+
+      - name: Unpack weddy-source-without-history.zip
+        run: |
+          set -euo pipefail
+          unzip -q "$RUNNER_TEMP/zip/$WITHOUT_HISTORY" -d "$RUNNER_TEMP/src"
+          [ -z "$(find "$RUNNER_TEMP/src" -name .git)" ] || { echo "::error::The source without history has a .git."; exit 1; }
+
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: ${{ runner.temp }}/src/weddy/caddy-gitea-plugin/go.mod
+
+      - name: Build ${{ matrix.group }} with xcaddy
+        run: |
+          set -euo pipefail
+          go telemetry off
+          go install "github.com/caddyserver/xcaddy/cmd/xcaddy@$XCADDY_VERSION"
+          S="$RUNNER_TEMP/src/weddy"
+          bash "$S/weddy/releases/build-weddy.sh" "$S" out "$TAG" "${{ matrix.group }}"
+          ls -l out
+
+      - uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
+
+      - name: Sign and attach
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          files=( out/weddy-* )
+          [ "${#files[@]}" -gt 0 ] || { echo "::error::Nothing was built."; exit 1; }
+          for f in "${files[@]}"; do cosign sign-blob "$f" --bundle "$f.sigstore.json" --yes; done
+          files=( out/weddy-* )
+          if [ "$MODE" = all ]; then gh release upload "$TAG" "${files[@]}" --clobber; exit 0; fi
+          gh release view "$TAG" --json assets --jq '.assets[].name' | sort > existing.txt
+          new=(); for f in "${files[@]}"; do grep -qxF "$(basename "$f")" existing.txt || new+=( "$f" ); done
+          [ "${#new[@]}" -eq 0 ] || gh release upload "$TAG" "${new[@]}"
+          if [ -s out/failed.txt ]; then echo "::warning::Not compiled: $(tr '\n' ' ' < out/failed.txt)"; fi

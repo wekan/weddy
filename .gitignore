@@ -2,6 +2,8 @@
 /out/
 __pycache__/
 /out-local/
+/out-test/
+/out-retry/
 /log/
 /tests/wekan/node_modules/
 /tests/wekan/test-results/

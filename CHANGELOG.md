@@ -11,7 +11,8 @@ Weddy is **Caddy with the WeKan, FerretDB, Gitea and rclone
 plugins** - WeKan **written in Go**, no Node.js - built with **xcaddy** from
 upstream Caddy and the plugins, and released with its source **with and without
 history** and binaries for **every platform**. It serves **many WeKan domains**,
-each with its own data, and is built and tested **locally** with **EVERYTHING**
-tests: WeKan's and Gitea's own.
+each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
+and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
+Gitea's own.
 
 [All changes so far](CHANGELOG-big.md#upcoming-weddy-release)

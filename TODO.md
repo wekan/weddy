@@ -17,51 +17,37 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   Member Settings, search, templates, rules, import and export.
 - **Attachments**: `files/attachments`, upload and download, as Node.js WeKan
   keeps them.
-- **Users**: registration, invitations, forgot password, profile, language
-  choice (the language is read from `profile.language`, but cannot be changed
-  yet), and Admin Panel / People.
+- **Users**: registration, invitations, forgot password, profile, and Admin
+  Panel / People.
 - **Other login methods** besides password: LDAP, OAuth2/OIDC, CAS, SAML.
-- **The rest of WeKan's REST API**: swimlane and list edit and delete, labels,
-  board members and roles, card members, dates, checklists, comments, custom
-  fields, bulk card actions, copy and move, linked cards, rules, export and
-  import, `/users/logout`, users (WeKan's `tests/playwright/specs/17-rest-api`
-  and `23-rest-api-more` list them).
+- **The rest of WeKan's REST API**: labels, board members and roles, card
+  members, dates, checklist items' edit and delete, comment edit and delete,
+  bulk card actions, copy and move, linked cards, rules, export and import,
+  users (the other tests of WeKan's `tests/playwright/specs/17-rest-api` and
+  `23-rest-api-more`).
 - **Activities and notifications** when something changes, as Node.js WeKan
   records them.
 
-## Many domains: the Cloud Panel
-
-- **The Cloud Panel's pages in Go**: Admin Panel / People / Cloud on the primary
-  domain (Cloud Panel Domain, SuperAdmin Username), and on the Cloud Panel Domain
-  the SuperAdmin's Settings with the left menus Domains (Domain, Customer name,
-  Customer email address, Billing email address, Start Date, End Date, TLS) and
-  CloudFlare (a write-only API key, never sent to a browser). Until then
-  `<data>/cloud/domains.json` and `cloudflare.json` are written by hand. It is
-  Weddy's feature, not WeKan's: here every domain is in one process.
-
 ## Tests
 
-- **WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt` is still
-  empty - add each of WeKan's specs there when Weddy has its pages;
-  `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
-- **Firefox and WebKit**: the browser tests have run in Chromium only
-  (`WEKAN_PLAYWRIGHT_ALL=1` runs all three).
-- **`./build.sh local all`**: building every platform locally has not been run
-  yet; only this computer's platform (linux/arm64) has.
-
-## Release
-
-- **Release notes list FerretDB**: `.github/workflows/release-all-build.yml`
-  still names three plugins in its comment and its source table; add
-  caddy-ferretdb-plugin and wekan/FerretDB (`FERRETDB_PLUGIN_COMMIT`,
-  `FERRETDB_COMMIT`).
-- **go-jose v3 in the other plugins**: caddy-wekan-plugin no longer has it
-  (Dependabot alerts #1-#3); check caddy-gitea-plugin, caddy-rclone-plugin and
-  caddy-ferretdb-plugin for the same dependency.
+- **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
+  names six so far; add each of WeKan's specs, or one test of it, when Weddy
+  has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
+- **Firefox and WebKit**: the browser tests have run in Chromium only. In the
+  VSCodium Flatpak sandbox Playwright's Firefox needs a newer NSS (3.126) than
+  the runtime has, and WebKit needs libevent, enchant, flite and more; run
+  `WEKAN_PLAYWRIGHT_ALL=1 ./build.sh everything` on a computer or in a
+  container that has them.
+- **`./build.sh local all`**: every platform built locally - the first run was
+  started while the plugins' go.mod files were being changed, and linux/arm-7
+  and linux/386 did not compile; run it again on the committed plugins and fix
+  any platform that still fails.
 
 ## For the maintainer (on GitHub)
 
 - Create the repository **wekan/caddy-ferretdb-plugin** and push it.
+- Push caddy-wekan-plugin, caddy-ferretdb-plugin, caddy-gitea-plugin,
+  caddy-rclone-plugin and Weddy: a release builds from what is on GitHub.
 - Dismiss caddy-wekan-plugin's code scanning alert **#9** as a false positive:
   SHA-256 is Meteor's password pre-hash, not the stored hash (see the plugin
   wiki's [Hall of Fame](https://github.com/wekan/caddy-wekan-plugin/wiki/Hall-of-Fame)).

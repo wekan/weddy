@@ -176,3 +176,8 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 20-rules.e2e.js: can create an event rule and see it in the list
 20-rules.e2e.js: #6630: a current-date action stores its description only on the Action
 20-rules.e2e.js: a board button rule renders a runnable button in the board header
+20-rules.e2e.js: eu named-member rule trigger uses its own verb composition
+20-rules.e2e.js: th named-member rule trigger uses its own verb composition
+20-rules.e2e.js: Galician attachment rule actions agree with the attachment noun
+44-rules.e2e.js: #6490: Rules list — Delete and View act on the clicked rule, not the first
+44-rules.e2e.js: #6749: Rules list — Select all / Unselect all visibly tick and untick every rule

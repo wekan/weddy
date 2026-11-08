@@ -80,7 +80,7 @@ duplicate-dependencies.e2e.js: REST accepts both duplicate types and retains boa
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (ltr)
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (rtl)
 export-access.e2e.js
-25-excel-pdf.e2e.js: board PDF export returns a PDF document
+25-excel-pdf.e2e.js
 import-export-format-audit.e2e.js: csv: empty imports fail without creating a board
 import-export-format-audit.e2e.js: excel: empty imports fail without creating a board
 import-export-format-audit.e2e.js: markdown: empty imports fail without creating a board

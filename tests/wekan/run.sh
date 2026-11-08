@@ -46,6 +46,7 @@ free_port() { node -e 'const s=require("net").createServer().listen(0,"127.0.0.1
 PORT="$(free_port)"; DBPORT="$(free_port)"
 # WeKan's mail specs capture mail on one local port (helpers/smtpSink.js);
 # Weddy sends there, as WeKan's test app does with MAIL_URL. Nothing is relayed.
+# EMAIL_NOTIFICATION_TIMEOUT=100, as WeKan's build.sh: a notification is queued, then sent within a pass.
 SMTPPORT="${WEKAN_TEST_SMTP_PORT:-$(free_port)}"
 WORK="$(mktemp -d "${TMPDIR:-/tmp}/weddy-wekan.XXXXXX")"
 cat > "$WORK/Caddyfile" <<CADDY
@@ -61,7 +62,7 @@ http://127.0.0.1:$PORT {
 	wekan
 }
 CADDY
-MAIL_URL="smtp://127.0.0.1:$SMTPPORT" "$BIN" run --config "$WORK/Caddyfile" --adapter caddyfile > "$LOG_DIR/weddy-server.log" 2>&1 &
+MAIL_URL="smtp://127.0.0.1:$SMTPPORT" EMAIL_NOTIFICATION_TIMEOUT=100 "$BIN" run --config "$WORK/Caddyfile" --adapter caddyfile > "$LOG_DIR/weddy-server.log" 2>&1 &
 PID=$!
 cleanup() { kill "$PID" 2>/dev/null || true; wait "$PID" 2>/dev/null || true; rm -rf "$WORK"; }
 trap cleanup EXIT

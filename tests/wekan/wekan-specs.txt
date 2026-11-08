@@ -229,3 +229,10 @@ instance-board-visibility.e2e.js: the owner can make a board visible to signed-i
 03-cards-operations.e2e.js: multi-selection archives every selected card
 notification-delivery-settings.e2e.js: Corsican clear notification drawer renders corrected card activity
 notification-delivery-settings.e2e.js: Corsican delete-all confirmation preserves cancellation
+notification-email-delivery.e2e.js: muted recipient receives no SMTP email
+notification-email-delivery.e2e.js: email disabled recipient receives no SMTP email
+notification-email-delivery.e2e.js: custom-field notifications retain numeric zero and checkbox false in delivered email
+notification-email-delivery.e2e.js: SMTP rejection is retried automatically without another notification
+notification-email-delivery.e2e.js: legacy email buffer is migrated and delivered without a new board event
+notification-email-delivery.e2e.js: clients cannot create or alter private email jobs and recipient leases
+notification-email-delivery.e2e.js: a queued digest is cancelled when its recipient loses board membership

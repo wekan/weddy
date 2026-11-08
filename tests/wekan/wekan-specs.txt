@@ -214,3 +214,4 @@ activity-viewer.e2e.js: card and sidebar activities obey formatted in st
 42-board-comments-attachments.e2e.js: a card comment (carrying boardId) is published and shown when the card is opened
 notification-delivery-settings.e2e.js: #5171 tray: an entry scheduled for later is not counted until its time
 scrum-container-move.e2e.js: list move retains destination Scrum list category
+instance-board-visibility.e2e.js: the owner can make a board visible to signed-in users

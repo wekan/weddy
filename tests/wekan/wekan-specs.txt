@@ -183,3 +183,4 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 44-rules.e2e.js: #6749: Rules list — Select all / Unselect all visibly tick and untick every rule
 20-rules.e2e.js: Import / Export dialog offers JSON and CSV export
 20-rules.e2e.js: can select all rules and switch to the workflow view
+20-rules.e2e.js: en named-member rule trigger uses its own verb composition

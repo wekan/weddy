@@ -45,3 +45,9 @@
 17-rest-api.e2e.js: #5592/#5627 copying a board copies its webhooks and rules
 17-rest-api.e2e.js: #5897 create a linked card referencing an existing card
 23-rest-api-more.e2e.js: board menu downloads complete JSON in both attachment modes
+08-notifications-activity.e2e.js: #1658 opening a card Activities section shows its persisted history
+08-notifications-activity.e2e.js: activity log shows board-level activities
+08-notifications-activity.e2e.js: adding a comment appears in the card activity log
+08-notifications-activity.e2e.js: activity log entries include a non-empty timestamp
+08-notifications-activity.e2e.js: working (time) log fields are accessible on a card
+08-notifications-activity.e2e.js: @mention in a comment is stored in the activity DB

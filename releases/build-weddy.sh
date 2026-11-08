@@ -73,7 +73,7 @@ platforms | while read -r p; do
       --with "github.com/wekan/caddy-rclone-plugin=$SRC/caddy-rclone-plugin" \
       --with "github.com/wekan/caddy-ferretdb-plugin=$SRC/caddy-ferretdb-plugin" \
       --replace "github.com/FerretDB/FerretDB=$SRC/FerretDB" ${extra[@]+"${extra[@]}"} > "$OUT/$name.log" 2>&1; then
-    xz -k -9 -T0 "$OUT/$name"
+    xz -k -f -9 -T0 "$OUT/$name"
     rm -f "$OUT/$name.log"
   else
     echo "  skipped $p (does not compile):"; tail -n 3 "$OUT/$name.log" | sed 's/^/    /'

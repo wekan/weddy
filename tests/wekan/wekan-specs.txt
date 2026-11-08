@@ -107,8 +107,6 @@ scrum-native-export.e2e.js: private board export refuses assigned-only members i
 02-cards-open-view.e2e.js: card opens without the maximized class by default (minimized view)
 02-cards-open-view.e2e.js: clicking a minicard opens the card detail panel
 02-cards-open-view.e2e.js: closing the card detail panel hides it
-05-admin-users.e2e.js: login page renders correctly on a fresh load
-05-admin-users.e2e.js: login page sign-in link is visible and accessible
 06-views-layout.e2e.js: cards seeded in different lists appear in the correct list columns
 06-views-layout.e2e.js: scrolling down a long list reaches the last card
 10-stability.e2e.js: automated 90-day archive rule: cards modified > 90 days ago are archived by cron
@@ -233,3 +231,4 @@ avatar-sub-path.e2e.js
 39-email-verification.e2e.js
 32-org-team-feature-toggles.e2e.js
 30-ldap-orgs-teams.e2e.js
+05-admin-users.e2e.js

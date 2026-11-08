@@ -4,7 +4,16 @@
   "description": "WeKan's browser and API tests, run against Weddy's WeKan. Node.js runs the tests only; Weddy itself has no Node.js.",
   "devDependencies": {
     "@playwright/test": "1.64.1",
-    "bcryptjs": "^3.0.2"
+    "@wekanteam/exceljs": "^4.7.4",
+    "archiver": "^8.0.0",
+    "axe-core": "^4.14.0",
+    "bcryptjs": "^3.0.2",
+    "bson": "^7.3.1",
+    "escape-string-regexp": "^5.0.0",
+    "fflate": "^0.8.3",
+    "jszip": "^3.10.1",
+    "papaparse": "^5.5.4",
+    "pdfkit": "^0.20.2"
   },
   "dependencies": {
     "mongodb": "^7.8.0"

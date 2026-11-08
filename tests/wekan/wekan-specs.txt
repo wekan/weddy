@@ -36,3 +36,7 @@
 40-rest-card-move-list.e2e.js
 23-rest-api-more.e2e.js: card PUT sets stickers, locations and the complete checkbox
 28-dependencies-rest.e2e.js
+23-rest-api-more.e2e.js: rules: create, list, get, edit and delete
+23-rest-api-more.e2e.js: whole-board import recreates the board together with its rules
+23-rest-api-more.e2e.js: rules: unauthenticated request is rejected
+23-rest-api-more.e2e.js: export with attachments=false returns the board without attachment file data

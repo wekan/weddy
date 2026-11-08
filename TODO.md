@@ -29,11 +29,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **The rest of WeKan's REST API**: WeKan's own REST tests of specs 17, 23,
   28 and 40 now run against Weddy; these routes of WeKan's are still missing:
   the Excel and PDF exports, the chart exports, and the other tools' formats
-  (Markdown, OPML, Todoist and the rest) of the export of all boards; board view settings and the card field order (WeKan's
-  `boardViewSettings.js` and `cardFieldOrder.js`); Admin Panel's attachment
-  settings, OAuth providers, passwordless login, all domains, and
-  organizations and teams (which Weddy does not have yet); imports from other
-  tools and from a zip; inbound e-mail; and a card's bot runs.
+  (Markdown, OPML, Todoist and the rest) of the export of all boards; Admin
+  Panel's attachment settings, OAuth providers, passwordless login, all
+  domains, and organizations and teams (which Weddy does not have yet);
+  imports from other tools and from a zip; inbound e-mail; and a card's bot
+  runs.
 - **Activities in the pages, and notifications**: changes are recorded as
   Node.js WeKan records them, but Weddy's pages do not show the activity feed
   yet, and nothing is sent by e-mail.

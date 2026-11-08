@@ -19,7 +19,10 @@ import shutil
 import sys
 
 REQUIRE = re.compile(r"""require\(\s*(?:path\.join\(\s*__dirname\s*,\s*)?['"`]([^'"`$]+)['"`]""")
-JOIN = re.compile(r"""(?:require\('path'\)|path)\.(?:join|resolve)\(\s*__dirname\s*,\s*((?:'[^']*'\s*,?\s*)+)\)""")
+# The arguments after __dirname as one run without parentheses - a single
+# quantifier, so it is linear; the quoted parts are taken from it afterwards.
+# (A repeated group of quoted parts backtracked exponentially: code scanning #1.)
+JOIN = re.compile(r"""(?:require\('path'\)|path)\.(?:join|resolve)\(\s*__dirname\s*,([^()]*)\)""")
 LINKED = ('node_modules/', 'imports/i18n/data/')
 SKIP_DIRS = {'node_modules', 'test-results', 'playwright-report', '.cache'}
 

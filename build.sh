@@ -54,6 +54,7 @@ case "$command" in
     [ ! -s out-local/failed.txt ] ;;
   test)
     bash tests/apply-patches.sh
+    python3 -I tests/syncFromWekan.test.py
     python3 -I tests/changelogShort.test.py ;;
   everything)
     exec bash tests/everything.sh ;;

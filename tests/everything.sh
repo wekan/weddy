@@ -21,7 +21,7 @@ stage() { # <name> <command...>
   else failed+=("$name"); echo "      FAILED - $LOG_DIR/$name.log"; tail -n 15 "$LOG_DIR/$name.log" | sed 's/^/      /'; fi
   echo "===== $name finished" >> "$LOG_DIR/$name.log"
 }
-stage scripts bash -c "bash '$ROOT/tests/apply-patches.sh' && python3 -I '$ROOT/tests/changelogShort.test.py'"
+stage scripts bash -c "bash '$ROOT/tests/apply-patches.sh' && python3 -I '$ROOT/tests/syncFromWekan.test.py' && python3 -I '$ROOT/tests/changelogShort.test.py'"
 for p in caddy-ferretdb-plugin caddy-wekan-plugin caddy-rclone-plugin caddy-gitea-plugin; do
   if [ -d "$WEDDY_LOCAL_SRC/$p" ]; then
     stage "go-$p" bash -c "cd '$WEDDY_LOCAL_SRC/$p' && CGO_ENABLED=0 go vet ./... && CGO_ENABLED=0 go test -count=1 ./..."

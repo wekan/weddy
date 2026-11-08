@@ -218,3 +218,8 @@ instance-board-visibility.e2e.js: the owner can make a board visible to signed-i
 11-labels-duedates.e2e.js: label selector popup opens from a card
 11-labels-duedates.e2e.js: creating a new label via the popup shows it in the list
 11-labels-duedates.e2e.js: applying a seeded label to a card shows it in card details
+03-cards-operations.e2e.js: archiving a card removes it from board view
+03-cards-operations.e2e.js: moving a card to another list shows it only in the target list
+03-cards-operations.e2e.js: move does not create duplicate cards
+03-cards-operations.e2e.js: copying a card adds it to the target list without removing the original
+03-cards-operations.e2e.js: copying a card to an empty board shows an error or empty list selector without crashing

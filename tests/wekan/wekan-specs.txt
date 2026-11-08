@@ -196,3 +196,9 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 02-cards-open-view.e2e.js: editing the card title does not break the card
 02-cards-open-view.e2e.js: a minicard title opens the card instead of an inline editor
 02-cards-open-view.e2e.js: #6639: a markdown link in a minicard title opens instead of editing
+board-view-titles.e2e.js: minicard title honors formatted
+board-view-titles.e2e.js: minicard title honors plain-links
+board-view-titles.e2e.js: minicard title honors plain-source
+board-view-titles.e2e.js: opened card title honors formatted
+board-view-titles.e2e.js: opened card title honors plain-links
+board-view-titles.e2e.js: opened card title honors plain-source

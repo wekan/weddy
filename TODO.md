@@ -63,11 +63,13 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 263 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 286 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
-- **Firefox and WebKit**: the browser tests have run in Chromium only. In the
-  VSCodium Flatpak sandbox Playwright's Firefox needs a newer NSS (3.126) than
-  the runtime has, and WebKit needs libevent, enchant, flite and more; run
+- **Firefox and WebKit**: the browser tests have run in Chromium only.
+  Both browsers are installed under `.tools/ms-playwright`, but in the
+  development sandbox Firefox crashes at start (SIGSEGV: its own sandbox
+  cannot create a user namespace, `clone()` EPERM), and WebKit lacks host
+  libraries (libgtk-4, libicu74, libevent and more). Run
   `WEKAN_PLAYWRIGHT_ALL=1 ./build.sh everything` on a computer or in a
   container that has them.
 - **netbsd/arm64**: 19 of the 20 platforms build locally; this one does not,

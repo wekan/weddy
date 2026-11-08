@@ -20,9 +20,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **Attachments, the rest**: thumbnails and previews, copy and move to another
   card, and storage other than the file system (S3, GridFS) that Node.js WeKan
   can use.
-- **Users, the rest**: outgoing e-mail and sending an invitation are done;
-  signing up with an invitation code and joining its boards, the sidebar's
-  invitations to accept or decline, forgot password, e-mail verification,
+- **Users, the rest**: outgoing e-mail, invitations and signing up with an
+  invitation code are done; the sidebar's invitations to accept or decline,
+  forgot password, e-mail verification,
   avatars, and the rest of Admin Panel (settings, organizations, teams).
 - **LDAP, CAS and SAML login**: OAuth2/OIDC is done with WeKan's OAUTH2_*
   settings; these three need a directory server or an identity provider to test

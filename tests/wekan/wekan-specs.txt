@@ -169,3 +169,4 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 73-invitation-board-grant.e2e.js
 39-email-verification.e2e.js
 72-invitation-profile.e2e.js
+45-profile-email.e2e.js

@@ -167,3 +167,4 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 74-linked-write-policy.e2e.js: REST linked-card creation follows the same source write rule (LinkedWriteBleed)
 69-comment-card-boundary.e2e.js
 73-invitation-board-grant.e2e.js
+39-email-verification.e2e.js

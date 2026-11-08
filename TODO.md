@@ -31,8 +31,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   the CSV, Excel, PDF, zip and ICS
   exports, the chart exports and export of all boards; board domains; board
   view settings and the card field order (WeKan's `boardViewSettings.js` and
-  `cardFieldOrder.js`); `users`, `createtoken`/`deletetoken`, `settings` and
-  `admin/*` (Admin Panel); imports from other tools and from a zip; inbound
+  `cardFieldOrder.js`); `settings` and `admin/*` (Admin Panel); imports from other tools and from a zip; inbound
   e-mail; and a card's bot runs.
 - **Activities in the pages, and notifications**: changes are recorded as
   Node.js WeKan records them, but Weddy's pages do not show the activity feed

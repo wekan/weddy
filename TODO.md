@@ -38,7 +38,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   runs.
 - **Rules, the rest**: rules run on activities, and button rules from
   rules.runButton; still to come are the Rules page and Board Settings'
-  rule views, the board header's rule buttons, triggers with {tokens},
+  rule views, triggers with {tokens},
   advanced-filter, move-direction and text-contains triggers, and the
   e-mail, bot, copy, link, sort and relative-date actions.
 - **Notifications, the rest**: activities notify as Node.js WeKan's do and

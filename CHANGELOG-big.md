@@ -136,6 +136,8 @@ package; eight more of WeKan's own tests run against Weddy
 
 </details>
 
+- [Card dependencies, and a card's dueComplete, stickers and locations in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/2c21caa22cc51561e06b58c3e9f83c87fa3e1951) - in WeKan's shape and with its role rules; three more of WeKan's own tests run against Weddy (<a href="https://github.com/wekan/weddy/commit/79ebb667f1f4efb952053cd6af22fdd3ff868050">wekan-specs.txt</a>), 55 tests in all. Thanks to xet7.
+
 **Release** - what a release says it is made of.
 
 - [NetBSD/amd64 builds: go-systemd v22.6.0 for NetBSD, without the function x/sys cannot build there](https://github.com/wekan/weddy/commit/486ba1828013577ff0609b5ef7d31cfea8fff5d3); 19 of 20 platforms build. Thanks to xet7.

@@ -223,3 +223,5 @@ instance-board-visibility.e2e.js: the owner can make a board visible to signed-i
 03-cards-operations.e2e.js: move does not create duplicate cards
 03-cards-operations.e2e.js: copying a card adds it to the target list without removing the original
 03-cards-operations.e2e.js: copying a card to an empty board shows an error or empty list selector without crashing
+03-cards-operations.e2e.js: add-to-top places the card first in the list
+03-cards-operations.e2e.js: add-to-bottom places the card last in the list

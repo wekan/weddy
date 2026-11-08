@@ -75,7 +75,6 @@
 70-rest-board-management.e2e.js: normal member cannot rename a board through REST
 admin-attachment-retention.e2e.js: negative: an ordinary user cannot open the retention settings
 admin-new-env-settings.e2e.js: negative: an ordinary user is offered none of them
-default-avatar.e2e.js: the default avatar route redirects to an http(s) address or answers 404
 duplicate-dependencies.e2e.js: REST accepts both duplicate types and retains board boundary validation
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (ltr)
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (rtl)
@@ -135,7 +134,6 @@ scrum-native-export.e2e.js: private board export refuses assigned-only members i
 18-rtl-layout.e2e.js: card details panel: direction and visible title
 19-accessibility.e2e.js: the html element declares its language and text direction
 24-feature-issues.e2e.js: #4266 deleting a board removes its rules, triggers and actions
-29-card-settings-avatar.e2e.js: complete toggle is hidden on minicards by default
 37-card-drag-sort.e2e.js: #3826 cards that have a parent can be reordered and the new order persists
 37-card-drag-sort.e2e.js: #5421 a fast touch drag moves the card without opening it
 38-fixed-list-width.e2e.js: anonymous/public-board: fixed width lives in localStorage and does not leak across boards
@@ -166,7 +164,6 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 74-linked-write-policy.e2e.js: REST linked-card creation follows the same source write rule (LinkedWriteBleed)
 69-comment-card-boundary.e2e.js
 73-invitation-board-grant.e2e.js
-39-email-verification.e2e.js
 72-invitation-profile.e2e.js
 45-profile-email.e2e.js
 71-button-rule-boundary.e2e.js
@@ -230,3 +227,7 @@ instance-board-visibility.e2e.js: the owner can make a board visible to signed-i
 notification-delivery-settings.e2e.js: Corsican clear notification drawer renders corrected card activity
 notification-delivery-settings.e2e.js: Corsican delete-all confirmation preserves cancellation
 notification-email-delivery.e2e.js
+default-avatar.e2e.js
+avatar-sub-path.e2e.js
+29-card-settings-avatar.e2e.js
+39-email-verification.e2e.js

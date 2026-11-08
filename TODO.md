@@ -21,8 +21,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   card, and storage other than the file system (S3, GridFS) that Node.js WeKan
   can use.
 - **Users, the rest**: outgoing e-mail, invitations, e-mail verification
-  (sent at sign-up too), forgot password and avatars are done; the rest of
-  Admin Panel (settings, organizations, teams) is not.
+  (sent at sign-up too), forgot password, avatars, and organizations' and
+  teams' feature flags and group sync are done; the rest of Admin Panel
+  (its settings pages, and the People pages that make and edit orgs and
+  teams) is not.
 - **LDAP, CAS and SAML login**: OAuth2/OIDC is done with WeKan's OAUTH2_*
   settings; these three need a directory server or an identity provider to test
   against, which the development sandbox does not have - build them with WeKan's
@@ -62,7 +64,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 291 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 297 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

@@ -110,6 +110,7 @@ and registration, never on oneself.
 
 </details>
 
+- [Unique card numbers, delete with children, bulk delete, copy, card settings, My Cards and deleting users in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/97b60d80dc4352e8be34f8fdf4f72934a87af3af); eight more of WeKan's own tests run against Weddy (<a href="https://github.com/wekan/weddy/commit/a3f0269f6528a1b5a296124a197d071138976182">wekan-specs.txt</a>), 44 tests in all. Thanks to xet7.
 - [Sign in with OAuth2 / OpenID Connect, with Node.js WeKan's OAUTH2_* settings, PKCE, state and nonce](https://github.com/wekan/caddy-wekan-plugin/commit/fee57982c84301ada4ef74cea2d0f0ad19034099). Thanks to xet7.
 - [Activities as Node.js WeKan records them, for its feed, notifications and rules](https://github.com/wekan/caddy-wekan-plugin/commit/2d9f1bf5bb2e560f3c450aed42d61efc31458bdf). Thanks to xet7.
 
@@ -117,6 +118,7 @@ and registration, never on oneself.
 
 **Release** - what a release says it is made of.
 
+- [NetBSD/amd64 builds: go-systemd v22.6.0 for NetBSD, without the function x/sys cannot build there](https://github.com/wekan/weddy/commit/486ba1828013577ff0609b5ef7d31cfea8fff5d3); 19 of 20 platforms build. Thanks to xet7.
 - [Local builds build xcaddy for this computer, so Windows, macOS and the BSDs build too](https://github.com/wekan/weddy/commit/6a08aa37ae585b7aff817b4ff4f12b596c2211f7). Thanks to xet7.
 - [The release notes list caddy-ferretdb-plugin and wekan/FerretDB with their commits](https://github.com/wekan/weddy/commit/97cb0638e351f02dc87ea1a0cb830afe1b0f5eec). Thanks to xet7.
 
@@ -128,6 +130,7 @@ and fixes the following SECURITY ISSUES found by GitHub CodeQL code scanning:
 
 - [Gitea in Weddy: the container tag list's allocation from ?n=, 32-bit wraps, and credentials in the access log](https://github.com/wekan/caddy-gitea-plugin/commit/1cf3aca662f297881b2c47486c1ed80bb5c432f2) - as caddy-gitea-plugin's dist/gitea/security-hardening.patch; the other alerts in Gitea's code are reviewed in its [Hall of Fame](https://github.com/wekan/caddy-gitea-plugin/wiki/Hall-of-Fame). Thanks to GitHub CodeQL and xet7.
 - [WeKan in Weddy: request values only through $eq, bounded argon2, Secure cookies](https://github.com/wekan/caddy-wekan-plugin/commit/1a1c8fb30f7e22e8fb4274c772b6556bbaf7478a) - see caddy-wekan-plugin's [Hall of Fame](https://github.com/wekan/caddy-wekan-plugin/wiki/Hall-of-Fame). Thanks to GitHub CodeQL and xet7.
+- [Weddy's own scripts: a linear pattern in sync-from-wekan.py, and Meteor's bcrypt cost in the test helper](https://github.com/wekan/weddy/commit/90f1439a41c532f0df37b92a46a25ca39958076e) - see Weddy's [Hall of Fame](https://github.com/wekan/weddy/wiki/Hall-of-Fame). Thanks to GitHub CodeQL and xet7.
 
 and fixes the following SECURITY ISSUES found by Dependabot:
 

@@ -27,9 +27,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   against, which the development sandbox does not have - build them with WeKan's
   LDAP_*, CAS_* and SAML_* settings and a test server of each.
 - **The rest of WeKan's REST API**: checklist items' edit and delete, comment
-  edit and delete, bulk delete, copy and move of cards, boards and lists, linked
-  cards, rules, export and import, users and `/api/user/cards` (the other tests
-  of WeKan's `tests/playwright/specs/17-rest-api` and `23-rest-api-more`).
+  edit and delete, moving cards between boards, copying boards and lists with
+  their webhooks and rules, subtasks and copied comments, linked cards, rules,
+  export and import (the other tests of WeKan's
+  `tests/playwright/specs/17-rest-api` and `23-rest-api-more`).
 - **Activities in the pages, and notifications**: changes are recorded as
   Node.js WeKan records them, but Weddy's pages do not show the activity feed
   yet, and nothing is sent by e-mail.
@@ -37,7 +38,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 18 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 26 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only. In the
   VSCodium Flatpak sandbox Playwright's Firefox needs a newer NSS (3.126) than

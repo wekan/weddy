@@ -164,3 +164,4 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
 35-list-sort-permissions.e2e.js
 68-board-mutation-policy.e2e.js
+74-linked-write-policy.e2e.js: REST linked-card creation follows the same source write rule (LinkedWriteBleed)

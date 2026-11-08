@@ -116,6 +116,26 @@ and registration, never on oneself.
 
 - [Change Language: every language WeKan has, named in itself, kept in profile.language](https://github.com/wekan/caddy-wekan-plugin/commit/d434a275bb08c350213ab7bca4cfd6e77a9b87a6). Thanks to xet7.
 
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/949636c326b7566b6d96d15bfdfe1fce3ab1090a">REST access by WeKan's role table, and ParentBleed, HashBleed, ErrorBleed and AssignedBleed fixed as in WeKan</a>. Thanks to xet7.</summary>
+
+A REST read of a whole board needs a role that sees every card, so an
+assigned-only member gets 403 (AssignedBleed); a write needs the role's write
+capability, comments the comment capability, and an assigned-only member
+comments only on cards assigned to them. The UI's writes and moves, a copy to
+another board and attachment writes use the same rule, and a Worker still
+moves cards. A `parentId` on a board the caller cannot see is refused - bulk
+create answers `{index, error: Forbidden}` for that entry alone (ParentBleed);
+members add/remove need the body action to be the route's own verb
+(HashBleed); `cards_count` of a board and a list answers a non-member 403
+(ErrorBleed). Refusals go to WeKan's `eventlog` as one summary row per problem,
+the shape Admin Panel -> Problems reads, and a high-severity attempt disables
+the account, as in WeKan. Go tests pin each, with negative tests over the whole
+package; eight more of WeKan's own tests run against Weddy
+(<a href="https://github.com/wekan/weddy/commit/bcf07ec3d1f1a0a763008b4d8256cc492c602fd2">wekan-specs.txt</a>), 52 tests in all.
+
+</details>
+
 **Release** - what a release says it is made of.
 
 - [NetBSD/amd64 builds: go-systemd v22.6.0 for NetBSD, without the function x/sys cannot build there](https://github.com/wekan/weddy/commit/486ba1828013577ff0609b5ef7d31cfea8fff5d3); 19 of 20 platforms build. Thanks to xet7.
@@ -125,6 +145,10 @@ and registration, never on oneself.
 **Many domains** - the Cloud Panel, in Weddy.
 
 - [Many WeKan domains from one Weddy, with the Cloud Panel](https://github.com/wekan/weddy/commit/ab862c2e81d0caa20f453ebe7f54d462b3a2c076). Thanks to xet7.
+
+and fixes the following bugs:
+
+- [A local rebuild of the same Weddy commit replaces its .xz instead of failing](https://github.com/wekan/weddy/commit/b6fff13a19ecbd9c659dce3422edf94432c373de). Thanks to xet7.
 
 and fixes the following SECURITY ISSUES found by GitHub CodeQL code scanning:
 

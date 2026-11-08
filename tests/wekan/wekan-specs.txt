@@ -79,9 +79,8 @@ default-avatar.e2e.js: the default avatar route redirects to an http(s) address 
 duplicate-dependencies.e2e.js: REST accepts both duplicate types and retains board boundary validation
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (ltr)
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (rtl)
-export-access.e2e.js: assigned-only private member cannot read unfiltered calendar.ics
-export-access.e2e.js: assigned-only private member cannot read unfiltered export/csv
-export-access.e2e.js: assigned-only private member cannot read unfiltered exportZip
+export-access.e2e.js
+25-excel-pdf.e2e.js: board PDF export returns a PDF document
 import-export-format-audit.e2e.js: csv: empty imports fail without creating a board
 import-export-format-audit.e2e.js: excel: empty imports fail without creating a board
 import-export-format-audit.e2e.js: markdown: empty imports fail without creating a board

@@ -172,3 +172,7 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 45-profile-email.e2e.js
 71-button-rule-boundary.e2e.js
 20-rules.e2e.js: RuleBleed: cross-board actions require destination write access
+20-rules.e2e.js: Rules opens as a fullscreen page with the board rules header
+20-rules.e2e.js: can create an event rule and see it in the list
+20-rules.e2e.js: #6630: a current-date action stores its description only on the Action
+20-rules.e2e.js: a board button rule renders a runnable button in the board header

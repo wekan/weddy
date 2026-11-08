@@ -194,3 +194,5 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 02-cards-open-view.e2e.js: minimize button collapses the maximized card back
 02-cards-open-view.e2e.js: copy-link button produces a URL that opens the card in full-screen view
 02-cards-open-view.e2e.js: editing the card title does not break the card
+02-cards-open-view.e2e.js: a minicard title opens the card instead of an inline editor
+02-cards-open-view.e2e.js: #6639: a markdown link in a minicard title opens instead of editing

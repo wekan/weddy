@@ -54,8 +54,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   header shows the unread ones, and the drawer lists them, marks them all
   read and deletes them all, a list is watched from its menu, and each
   notification is mailed as WeKan decides, and the drawer filters unread or
-  all and groups by card or board; still to come are WeKan's e-mail
-  digests, schedules and retries.
+  all and groups by card or board; e-mail goes through WeKan's durable
+  outbox with its schedules, grouping and retries; still to come is
+  WeKan's durable activity notification pipeline (activityNotification-
+  Intents and -Plans, #6768) and its background recovery, which WeKan's
+  watching and recovery e-mail tests check.
 
 ## Tests
 

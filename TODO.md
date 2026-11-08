@@ -20,9 +20,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **Attachments, the rest**: thumbnails and previews, copy and move to another
   card, and storage other than the file system (S3, GridFS) that Node.js WeKan
   can use.
-- **Users, the rest**: invitation codes and invitations to a board, forgot
-  password and e-mail verification (both need outgoing e-mail), avatars, and
-  the rest of Admin Panel (settings, organizations, teams).
+- **Users, the rest**: outgoing e-mail and sending an invitation are done;
+  signing up with an invitation code and joining its boards, the sidebar's
+  invitations to accept or decline, forgot password, e-mail verification,
+  avatars, and the rest of Admin Panel (settings, organizations, teams).
 - **LDAP, CAS and SAML login**: OAuth2/OIDC is done with WeKan's OAUTH2_*
   settings; these three need a directory server or an identity provider to test
   against, which the development sandbox does not have - build them with WeKan's
@@ -43,7 +44,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 26 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 191 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only. In the
   VSCodium Flatpak sandbox Playwright's Firefox needs a newer NSS (3.126) than

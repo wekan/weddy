@@ -179,6 +179,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [WeKan's /checklists/remove: a checklist goes with its items, only its own](https://github.com/wekan/caddy-wekan-plugin/commit/a4f0d400684f46e788ce766ca88c9186fd4754c0) (#6816); 7 of the 8 checklist tests of WeKan's spec 12 run against Weddy (<a href="https://github.com/wekan/weddy/commit/6048ccf00e2e638986c7813963722a8cb7f77b96">wekan-specs.txt</a>), 96 tests in all. Thanks to xet7.
 - [31 more WeKan tests that already passed against Weddy are listed](https://github.com/wekan/weddy/commit/7ecb6e28ba1629c820038fbb6dee42ebc03db470), found from a run of every WeKan spec and each checked again to have passed, not been skipped - 127 tests in all. Thanks to xet7.
 - [The site's settings document exists from the start, with WeKan's defaults](https://github.com/wekan/caddy-wekan-plugin/commit/06c431d5a46dfb669a54e1e732a4fbc3d06d7f60), as Node.js WeKan makes it, so WeKan's tests and tools that read it find it. Thanks to xet7.
+- [A swimlane's + adds a swimlane below or above it](https://github.com/wekan/caddy-wekan-plugin/commit/a22ad0203b364d5d264d8ac35d4ed327f888184f), WeKan's swimlaneAddPopup; [59 more WeKan tests that pass against Weddy are listed](https://github.com/wekan/weddy/commit/ff0faa48b587a44116e87d0c6523aaa92df786a2) - those inside a describe block were never matched before - 186 tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

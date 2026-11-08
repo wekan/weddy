@@ -205,3 +205,12 @@ board-view-titles.e2e.js: opened card title honors plain-source
 activity-viewer.e2e.js: card and sidebar activities obey formatted in en
 activity-viewer.e2e.js: card and sidebar activities obey plain-links in en
 activity-viewer.e2e.js: card and sidebar activities obey formatted in st
+10-stability.e2e.js: #6654: a private-board session survives a full page refresh
+10-stability.e2e.js: comment is not lost when the page is refreshed immediately after saving
+13-swimlanes.e2e.js: swimlane action popup opens without JS errors
+30-ldap-orgs-teams.e2e.js: non-admin client call is rejected and creates nothing
+36-fixed-bug-regressions.e2e.js: #5892 a collapsed list with a custom width still shrinks to the rail
+36-fixed-bug-regressions.e2e.js: #6420 voting buttons render without a currentUser ReferenceError
+42-board-comments-attachments.e2e.js: a card comment (carrying boardId) is published and shown when the card is opened
+notification-delivery-settings.e2e.js: #5171 tray: an entry scheduled for later is not counted until its time
+scrum-container-move.e2e.js: list move retains destination Scrum list category

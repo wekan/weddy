@@ -48,8 +48,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   e-mail, bot, copy, link, sort and relative-date actions.
 - **Notifications, the rest**: activities notify as Node.js WeKan's do, the
   header shows the unread ones, and the drawer lists them, marks them all
-  read and deletes them all; still to come are watching a list from the
-  pages, the drawer's filters and grouping, and delivery by e-mail.
+  read and deletes them all, and a list is watched from its menu; still to
+  come are the drawer's filters and grouping, and delivery by e-mail.
 
 ## Tests
 

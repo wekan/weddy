@@ -164,6 +164,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [A board's domains, and Admin Panel's settings in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/6675edd1be999d9d83648a922ef0985e2a4777ca) - only WeKan's REST settings, never the SMTP credentials. Thanks to xet7.
 - [Admin Panel -> Problems in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/76f2f39222ee86af333ba18c0482c0c9b67affb3) - the overview, each stream's rows and acknowledging, with the security stream Weddy's guards write. Thanks to xet7.
 - [The board as CSV and TSV](https://github.com/wekan/caddy-wekan-plugin/commit/83292157b28c250c25cae8c1c67d888c3c629470), [as an iCalendar feed](https://github.com/wekan/caddy-wekan-plugin/commit/fdad086582773c45146bde1bb80a2d3fe360bdbe), and [an iCalendar file imported as cards](https://github.com/wekan/caddy-wekan-plugin/commit/a6f6346734aae6257cbfb2386e609441d4c53ae6) in the REST API, as Node.js WeKan writes and reads them - a spreadsheet formula never left to run. Thanks to xet7.
+- [The board as a .zip](https://github.com/wekan/caddy-wekan-plugin/commit/0f8d2b6da4b8557537319fbaebd86da26f0fab6b) - wekan.json and the attachments as files, no entry pointing out of the zip - and [all of a user's boards in one .zip](https://github.com/wekan/caddy-wekan-plugin/commit/c25af3e7284cf4d29e4829f642302d6951d6a70d) as WeKan JSON, CSV or TSV, in the REST API. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

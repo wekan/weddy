@@ -185,3 +185,4 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 20-rules.e2e.js: can select all rules and switch to the workflow view
 20-rules.e2e.js: en named-member rule trigger uses its own verb composition
 88-basque-rule-subject-order.e2e.js
+01-boards-users.e2e.js

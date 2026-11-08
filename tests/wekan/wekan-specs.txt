@@ -20,3 +20,11 @@
 17-rest-api.e2e.js: #2875 create a card with no / empty members stores [] not null
 17-rest-api.e2e.js: #5650 board created via REST without owner is owned by the caller
 17-rest-api.e2e.js: #1894 a disabled user cannot be added to a board
+17-rest-api.e2e.js: user deletion confirms removal and reports a repeat as 404
+17-rest-api.e2e.js: #4743/#5813 bulk create assigns unique card numbers, bulk delete removes them
+17-rest-api.e2e.js: #4743 bulk create rejects an oversized array (>500)
+17-rest-api.e2e.js: #3252 deleting a card removes its children and adds one delete activity
+17-rest-api.e2e.js: copy a card to position 0 of another list
+17-rest-api.e2e.js: #3062 get and update board card settings
+17-rest-api.e2e.js: #4815 GET /api/user/cards returns the user's cards, with a due filter
+17-rest-api.e2e.js: unauthenticated request cannot read user cards

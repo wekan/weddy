@@ -7,7 +7,7 @@ const { setPassword } = require('./helpers.cjs');
 const auth = token => ({ Authorization: `Bearer ${token}` });
 
 test('POST /users/login answers id, token and tokenExpires', async ({ request, user }) => {
-  setPassword(user.id, 'Api-pw-1');
+  await setPassword(user.id, 'Api-pw-1');
   const res = await request.post('/users/login', { data: { username: user.username, password: 'Api-pw-1' } });
   expect(res.status()).toBe(200);
   const body = await res.json();

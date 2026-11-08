@@ -6,7 +6,7 @@ const { loginWithCredentials, logout } = require('../tests/playwright/helpers/au
 const { setPassword } = require('./helpers.cjs');
 
 test('the sign-in form signs a WeKan user in, and All Boards lists their board', async ({ page, user, board }) => {
-  setPassword(user.id, 'Weddy-pw-1');
+  await setPassword(user.id, 'Weddy-pw-1');
   await loginWithCredentials(page, user.username, 'Weddy-pw-1');
   await expect(page.locator('.board-list-item-name', { hasText: `E2E Board ${board.boardId}` })).toBeVisible();
   await logout(page);
@@ -15,13 +15,13 @@ test('the sign-in form signs a WeKan user in, and All Boards lists their board',
 });
 
 test('an e-mail address signs in too', async ({ page, user }) => {
-  setPassword(user.id, 'Weddy-pw-2');
+  await setPassword(user.id, 'Weddy-pw-2');
   await loginWithCredentials(page, user.email, 'Weddy-pw-2');
   await expect(page.locator('.board-list-title')).toBeVisible();
 });
 
 test('negative: a wrong password shows the error and stays on sign-in', async ({ page, user }) => {
-  setPassword(user.id, 'Weddy-pw-3');
+  await setPassword(user.id, 'Weddy-pw-3');
   await page.goto('/sign-in');
   await page.locator('#at-field-username_and_email').fill(user.username);
   await page.locator('#at-field-password').fill('not-it');

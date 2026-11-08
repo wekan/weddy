@@ -64,3 +64,4 @@
 14-voting-watchers.e2e.js: Corsican Planning Poker shows literal scores without progress prefixes
 76-list-collapse-refresh.e2e.js: #6712 a collapsed list stays collapsed after a hard reload
 77-public-board-favorite.e2e.js: #6713 public board favorite survives reload and appears in Favorites
+16-card-members-description.e2e.js

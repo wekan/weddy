@@ -180,6 +180,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [31 more WeKan tests that already passed against Weddy are listed](https://github.com/wekan/weddy/commit/7ecb6e28ba1629c820038fbb6dee42ebc03db470), found from a run of every WeKan spec and each checked again to have passed, not been skipped - 127 tests in all. Thanks to xet7.
 - [The site's settings document exists from the start, with WeKan's defaults](https://github.com/wekan/caddy-wekan-plugin/commit/06c431d5a46dfb669a54e1e732a4fbc3d06d7f60), as Node.js WeKan makes it, so WeKan's tests and tools that read it find it. Thanks to xet7.
 - [A swimlane's + adds a swimlane below or above it](https://github.com/wekan/caddy-wekan-plugin/commit/a22ad0203b364d5d264d8ac35d4ed327f888184f), WeKan's swimlaneAddPopup; [59 more WeKan tests that pass against Weddy are listed](https://github.com/wekan/weddy/commit/ff0faa48b587a44116e87d0c6523aaa92df786a2) - those inside a describe block were never matched before - 186 tests in all. Thanks to xet7.
+- [WeKan's updateListSort and /lists/update, and Meteor.apply](https://github.com/wekan/caddy-wekan-plugin/commit/79f41e101aeac86d9a968b1073c1318e87d078e1) - a read-only member gets #5462's 403 "Access denied"; WeKan's #5462 test runs against Weddy (<a href="https://github.com/wekan/weddy/commit/d93a630c22f92c07e899199360ec9063003daf2b">wekan-specs.txt</a>), 187 tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

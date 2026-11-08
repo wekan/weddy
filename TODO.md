@@ -54,7 +54,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 220 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 222 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only. In the
   VSCodium Flatpak sandbox Playwright's Firefox needs a newer NSS (3.126) than

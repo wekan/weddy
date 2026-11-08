@@ -8,10 +8,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 
 ## WeKan in Go (caddy-wekan-plugin)
 
-- **WeKan's pages as Go Pug templates.** 14 of WeKan's 174 Jade templates are
+- **WeKan's pages as Go Pug templates.** 16 of WeKan's 174 Jade templates are
   started: sign-in and sign-up, All Boards, the board, its swimlanes, lists and
   cards, a card's title, description and attachments, the profile and the
-  language, People and the Cloud Panel. The other 160 are listed in caddy-wekan-plugin's
+  language, People, the Cloud Panel, the sidebar's board menu and the Export
+  pop-over. The other 158 are listed in caddy-wekan-plugin's
   [TEMPLATES.md](https://github.com/wekan/caddy-wekan-plugin/blob/main/TEMPLATES.md):
   card details (dates, members, labels, checklists, comments, attachments,
   custom fields), the board header and its menus, the board views, Admin Panel,

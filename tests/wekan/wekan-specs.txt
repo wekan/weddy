@@ -40,3 +40,7 @@
 23-rest-api-more.e2e.js: whole-board import recreates the board together with its rules
 23-rest-api-more.e2e.js: rules: unauthenticated request is rejected
 23-rest-api-more.e2e.js: export with attachments=false returns the board without attachment file data
+17-rest-api.e2e.js: copying a card cross-board re-homes its subtasks onto the destination board
+17-rest-api.e2e.js: #5166 copied comments get the destination boardId and keep their author
+17-rest-api.e2e.js: #5592/#5627 copying a board copies its webhooks and rules
+17-rest-api.e2e.js: #5897 create a linked card referencing an existing card

@@ -35,9 +35,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   domains, and organizations and teams (which Weddy does not have yet);
   imports from other tools; inbound e-mail; and a card's bot
   runs.
-- **Notifications**: activities are recorded and shown in the card and the
-  sidebar as Node.js WeKan shows them, but nobody is notified yet - no
-  notifications drawer, no watching, no e-mail.
+- **Notifications, the rest**: activities notify as Node.js WeKan's do and
+  the header shows the unread ones; the notifications drawer (reading them,
+  marking them read), watching a board, list or card from the pages, and
+  delivery by e-mail are still to come.
 
 ## Tests
 

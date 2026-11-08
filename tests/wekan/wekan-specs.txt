@@ -162,3 +162,4 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
 viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
 viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
+35-list-sort-permissions.e2e.js

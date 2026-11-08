@@ -60,13 +60,19 @@ platforms | while read -r p; do
   goarch="$arch"; goarm=""
   case "$arch" in arm-*) goarch=arm; goarm="${arch#arm-}" ;; esac
   name="weddy-$VERSION-$os-$arch"; [ "$os" = windows ] && name="$name.exe"
+  # NetBSD: github.com/coreos/go-systemd/v22 v22.7.0 (under rclone and step-ca) added
+  # SdNotifyMonotonicUsec, which calls unix.CLOCK_MONOTONIC - golang.org/x/sys does
+  # not define it for NetBSD, so nothing builds. Nothing in Weddy calls that function,
+  # and everything that is called is in v22.6.0, which NetBSD builds use.
+  extra=()
+  [ "$os" = netbsd ] && extra=(--replace "github.com/coreos/go-systemd/v22=github.com/coreos/go-systemd/v22@v22.6.0")
   echo "== $p"
   if GOOS="$os" GOARCH="$goarch" GOARM="$goarm" $XCADDY build "${CADDY[@]}" --output "$OUT/$name" \
       --with "github.com/wekan/caddy-gitea-plugin=$SRC/caddy-gitea-plugin" \
       --with "github.com/wekan/caddy-wekan-plugin=$SRC/caddy-wekan-plugin" \
       --with "github.com/wekan/caddy-rclone-plugin=$SRC/caddy-rclone-plugin" \
       --with "github.com/wekan/caddy-ferretdb-plugin=$SRC/caddy-ferretdb-plugin" \
-      --replace "github.com/FerretDB/FerretDB=$SRC/FerretDB" > "$OUT/$name.log" 2>&1; then
+      --replace "github.com/FerretDB/FerretDB=$SRC/FerretDB" ${extra[@]+"${extra[@]}"} > "$OUT/$name.log" 2>&1; then
     xz -k -9 -T0 "$OUT/$name"
     rm -f "$OUT/$name.log"
   else

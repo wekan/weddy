@@ -44,14 +44,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   the runtime has, and WebKit needs libevent, enchant, flite and more; run
   `WEKAN_PLAYWRIGHT_ALL=1 ./build.sh everything` on a computer or in a
   container that has them.
-- **NetBSD**: 18 of the 20 platforms build locally; the two NetBSD ones do not,
-  for reasons upstream, not in Weddy's code:
-  - netbsd/amd64: rclone's logging uses github.com/coreos/go-systemd/v22
-    v22.7.0, whose `daemon/sdnotify_unix.go` calls `unix.CLOCK_MONOTONIC`, which
-    golang.org/x/sys (v0.49.0, the newest) does not define for NetBSD - fix it in
-    go-systemd or x/sys, or build rclone's logging without it;
-  - netbsd/arm64: modernc.org/libc (v1.79.0), under the pure-Go SQLite that
-    FerretDB and Gitea use, has no netbsd/arm64 port.
+- **netbsd/arm64**: 19 of the 20 platforms build locally; this one does not,
+  for a reason upstream: modernc.org/libc (v1.79.0), under the pure-Go SQLite
+  that FerretDB and Gitea use, has no netbsd/arm64 port.
 
 ## For the maintainer (on GitHub)
 

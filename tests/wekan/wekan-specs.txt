@@ -34,3 +34,5 @@
 17-rest-api.e2e.js: an assigned-only member cannot read the whole board over REST (AssignedBleed)
 17-rest-api.e2e.js: #5688 copying a card copies its checklist and all items
 40-rest-card-move-list.e2e.js
+23-rest-api-more.e2e.js: card PUT sets stickers, locations and the complete checkbox
+28-dependencies-rest.e2e.js

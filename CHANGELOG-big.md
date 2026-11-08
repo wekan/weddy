@@ -153,6 +153,8 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 </details>
 
+- [Card copies take subtasks and comments along, linked cards, and board copies with their webhooks and rules in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/09e2b04247d77ace1d1bd287dfd6dd08196e5d73); four more of WeKan's own tests run against Weddy (<a href="https://github.com/wekan/weddy/commit/10535c76c729988c6a9d00911b6176ef04d860ca">wekan-specs.txt</a>), 63 tests in all. Thanks to xet7.
+
 **Release** - what a release says it is made of.
 
 - [NetBSD/amd64 builds: go-systemd v22.6.0 for NetBSD, without the function x/sys cannot build there](https://github.com/wekan/weddy/commit/486ba1828013577ff0609b5ef7d31cfea8fff5d3); 19 of 20 platforms build. Thanks to xet7.

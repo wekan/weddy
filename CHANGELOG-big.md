@@ -130,7 +130,7 @@ and fixes the following SECURITY ISSUES found by GitHub CodeQL code scanning:
 
 - [Gitea in Weddy: the container tag list's allocation from ?n=, 32-bit wraps, and credentials in the access log](https://github.com/wekan/caddy-gitea-plugin/commit/1cf3aca662f297881b2c47486c1ed80bb5c432f2) - as caddy-gitea-plugin's dist/gitea/security-hardening.patch; the other alerts in Gitea's code are reviewed in its [Hall of Fame](https://github.com/wekan/caddy-gitea-plugin/wiki/Hall-of-Fame). Thanks to GitHub CodeQL and xet7.
 - [WeKan in Weddy: request values only through $eq, bounded argon2, Secure cookies](https://github.com/wekan/caddy-wekan-plugin/commit/1a1c8fb30f7e22e8fb4274c772b6556bbaf7478a) - see caddy-wekan-plugin's [Hall of Fame](https://github.com/wekan/caddy-wekan-plugin/wiki/Hall-of-Fame). Thanks to GitHub CodeQL and xet7.
-- [Weddy's own scripts: a linear pattern in sync-from-wekan.py, and Meteor's bcrypt cost in the test helper](https://github.com/wekan/weddy/commit/90f1439a41c532f0df37b92a46a25ca39958076e) - see Weddy's [Hall of Fame](https://github.com/wekan/weddy/wiki/Hall-of-Fame). Thanks to GitHub CodeQL and xet7.
+- [Weddy's own scripts: a linear pattern in sync-from-wekan.py](https://github.com/wekan/weddy/commit/90f1439a41c532f0df37b92a46a25ca39958076e), and [Meteor's pre-hash in the test helper with Web Crypto, as WeKan's #599](https://github.com/wekan/weddy/commit/9b0bd53fbfd486ad8380dfb0f6b88e915187158c) - see Weddy's [Hall of Fame](https://github.com/wekan/weddy/wiki/Hall-of-Fame). Thanks to GitHub CodeQL and xet7.
 
 and fixes the following SECURITY ISSUES found by Dependabot:
 

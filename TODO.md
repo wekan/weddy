@@ -37,8 +37,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   runs.
 - **Notifications, the rest**: activities notify as Node.js WeKan's do and
   the header shows the unread ones; the notifications drawer (reading them,
-  marking them read), watching a board, list or card from the pages, and
-  delivery by e-mail are still to come.
+  marking them read), watching a list from the pages, and delivery by e-mail
+  are still to come.
 
 ## Tests
 

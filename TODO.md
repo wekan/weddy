@@ -30,9 +30,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   LDAP_*, CAS_* and SAML_* settings and a test server of each.
 - **The rest of WeKan's REST API**: WeKan's own REST tests of specs 17, 23,
   28 and 40 now run against Weddy, and the board, card and chart exports as
-  Excel and PDF; these routes of WeKan's are still missing: the Cumulative
-  Flow, WIP Run, Flow Efficiency, Time and flow-analytics chart exports (501
-  until ported), the Scrum charts' rows (Weddy has no sprints yet), the
+  Excel and PDF, every chart included; these routes of WeKan's are still
+  missing: the Scrum charts' rows (Weddy has no sprints yet), the
   other tools' formats (Markdown, OPML, Todoist and the rest) of the export
   of all boards, and the PDF's comments and checklists; Admin
   Panel's attachment settings, OAuth providers, passwordless login, all
@@ -55,8 +54,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   header shows the unread ones, and the drawer lists them, marks them all
   read and deletes them all, a list is watched from its menu, and each
   notification is mailed as WeKan decides, and the drawer filters unread or
-  all; still to come are the drawer's grouping, and WeKan's e-mail digests,
-  schedules and retries.
+  all and groups by card or board; still to come are WeKan's e-mail
+  digests, schedules and retries.
 
 ## Tests
 

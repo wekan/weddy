@@ -178,6 +178,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Requested By and Assigned By in the card details](https://github.com/wekan/caddy-wekan-plugin/commit/9a2c0f6d5896533f3ad716aa46da224c75bf9102), with WeKan's Edit or Add; every test of WeKan's spec 16 runs against Weddy (<a href="https://github.com/wekan/weddy/commit/3b1dec4732ffcc7ca449bd0ca5e589db2d66b073">wekan-specs.txt</a>), 89 tests in all. Thanks to xet7.
 - [WeKan's /checklists/remove: a checklist goes with its items, only its own](https://github.com/wekan/caddy-wekan-plugin/commit/a4f0d400684f46e788ce766ca88c9186fd4754c0) (#6816); 7 of the 8 checklist tests of WeKan's spec 12 run against Weddy (<a href="https://github.com/wekan/weddy/commit/6048ccf00e2e638986c7813963722a8cb7f77b96">wekan-specs.txt</a>), 96 tests in all. Thanks to xet7.
 - [31 more WeKan tests that already passed against Weddy are listed](https://github.com/wekan/weddy/commit/7ecb6e28ba1629c820038fbb6dee42ebc03db470), found from a run of every WeKan spec and each checked again to have passed, not been skipped - 127 tests in all. Thanks to xet7.
+- [The site's settings document exists from the start, with WeKan's defaults](https://github.com/wekan/caddy-wekan-plugin/commit/06c431d5a46dfb669a54e1e732a4fbc3d06d7f60), as Node.js WeKan makes it, so WeKan's tests and tools that read it find it. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

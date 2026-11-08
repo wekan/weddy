@@ -51,3 +51,4 @@
 08-notifications-activity.e2e.js: activity log entries include a non-empty timestamp
 08-notifications-activity.e2e.js: working (time) log fields are accessible on a card
 08-notifications-activity.e2e.js: @mention in a comment is stored in the activity DB
+08-notifications-activity.e2e.js: #6658: assigning a muted board member creates no notification

@@ -181,3 +181,5 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 20-rules.e2e.js: Galician attachment rule actions agree with the attachment noun
 44-rules.e2e.js: #6490: Rules list — Delete and View act on the clicked rule, not the first
 44-rules.e2e.js: #6749: Rules list — Select all / Unselect all visibly tick and untick every rule
+20-rules.e2e.js: Import / Export dialog offers JSON and CSV export
+20-rules.e2e.js: can select all rules and switch to the workflow view

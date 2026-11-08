@@ -44,3 +44,4 @@
 17-rest-api.e2e.js: #5166 copied comments get the destination boardId and keep their author
 17-rest-api.e2e.js: #5592/#5627 copying a board copies its webhooks and rules
 17-rest-api.e2e.js: #5897 create a linked card referencing an existing card
+23-rest-api-more.e2e.js: board menu downloads complete JSON in both attachment modes

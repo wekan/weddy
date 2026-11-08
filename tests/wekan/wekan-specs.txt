@@ -62,3 +62,4 @@
 14-voting-watchers.e2e.js: Latin positive vote label records the matching vote
 14-voting-watchers.e2e.js: Latin negative vote label records the matching vote
 14-voting-watchers.e2e.js: Corsican Planning Poker shows literal scores without progress prefixes
+76-list-collapse-refresh.e2e.js: #6712 a collapsed list stays collapsed after a hard reload

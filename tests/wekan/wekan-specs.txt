@@ -54,3 +54,10 @@
 08-notifications-activity.e2e.js: #6658: assigning a muted board member creates no notification
 08-notifications-activity.e2e.js: #6658 explicit list watching receives comments on a muted board
 08-notifications-activity.e2e.js: notification indicator appears after a watching member is mentioned
+14-voting-watchers.e2e.js: positive vote button is clickable and registers the voted state
+14-voting-watchers.e2e.js: negative vote button is clickable and registers the voted state
+14-voting-watchers.e2e.js: toggling watch on a card succeeds without errors
+14-voting-watchers.e2e.js: watching/unwatching the board works without errors
+14-voting-watchers.e2e.js: vote counts update in the card after voting
+14-voting-watchers.e2e.js: Latin positive vote label records the matching vote
+14-voting-watchers.e2e.js: Latin negative vote label records the matching vote

@@ -23,7 +23,36 @@ each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
 Gitea's own.
 
-This release adds the following new features:
+This release fixes the following CRITICAL SECURITY ISSUE of [CrossBoardExportBleed](https://wekan.fi/hall-of-fame/crossboardexportbleed/):
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/b29d36a22ece67a92d3b97c3ec8887891d6258ec">WeKan in Weddy: every export follows Admin Panel's export switch</a>. Thanks to xet7.</summary>
+
+Node.js WeKan's Admin Panel can turn all export off (`disableAllExport`,
+[GHSA-8885-xrq4-j47h](https://github.com/wekan/wekan/security/advisories/GHSA-8885-xrq4-j47h)).
+Weddy shares that settings document but never read it, so with export off,
+Weddy still exported boards, cards, attachments, calendars and all boards at
+once. Every export route now answers 403 first, and the attempt is in Admin
+Panel -> Problems as `authz.export-disabled`, never disabling the account. A
+test asks all ten routes with the switch on and off, and the negative test
+fails on any export route registered without the switch.
+
+</details>
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/f0c5e19c9f00196420182a83d306a3b065611187">WeKan in Weddy: Anonymize export users holds for every export</a>. Thanks to xet7.</summary>
+
+With Admin Panel -> Anonymize export users on, Weddy's exports still named
+every user. The JSON, ZIP, all-boards, CSV/TSV, Excel, PDF and calendar
+exports now write user1, user2 ... for usernames, full names and initials, drop
+avatars, and rewrite @mentions and requested-by / assigned-by, as WeKan's
+`anonymizeExportIdentities`; copying a board keeps its names. A test finds no
+real name in nine exports, and the negative test fails on any export function
+that reads users without the anonymizer.
+
+</details>
+
+and adds the following new features:
 
 **Build** - from upstream Caddy and the plugins, like gitea-patches.
 
@@ -216,6 +245,8 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Emoji, and Admin Panel's text policies, in card titles, as WeKan's viewer](https://github.com/wekan/caddy-wekan-plugin/commit/7b376af1dcd2970147ac57e7f450a4dd8415ccf9); WeKan's minicard and opened card title tests run against Weddy under each policy (<a href="https://github.com/wekan/weddy/commit/1e8093b22daefce6cd6106504d6d284c9ec6adad">wekan-specs.txt</a>), 235 tests in all. Thanks to xet7.
 - [Activities in Markdown and safe HTML, as WeKan's viewer; the sidebar keeps its place](https://github.com/wekan/caddy-wekan-plugin/commit/545c5e9a8e8bfc187094b418f0eaa4f44c0f5476) - HTML through bluemonday, scripts and event handlers never; WeKan's activity viewer tests run against Weddy (<a href="https://github.com/wekan/weddy/commit/bb02163ae37605963984fe1ea89b6c0eb9284e4d">wekan-specs.txt</a>), 238 tests in all. Thanks to xet7.
 - [9 more WeKan tests that pass against Weddy are listed](https://github.com/wekan/weddy/commit/41f61723ee68ea93d9b5a2e25ae33f34b52f913e), from a second run of every WeKan spec, each checked again - 247 tests in all. Thanks to xet7.
+- [The notifications drawer's filters: the unread ones, or all](https://github.com/wekan/caddy-wekan-plugin/commit/2db57393be1c8640eaff351db48d5930dcb7e290), as WeKan's drawer. Thanks to xet7.
+- [Board and card exports as Excel and PDF](https://github.com/wekan/caddy-wekan-plugin/commit/846d7a185d208cbe7f4c20852640dca5a7d9f926), and [the board report charts as Excel and PDF](https://github.com/wekan/caddy-wekan-plugin/commit/a2ca99e5de303b8f67b1704d9d26d047a0a2d801) - Burndown, Burnup, Control Chart, Lead and Cycle Time, Throughput, Gantt, Pulse and the Dashboard, by WeKan's rule for an assigned-only member; every test of WeKan's export-access spec and its board PDF export run against Weddy (<a href="https://github.com/wekan/weddy/commit/e413852f3ab11ab40e12a228ef56798044b5df71">wekan-specs.txt</a>), 272 tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

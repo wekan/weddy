@@ -44,6 +44,9 @@ fi
 
 free_port() { node -e 'const s=require("net").createServer().listen(0,"127.0.0.1",()=>{console.log(s.address().port);s.close()})'; }
 PORT="$(free_port)"; DBPORT="$(free_port)"
+# WeKan's mail specs capture mail on one local port (helpers/smtpSink.js);
+# Weddy sends there, as WeKan's test app does with MAIL_URL. Nothing is relayed.
+SMTPPORT="${WEKAN_TEST_SMTP_PORT:-$(free_port)}"
 WORK="$(mktemp -d "${TMPDIR:-/tmp}/weddy-wekan.XXXXXX")"
 cat > "$WORK/Caddyfile" <<CADDY
 {
@@ -58,7 +61,7 @@ http://127.0.0.1:$PORT {
 	wekan
 }
 CADDY
-"$BIN" run --config "$WORK/Caddyfile" --adapter caddyfile > "$LOG_DIR/weddy-server.log" 2>&1 &
+MAIL_URL="smtp://127.0.0.1:$SMTPPORT" "$BIN" run --config "$WORK/Caddyfile" --adapter caddyfile > "$LOG_DIR/weddy-server.log" 2>&1 &
 PID=$!
 cleanup() { kill "$PID" 2>/dev/null || true; wait "$PID" 2>/dev/null || true; rm -rf "$WORK"; }
 trap cleanup EXIT
@@ -68,7 +71,7 @@ for _ in $(seq 1 100); do
   sleep 0.2
 done
 
-export WEKAN_BASE_URL="http://127.0.0.1:$PORT" WEKAN_MONGO_URL="mongodb://127.0.0.1:$DBPORT/wekan"
+export WEKAN_BASE_URL="http://127.0.0.1:$PORT" WEKAN_MONGO_URL="mongodb://127.0.0.1:$DBPORT/wekan" WEKAN_TEST_SMTP_PORT="$SMTPPORT"
 export WEDDY_TEST_RESULTS="$LOG_DIR/test-results" WEDDY_TEST_REPORT="$LOG_DIR/playwright-report"
 cd "$HERE"
 set +e

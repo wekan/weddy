@@ -46,15 +46,15 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   triggers with {tokens},
   advanced-filter, move-direction and text-contains triggers, and the
   e-mail, bot, copy, link, sort and relative-date actions.
-- **Notifications, the rest**: activities notify as Node.js WeKan's do and
-  the header shows the unread ones; the notifications drawer (reading them,
-  marking them read), watching a list from the pages, and delivery by e-mail
-  are still to come.
+- **Notifications, the rest**: activities notify as Node.js WeKan's do, the
+  header shows the unread ones, and the drawer lists them, marks them all
+  read and deletes them all; still to come are watching a list from the
+  pages, the drawer's filters and grouping, and delivery by e-mail.
 
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 261 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 263 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only. In the
   VSCodium Flatpak sandbox Playwright's Firefox needs a newer NSS (3.126) than

@@ -37,7 +37,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   of all boards, and the PDF's comments and checklists; Admin
   Panel's attachment settings, OAuth providers, passwordless login, all
   domains, and organizations and teams (which Weddy does not have yet);
-  imports from other tools; inbound e-mail; and a card's bot
+  imports from other tools (CSV/TSV and Excel are in, from the import
+  page; the other sources' pages and WeKan's import of many sheets and
+  members mapping are not); inbound e-mail; and a card's bot
   runs.
 - **Rules, the rest**: rules run on activities, button rules from
   rules.runButton, and the Rules page with board, card, checklist and

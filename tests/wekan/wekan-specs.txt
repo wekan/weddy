@@ -103,3 +103,62 @@ rtl-check-mark.e2e.js: a checked checkbox sits on its own square left-to-right a
 rule-variables.e2e.js: an unknown token adds nobody and the rule does not fail the card creation
 sanitize-html-nested-iframe.e2e.js: a board whose card holds nested iframes exports and imports, and nobody is locked out
 scrum-native-export.e2e.js: private board export refuses assigned-only members instead of exposing unassigned data
+01-boards-users.e2e.js: board admin can change a member role to admin
+01-boards-users.e2e.js: board loads within 10 seconds and renders lists
+01-boards-users.e2e.js: board renders all three seeded lists without freezing
+02-cards-open-view.e2e.js: card opens without the maximized class by default (minimized view)
+02-cards-open-view.e2e.js: clicking a minicard opens the card detail panel
+02-cards-open-view.e2e.js: closing the card detail panel hides it
+05-admin-users.e2e.js: login page renders correctly on a fresh load
+05-admin-users.e2e.js: login page sign-in link is visible and accessible
+06-views-layout.e2e.js: cards seeded in different lists appear in the correct list columns
+06-views-layout.e2e.js: scrolling down a long list reaches the last card
+10-stability.e2e.js: automated 90-day archive rule: cards modified > 90 days ago are archived by cron
+10-stability.e2e.js: login link is visible on 5 consecutive fresh page loads
+10-stability.e2e.js: multiple simultaneous board views by different users stay independent
+10-stability.e2e.js: offline warning element exists in the DOM (for surfacing disconnection)
+10-stability.e2e.js: page does not emit JS errors on initial board load
+11-labels-duedates.e2e.js: clearing a due date removes its badge from the card
+11-labels-duedates.e2e.js: due date "+" button opens the date-editor popup
+11-labels-duedates.e2e.js: setting a due date saves the selected value
+13-swimlanes.e2e.js: adding a new swimlane creates it on the board
+13-swimlanes.e2e.js: board renders with a visible swimlane section
+13-swimlanes.e2e.js: clicking the swimlane collapse button does not crash the page
+13-swimlanes.e2e.js: swimlane header shows the seeded "Default" title
+15-board-actions.e2e.js: #6660: star/unstar persists through the server method
+15-board-actions.e2e.js: filter sidebar opens when filter button is clicked
+15-board-actions.e2e.js: sort cards popup opens without JS errors
+18-rtl-layout.e2e.js: board view: direction, visible cards, first list on leading side
+18-rtl-layout.e2e.js: card details panel: direction and visible title
+18-rtl-layout.e2e.js: board view: direction, visible cards, first list on leading side
+18-rtl-layout.e2e.js: card details panel: direction and visible title
+18-rtl-layout.e2e.js: board view: direction, visible cards, first list on leading side
+18-rtl-layout.e2e.js: card details panel: direction and visible title
+19-accessibility.e2e.js: the html element declares its language and text direction
+24-feature-issues.e2e.js: #4266 deleting a board removes its rules, triggers and actions
+29-card-settings-avatar.e2e.js: complete toggle is hidden on minicards by default
+37-card-drag-sort.e2e.js: #3826 cards that have a parent can be reordered and the new order persists
+37-card-drag-sort.e2e.js: #5421 a fast touch drag moves the card without opening it
+38-fixed-list-width.e2e.js: anonymous/public-board: fixed width lives in localStorage and does not leak across boards
+41-admin-newest-features.e2e.js: NEGATIVE: board Table view column headers are not clickable-sortable
+42-board-comments-attachments.e2e.js: NEGATIVE: a comment on a different board is not published into this board
+45-axe-accessibility.e2e.js: the signed-out pages: sign in and register
+assist-due-from-title.e2e.js: Board Settings / Card turns it off for the add-card form (negative)
+due-date-keyboard-shortcut.e2e.js: negative: Space on a focused button activates the button, not the Space shortcut (#6755)
+due-date-keyboard-shortcut.e2e.js: negative: d over a minicard does nothing when shortcuts are disabled (#6755)
+issue-6793-comments-follow-card-move.e2e.js: NEGATIVE: a refused REST move moves neither the card nor its comment
+issue-6793-comments-follow-card-move.e2e.js: REST move: the comment and checklist follow the card there and back
+minicard-requested-by-6872.e2e.js: Show on Minicard off hides a picked member
+minicard-requested-by-6872.e2e.js: negative: nothing picked and nothing typed draws no line
+viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
+viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
+viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
+viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
+viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
+viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
+viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
+viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
+viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
+viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
+viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll
+viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways page scroll

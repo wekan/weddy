@@ -11,7 +11,10 @@ const base = require('./tests/playwright/playwright.config.js');
 // one test of it.
 const lines = fs.readFileSync(path.join(__dirname, 'wekan-specs.txt'), 'utf8').split('\n')
   .map(l => l.trim()).filter(l => l && !l.startsWith('#'))
-  .map(l => { const i = l.indexOf(': '); return i < 0 ? { file: l } : { file: l.slice(0, i), title: l.slice(i + 2) }; });
+  .map(l => { const i = l.indexOf(': '); return i < 0 ? { file: l } : { file: l.slice(0, i), title: l.slice(i + 2) }; })
+  // Playwright greps the title path joined with spaces, so a line written as
+  // "Describe › test", the way the reporters print it, matches as well.
+  .map(l => (l.title ? { ...l, title: l.title.split(' › ').join(' ') } : l));
 const all = process.env.WEDDY_WEKAN_SPECS === 'all';
 const escape = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 const listed = all ? ['tests/playwright/specs/**/*.e2e.js'] : [...new Set(lines.map(l => `tests/playwright/specs/${l.file}`))];

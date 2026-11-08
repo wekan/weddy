@@ -156,6 +156,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Card copies take subtasks and comments along, linked cards, and board copies with their webhooks and rules in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/09e2b04247d77ace1d1bd287dfd6dd08196e5d73); four more of WeKan's own tests run against Weddy (<a href="https://github.com/wekan/weddy/commit/10535c76c729988c6a9d00911b6176ef04d860ca">wekan-specs.txt</a>), 63 tests in all. Thanks to xet7.
 - [Checklist items and comments one by one, card archive, assignees, custom field values, and cards by swimlane, by field and by id in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/8fb404aa88bd4caa117db76c5769f1b6042e5ffe) - a comment changed only by its author or a board admin, as WeKan's GHSA-pqr4-rxgp-hv2m fix. Thanks to xet7.
 - [Lists and swimlanes archived, copied and moved, and cards moved to another board in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/c30b10f04a29e8b46627f230a4af7954027f0558) - on another board labels by name, a card number there, only that board's members and custom fields, and the comments, checklists and attachments along. Thanks to xet7.
+- [A member's role by WeKan's role names or flags, the board's title, and the boards and their count for a site admin in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/ab30f2bd657d86eea741cda7b6bb5536d5b297f9). Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

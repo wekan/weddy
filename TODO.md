@@ -26,11 +26,16 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   settings; these three need a directory server or an identity provider to test
   against, which the development sandbox does not have - build them with WeKan's
   LDAP_*, CAS_* and SAML_* settings and a test server of each.
-- **The rest of WeKan's REST API**: checklist items' edit and delete, comment
-  edit and delete, moving cards between boards, copying boards and lists with
-  their webhooks and rules, subtasks and copied comments, linked cards, rules,
-  export and import (the other tests of WeKan's
-  `tests/playwright/specs/17-rest-api` and `23-rest-api-more`).
+- **The rest of WeKan's REST API**: WeKan's own REST tests of specs 17, 23,
+  28 and 40 now run against Weddy; these routes of WeKan's are still missing:
+  attachments at the board's address (list, deleted, restore, delete, export);
+  editing a custom field and its dropdown items; webhooks
+  (`integrations`, with their activities); the CSV, Excel, PDF, zip and ICS
+  exports, the chart exports and export of all boards; board domains; board
+  view settings and the card field order (WeKan's `boardViewSettings.js` and
+  `cardFieldOrder.js`); `users`, `createtoken`/`deletetoken`, `settings` and
+  `admin/*` (Admin Panel); imports from other tools and from a zip; inbound
+  e-mail; and a card's bot runs.
 - **Activities in the pages, and notifications**: changes are recorded as
   Node.js WeKan records them, but Weddy's pages do not show the activity feed
   yet, and nothing is sent by e-mail.

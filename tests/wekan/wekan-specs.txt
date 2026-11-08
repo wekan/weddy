@@ -187,3 +187,5 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 88-basque-rule-subject-order.e2e.js
 01-boards-users.e2e.js
 15-board-actions.e2e.js: archiving a card removes it from the board list
+15-board-actions.e2e.js: board settings (board menu) opens from the right sidebar
+15-board-actions.e2e.js: renaming board via popup updates the board title

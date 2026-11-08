@@ -32,7 +32,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   (Markdown, OPML, Todoist and the rest) of the export of all boards; Admin
   Panel's attachment settings, OAuth providers, passwordless login, all
   domains, and organizations and teams (which Weddy does not have yet);
-  imports from other tools and from a zip; inbound e-mail; and a card's bot
+  imports from other tools; inbound e-mail; and a card's bot
   runs.
 - **Activities in the pages, and notifications**: changes are recorded as
   Node.js WeKan records them, but Weddy's pages do not show the activity feed

@@ -28,11 +28,12 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   LDAP_*, CAS_* and SAML_* settings and a test server of each.
 - **The rest of WeKan's REST API**: WeKan's own REST tests of specs 17, 23,
   28 and 40 now run against Weddy; these routes of WeKan's are still missing:
-  the CSV, Excel, PDF, zip and ICS
-  exports, the chart exports and export of all boards; board domains; board
-  view settings and the card field order (WeKan's `boardViewSettings.js` and
-  `cardFieldOrder.js`); `settings` and `admin/*` (Admin Panel); imports from other tools and from a zip; inbound
-  e-mail; and a card's bot runs.
+  the CSV, Excel, PDF, zip and ICS exports, the chart exports and the export of
+  all boards; board view settings and the card field order (WeKan's
+  `boardViewSettings.js` and `cardFieldOrder.js`); Admin Panel's attachment
+  settings, OAuth providers, passwordless login, all domains, and
+  organizations and teams (which Weddy does not have yet); imports from other
+  tools and from a zip; inbound e-mail; and a card's bot runs.
 - **Activities in the pages, and notifications**: changes are recorded as
   Node.js WeKan records them, but Weddy's pages do not show the activity feed
   yet, and nothing is sent by e-mail.

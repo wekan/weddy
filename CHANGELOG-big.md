@@ -161,6 +161,8 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Editing a custom field and its dropdown items in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/2a999227e5a52d7d5fe7ceafc0013c09145b46ba) - written without the positional $ operator, which the embedded FerretDB has not. Thanks to xet7.
 - [A board's webhooks in the REST API, with WeKan's SSRF guard ported](https://github.com/wekan/caddy-wekan-plugin/commit/34acc8a8e34c0f7d0a96218869907ac0fcaf08c3) - the URL only for a board admin (HookUrlBleed), never an internal address (GHSA-hc3x-hq3m-663q). Thanks to xet7.
 - [Users for a site admin, login tokens made and deleted, and /api/user in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/e7fc6247869413d62e72c43667450e7477331cc1) - never a password hash or token in an answer (GHSA-6qpx-x7vr-p9w6), a token for another user only with a reason that is kept. Thanks to xet7.
+- [A board's domains, and Admin Panel's settings in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/6675edd1be999d9d83648a922ef0985e2a4777ca) - only WeKan's REST settings, never the SMTP credentials. Thanks to xet7.
+- [Admin Panel -> Problems in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/76f2f39222ee86af333ba18c0482c0c9b67affb3) - the overview, each stream's rows and acknowledging, with the security stream Weddy's guards write. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

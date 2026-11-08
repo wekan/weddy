@@ -157,6 +157,9 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Checklist items and comments one by one, card archive, assignees, custom field values, and cards by swimlane, by field and by id in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/8fb404aa88bd4caa117db76c5769f1b6042e5ffe) - a comment changed only by its author or a board admin, as WeKan's GHSA-pqr4-rxgp-hv2m fix. Thanks to xet7.
 - [Lists and swimlanes archived, copied and moved, and cards moved to another board in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/c30b10f04a29e8b46627f230a4af7954027f0558) - on another board labels by name, a card number there, only that board's members and custom fields, and the comments, checklists and attachments along. Thanks to xet7.
 - [A member's role by WeKan's role names or flags, the board's title, and the boards and their count for a site admin in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/ab30f2bd657d86eea741cda7b6bb5536d5b297f9). Thanks to xet7.
+- [A board's attachments listed, soft-deleted, restored and exported in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/62a96c28b0a2bb0bf0d37ea59d12862b99a64fa9), as WeKan's attachments.softDelete and restore. Thanks to xet7.
+- [Editing a custom field and its dropdown items in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/2a999227e5a52d7d5fe7ceafc0013c09145b46ba) - written without the positional $ operator, which the embedded FerretDB has not. Thanks to xet7.
+- [A board's webhooks in the REST API, with WeKan's SSRF guard ported](https://github.com/wekan/caddy-wekan-plugin/commit/34acc8a8e34c0f7d0a96218869907ac0fcaf08c3) - the URL only for a board admin (HookUrlBleed), never an internal address (GHSA-hc3x-hq3m-663q). Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

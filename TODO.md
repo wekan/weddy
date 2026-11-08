@@ -8,11 +8,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 
 ## WeKan in Go (caddy-wekan-plugin)
 
-- **WeKan's pages as Go Pug templates.** 16 of WeKan's 174 Jade templates are
+- **WeKan's pages as Go Pug templates.** 18 of WeKan's 174 Jade templates are
   started: sign-in and sign-up, All Boards, the board, its swimlanes, lists and
   cards, a card's title, description and attachments, the profile and the
   language, People, the Cloud Panel, the sidebar's board menu and the Export
-  pop-over. The other 158 are listed in caddy-wekan-plugin's
+  pop-over, comments and activities. The other 156 are listed in caddy-wekan-plugin's
   [TEMPLATES.md](https://github.com/wekan/caddy-wekan-plugin/blob/main/TEMPLATES.md):
   card details (dates, members, labels, checklists, comments, attachments,
   custom fields), the board header and its menus, the board views, Admin Panel,
@@ -35,9 +35,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   domains, and organizations and teams (which Weddy does not have yet);
   imports from other tools; inbound e-mail; and a card's bot
   runs.
-- **Activities in the pages, and notifications**: changes are recorded as
-  Node.js WeKan records them, but Weddy's pages do not show the activity feed
-  yet, and nothing is sent by e-mail.
+- **Notifications**: activities are recorded and shown in the card and the
+  sidebar as Node.js WeKan shows them, but nobody is notified yet - no
+  notifications drawer, no watching, no e-mail.
 
 ## Tests
 

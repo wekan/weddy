@@ -202,3 +202,6 @@ board-view-titles.e2e.js: minicard title honors plain-source
 board-view-titles.e2e.js: opened card title honors formatted
 board-view-titles.e2e.js: opened card title honors plain-links
 board-view-titles.e2e.js: opened card title honors plain-source
+activity-viewer.e2e.js: card and sidebar activities obey formatted in en
+activity-viewer.e2e.js: card and sidebar activities obey plain-links in en
+activity-viewer.e2e.js: card and sidebar activities obey formatted in st

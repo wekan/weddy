@@ -37,10 +37,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   imports from other tools; inbound e-mail; and a card's bot
   runs.
 - **Rules, the rest**: rules run on activities, button rules from
-  rules.runButton, and the Rules page with board and button triggers and
-  board and card actions; still to come are the card, checklist and
-  scheduled triggers, the checklist and mail actions, rule details and
-  editing, Board Settings' rule views (Import / Export, workflow, bots),
+  rules.runButton, and the Rules page with board, card, checklist and
+  button triggers, board, card and checklist actions, rule details and
+  selection; still to come are the scheduled triggers, the mail actions,
+  editing a rule, Board Settings' rule views (Import / Export, workflow,
+  bots),
   triggers with {tokens},
   advanced-filter, move-direction and text-contains triggers, and the
   e-mail, bot, copy, link, sort and relative-date actions.
@@ -52,7 +53,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 203 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 208 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only. In the
   VSCodium Flatpak sandbox Playwright's Firefox needs a newer NSS (3.126) than

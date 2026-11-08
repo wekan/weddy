@@ -171,3 +171,4 @@ viewport-matrix.e2e.js: board header: icons and texts on screen, no sideways pag
 72-invitation-profile.e2e.js
 45-profile-email.e2e.js
 71-button-rule-boundary.e2e.js
+20-rules.e2e.js: RuleBleed: cross-board actions require destination write access

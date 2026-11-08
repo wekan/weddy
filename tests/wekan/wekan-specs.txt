@@ -28,3 +28,9 @@
 17-rest-api.e2e.js: #3062 get and update board card settings
 17-rest-api.e2e.js: #4815 GET /api/user/cards returns the user's cards, with a due filter
 17-rest-api.e2e.js: unauthenticated request cannot read user cards
+17-rest-api.e2e.js: bulk create refuses a parent card on a board the caller cannot see (ParentBleed)
+17-rest-api.e2e.js: member add/remove with an unknown action never returns the user document (HashBleed)
+17-rest-api.e2e.js: a refused REST read answers 403, not 200 with an error object (ErrorBleed)
+17-rest-api.e2e.js: an assigned-only member cannot read the whole board over REST (AssignedBleed)
+17-rest-api.e2e.js: #5688 copying a card copies its checklist and all items
+40-rest-card-move-list.e2e.js

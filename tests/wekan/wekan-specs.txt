@@ -61,3 +61,4 @@
 14-voting-watchers.e2e.js: vote counts update in the card after voting
 14-voting-watchers.e2e.js: Latin positive vote label records the matching vote
 14-voting-watchers.e2e.js: Latin negative vote label records the matching vote
+14-voting-watchers.e2e.js: Corsican Planning Poker shows literal scores without progress prefixes

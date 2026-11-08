@@ -55,9 +55,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 
 ## For the maintainer (on GitHub)
 
-- Create the repository **wekan/caddy-ferretdb-plugin** and push it.
-- Push caddy-wekan-plugin, caddy-ferretdb-plugin, caddy-gitea-plugin,
-  caddy-rclone-plugin and Weddy: a release builds from what is on GitHub.
 - Dismiss caddy-wekan-plugin's code scanning alert **#9** as a false positive:
   SHA-256 is Meteor's password pre-hash, not the stored hash (see the plugin
   wiki's [Hall of Fame](https://github.com/wekan/caddy-wekan-plugin/wiki/Hall-of-Fame)).
+- Dismiss caddy-gitea-plugin's reviewed code scanning alerts - #1-#25, #28-#31,
+  #33, #35-#38, #40-#58 and #60-#63 - as false positives or "used in tests / by
+  design", with the reasons of its wiki's
+  [Hall of Fame](https://github.com/wekan/caddy-gitea-plugin/wiki/Hall-of-Fame); #26,
+  #27, #32, #34 and #39 are fixed.

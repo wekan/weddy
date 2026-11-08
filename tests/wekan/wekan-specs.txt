@@ -215,3 +215,6 @@ activity-viewer.e2e.js: card and sidebar activities obey formatted in st
 notification-delivery-settings.e2e.js: #5171 tray: an entry scheduled for later is not counted until its time
 scrum-container-move.e2e.js: list move retains destination Scrum list category
 instance-board-visibility.e2e.js: the owner can make a board visible to signed-in users
+11-labels-duedates.e2e.js: label selector popup opens from a card
+11-labels-duedates.e2e.js: creating a new label via the popup shows it in the list
+11-labels-duedates.e2e.js: applying a seeded label to a card shows it in card details

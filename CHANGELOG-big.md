@@ -138,6 +138,21 @@ package; eight more of WeKan's own tests run against Weddy
 
 - [Card dependencies, and a card's dueComplete, stickers and locations in the REST API](https://github.com/wekan/caddy-wekan-plugin/commit/2c21caa22cc51561e06b58c3e9f83c87fa3e1951) - in WeKan's shape and with its role rules; three more of WeKan's own tests run against Weddy (<a href="https://github.com/wekan/weddy/commit/79ebb667f1f4efb952053cd6af22fdd3ff868050">wekan-specs.txt</a>), 55 tests in all. Thanks to xet7.
 
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/4272934315fe0119ca2cf62a976a1650c9fb5f4e">Rules, board export and import, and deleting a board in the REST API</a>. Thanks to xet7.</summary>
+
+Rules with their triggers and actions as WeKan's rules engine reads them - a
+board admin writes them, an edit never changes a part another rule shares, and
+their documents are flat named fields, never an operator or a path. The export
+is WeKan's `wekan-board-1.0.0`, with or without attachment files, and the import
+makes a new board of the caller from one, from WeKan or from Weddy, with new
+ids and every reference following them. Both pass WeKan's import/export
+boundary: markup in text removed as its `sanitizeInput` does, secret-looking
+fields never leaving. Four more of WeKan's own tests run against Weddy
+(<a href="https://github.com/wekan/weddy/commit/0c467452f00d7ee58bbcdf08e595f6a7f2986fbe">wekan-specs.txt</a>), 59 tests in all.
+
+</details>
+
 **Release** - what a release says it is made of.
 
 - [NetBSD/amd64 builds: go-systemd v22.6.0 for NetBSD, without the function x/sys cannot build there](https://github.com/wekan/weddy/commit/486ba1828013577ff0609b5ef7d31cfea8fff5d3); 19 of 20 platforms build. Thanks to xet7.

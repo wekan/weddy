@@ -49,9 +49,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   rules.runButton, and the Rules page with board, card, checklist and
   button triggers, board, card and checklist actions, rule details and
   selection, Import / Export of JSON, CSV, Trello Butler commands and visual
-  workflows, and a workflow view; still to come
-  are the mail action's linked sources - a linked card's or board's
-  content and a linked board's discussion - the bots and blocks views, and the bot
+  workflows, a workflow view, and the mail action with the card's
+  details, checklists, comments and attachments, a linked card's or
+  board's too; still to come are the bots and blocks views, and the bot
   actions.
 
 ## Tests

@@ -17,9 +17,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   card details (dates, members, labels, checklists, comments, attachments,
   custom fields), the board header and its menus, the board views, Admin Panel,
   Member Settings, search, templates, rules, import and export.
-- **Attachments, the rest**: thumbnails and previews, copy and move to another
-  card, and storage other than the file system (S3, GridFS) that Node.js WeKan
-  can use.
+- **Attachments, the rest**: thumbnails and previews, and storage other than
+  the file system (S3, GridFS) that Node.js WeKan can use.
 - **Users, the rest**: outgoing e-mail, invitations, e-mail verification
   (sent at sign-up too), forgot password, avatars, and organizations' and
   teams' feature flags and group sync, and Admin Panel / People's users,
@@ -61,12 +60,6 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
   names 402 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
-- **A timing flake in WeKan's own spec**: activity-notification-recovery's
-  cancellation test can find the orphan's lease held by the one-second
-  recovery scan at the moment the page renders, and shows "Delivery
-  reservation active" - the right word for that moment, as in WeKan, but not
-  what the test waits for. It failed once in fifteen runs (2026-11-09) and
-  passed three repeats alone; WeKan has the same race.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the
   development sandbox Firefox crashes at start (SIGSEGV: its own sandbox

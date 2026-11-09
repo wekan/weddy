@@ -53,7 +53,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   Rules page (rules.updateRule is in), importing
   CSV, Trello Butler and Wrike workflows, the workflow view's palette,
   the bots and blocks views, and the
-  e-mail, bot and link actions.
+  e-mail and bot actions.
 
 ## Tests
 

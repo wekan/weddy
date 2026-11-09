@@ -17,6 +17,7 @@ end; logs in `log/<datetime>/`:
 | gitea-tests | Gitea's own tests, for the Gitea Weddy compiles in ([tests/gitea/](../tests/gitea/README.md)) |
 | build-local | `./build.sh local` |
 | wekan-tests | WeKan's browser and API tests against that binary ([tests/wekan/run.sh](../tests/wekan/run.sh)) |
+| wekan-mail-settings | WeKan's e-mail tests that need their own server settings - the SMTP phase limits, the total SMTP deadline and receipt retention - each against a Weddy started with them |
 
 `tests/wekan/` is WeKan's own Playwright suite and the WeKan files it reads, copied by
 `./build.sh sync-wekan-tests` (menu 7) - written in WeKan, never edited here - with

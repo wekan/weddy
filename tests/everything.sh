@@ -9,6 +9,7 @@
 #   3. Gitea's own tests, for the Gitea Weddy compiles in (tests/gitea/run.sh)
 #   4. a local Weddy for this computer (build.sh local)
 #   5. WeKan's browser and API tests against it (tests/wekan/run.sh)
+#   6. WeKan's tests that need the server started with other mail settings
 set -uo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 source "$ROOT/releases/local-env.sh"
@@ -33,6 +34,18 @@ if [ -x "$ROOT/tests/gitea/run.sh" ]; then stage gitea-tests bash "$ROOT/tests/g
 else failed+=("gitea-tests (tests/gitea/run.sh missing)"); fi
 stage build-local bash "$ROOT/build.sh" local
 stage wekan-tests bash "$ROOT/tests/wekan/run.sh"
+# WeKan's tests that need the server started otherwise skip themselves in the
+# run above; each gets a Weddy of its own here: the SMTP phase limits, the
+# total SMTP deadline, and e-mail receipt retention.
+spec=tests/playwright/specs/email-recovery-controls.e2e.js
+stage wekan-mail-settings bash -c "
+  export WEDDY_WEKAN_SPECS=all
+  MAIL_GREETING_TIMEOUT_MS=1000 MAIL_SOCKET_TIMEOUT_MS=1000 MAIL_TOTAL_TIMEOUT_MS=30000 WEKAN_TEST_MAIL_TIMEOUTS=1000 \\
+    LOG_DIR='$LOG_DIR/mail-phase-timeouts' bash '$ROOT/tests/wekan/run.sh' '' $spec -g 'greeting timeout|idle timeout' &&
+  MAIL_TOTAL_TIMEOUT_MS=1000 WEKAN_TEST_MAIL_TOTAL_TIMEOUT=1000 \\
+    LOG_DIR='$LOG_DIR/mail-total-timeout' bash '$ROOT/tests/wekan/run.sh' '' $spec -g 'total timeout|slow SMTP' &&
+  EMAIL_RECEIPT_SWEEP_INTERVAL_MS=1000 WEKAN_TEST_EMAIL_RETENTION=1 \\
+    LOG_DIR='$LOG_DIR/mail-receipt-retention' bash '$ROOT/tests/wekan/run.sh' '' $spec -g 'compacted cancellation'"
 echo
 echo "===== EVERYTHING: ${#passed[@]} passed, ${#failed[@]} failed - logs in $LOG_DIR"
 for f in "${failed[@]}"; do echo "  x $f"; done

@@ -232,3 +232,4 @@ avatar-sub-path.e2e.js
 32-org-team-feature-toggles.e2e.js
 30-ldap-orgs-teams.e2e.js
 05-admin-users.e2e.js
+activity-notification-recovery.e2e.js

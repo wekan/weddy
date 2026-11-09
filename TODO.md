@@ -49,10 +49,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   fields and collections this way under its allow rules, and Weddy answers
   them as Meteor does without one (403).
 - **Outgoing webhooks, the rest**: a board's activity goes to its webhooks
-  through the SSRF guard, "Leave my name out" is honoured, a two-way
-  webhook's answer edits its comment, Mattermost direct messages go to the
-  card's people, and a proxy and a trusted certificate are used; still to come are Notification
-  delivery's grouping and schedule for webhooks, Member Settings'
+  through the SSRF guard, "Leave my name out" is honoured, a two-way webhook's
+  answer edits its comment, Mattermost direct messages go to the card's
+  people, and a proxy and a trusted certificate are used; still to come are
+  Notification delivery's grouping and schedule for webhooks, Member Settings'
   notification page (where "Leave my name out" is set).
 
 ## Tests

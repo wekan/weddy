@@ -236,3 +236,4 @@ activity-notification-recovery.e2e.js
 email-recovery-controls.e2e.js
 rule-move-direction.e2e.js
 rule-trigger-vars.e2e.js
+advanced-filter-field-identity.e2e.js

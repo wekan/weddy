@@ -53,14 +53,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   and schedule for webhooks, "Leave my name out of outgoing webhooks",
   Mattermost direct messages, a two-way webhook's reply editing the comment,
   and an outbound proxy.
-- **Rules, the rest**: rules run on activities, button rules from
-  rules.runButton, and the Rules page with board, card, checklist and
-  button triggers, board, card and checklist actions, rule details and
-  selection, Import / Export of JSON, CSV, Trello Butler commands and visual
-  workflows, a workflow view, and the mail action with the card's
-  details, checklists, comments and attachments, a linked card's or
-  board's too; and bots - handing a card over, the runner's
-  reports, the Rules action; and the Bots view; still to come is the Blocks view.
+
 
 ## Tests
 

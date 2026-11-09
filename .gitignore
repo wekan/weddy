@@ -9,3 +9,6 @@ __pycache__/
 /tests/wekan/test-results/
 /tests/wekan/playwright-report/
 /tests/wekan/imports/i18n/data
+node_modules
+.build
+.tools

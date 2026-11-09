@@ -49,17 +49,23 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   fields and collections this way under its allow rules, and Weddy answers
   them as Meteor does without one (403).
 - **Outgoing webhooks, the rest**: a board's activity goes to its webhooks
-  through the SSRF guard; still to come are Notification delivery's grouping
-  and schedule for webhooks, Member Settings' notification page (where
-  "Leave my name out" is set - Weddy honours it), Mattermost direct messages, a two-way webhook's reply editing the comment,
-  and an outbound proxy.
-
+  through the SSRF guard, "Leave my name out" is honoured and a two-way
+  webhook's answer edits its comment; still to come are Notification
+  delivery's grouping and schedule for webhooks, Member Settings'
+  notification page (where "Leave my name out" is set), Mattermost direct
+  messages and an outbound proxy.
 
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
   names 402 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
+- **A timing flake in WeKan's own spec**: activity-notification-recovery's
+  cancellation test can find the orphan's lease held by the one-second
+  recovery scan at the moment the page renders, and shows "Delivery
+  reservation active" - the right word for that moment, as in WeKan, but not
+  what the test waits for. It failed once in fifteen runs (2026-11-09) and
+  passed three repeats alone; WeKan has the same race.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the
   development sandbox Firefox crashes at start (SIGSEGV: its own sandbox

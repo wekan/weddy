@@ -49,11 +49,12 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   rules.runButton, and the Rules page with board, card, checklist and
   button triggers, board, card and checklist actions, rule details and
   selection, Import / Export of JSON and a workflow view; still to come
-  are the scheduled triggers, the mail actions, editing a rule on the
+  are the scheduled triggers, the mail action's card details, checklists,
+  comments and attachments, editing a rule on the
   Rules page (rules.updateRule is in), importing
   CSV, Trello Butler and Wrike workflows, the workflow view's palette,
   the bots and blocks views, and the
-  e-mail and bot actions.
+  bot actions.
 
 ## Tests
 

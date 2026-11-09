@@ -268,6 +268,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Rules: Copy Card, rules.updateRule and createCardWithDueDate](https://github.com/wekan/caddy-wekan-plugin/commit/2f3cf6946cca40b633d6a7b1d0af3f7acdb52e6c) - the card with its dates, checklists and comments, to a list of a board its user may change, once a causal chain as WeKan's ruleCopyCard; a rule edited in place; WeKan's rule copy card spec runs against Weddy (<a href="https://github.com/wekan/weddy/commit/31b227ca651a977008b7bfa325b4ab8f9b8d6923">wekan-specs.txt</a>), 395 tests in all. Thanks to xet7.
 - [Rules: set a date relative to now, and sort a list](https://github.com/wekan/caddy-wekan-plugin/commit/afbc953cf888e2084127b9340b705e7f0c54f77d) - minutes to calendar months as WeKan's #5621, and a list's cards by name, creation, modification or due date, both on the Rules page. Thanks to xet7.
 - [Rules: link the card into a list of a board](https://github.com/wekan/caddy-wekan-plugin/commit/9f6b887819bf6f46b71050a51fe7800fa155bca3) - a linked card of the original, with only that board's fields, never on a board its user may not change. Thanks to xet7.
+- [Rules: send an e-mail, with the rule's variables and the card at its end](https://github.com/wekan/caddy-wekan-plugin/commit/79ba56fba55b3a9411bca25d9fbd54dcab63cc4b) - people tokens and @members as their addresses, a non-member's dropped, the subject one line, as WeKan's prepareEmailAction. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

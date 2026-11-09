@@ -22,9 +22,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   can use.
 - **Users, the rest**: outgoing e-mail, invitations, e-mail verification
   (sent at sign-up too), forgot password, avatars, and organizations' and
-  teams' feature flags and group sync, and Admin Panel / People's users
-  are done; the rest of Admin Panel (its settings panes, and the panes that
-  make and edit orgs and teams) is not.
+  teams' feature flags and group sync, and Admin Panel / People's users,
+  organizations and teams are done; the rest of Admin Panel (its settings
+  panes) is not.
 - **LDAP, CAS and SAML login**: OAuth2/OIDC is done with WeKan's OAUTH2_*
   settings; these three need a directory server or an identity provider to test
   against, which the development sandbox does not have - build them with WeKan's
@@ -33,10 +33,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   28 and 40 now run against Weddy, and the board, card and chart exports as
   Excel and PDF, every chart included; these routes of WeKan's are still
   missing: the Scrum charts' rows (Weddy has no sprints yet), the
-  other tools' formats (Markdown, OPML, Todoist and the rest) of the export
-  of all boards, and the PDF's comments and checklists; Admin
-  Panel's attachment settings, OAuth providers, passwordless login, all
-  domains, and organizations and teams (which Weddy does not have yet);
+  other tools' formats (Trello, Todoist and the rest - Markdown, OPML and
+  todo.txt are in) of a board and of the export of all boards; Admin
+  Panel's attachment settings, OAuth providers, passwordless login and all
+  domains;
   imports from other tools (CSV/TSV and Excel are in, from the import
   page; the other sources' pages and WeKan's import of many sheets and
   members mapping are not); inbound e-mail; and a card's bot

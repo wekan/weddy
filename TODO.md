@@ -49,13 +49,13 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   CSV, Trello Butler and Wrike workflows, the workflow view's palette,
   the bots and blocks views,
   triggers with {tokens},
-  advanced-filter, move-direction and text-contains triggers, and the
+  advanced-filter and text-contains triggers, and the
   e-mail, bot, copy, link, sort and relative-date actions.
 
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 315 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 316 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

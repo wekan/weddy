@@ -40,6 +40,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   imports from other tools (CSV/TSV and Excel are in, from the import
   page; the other sources' pages and WeKan's import of many sheets and
   members mapping are not); and inbound e-mail.
+- **Per-list exceptions, the rest**: a list that refuses a role is applied to
+  every write; a list that GRANTS a role more than the board gives (WeKan's
+  allow rules for #4527) is not applied yet, and Weddy has no page to set a
+  list's exceptions - they are set in WeKan.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers

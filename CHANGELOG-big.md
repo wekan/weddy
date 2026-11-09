@@ -21,13 +21,15 @@ upstream Caddy and the plugins, and released with its source **with and without
 history** and binaries for **every platform**. It serves **many WeKan domains**,
 each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
-Gitea's own.
+Gitea's own. WeKan's fixes of **CrossBoardExportBleed** and **ListLockBleed**
+hold in Weddy too.
 
-This release fixes the following CRITICAL SECURITY ISSUE of [CrossBoardExportBleed](https://wekan.fi/hall-of-fame/crossboardexportbleed/):
+This release fixes the following CRITICAL SECURITY ISSUES:
 
 <details>
 <summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/b29d36a22ece67a92d3b97c3ec8887891d6258ec">WeKan in Weddy: every export follows Admin Panel's export switch</a>. Thanks to xet7.</summary>
 
+[CrossBoardExportBleed](https://wekan.fi/hall-of-fame/crossboardexportbleed/).
 Node.js WeKan's Admin Panel can turn all export off (`disableAllExport`,
 [GHSA-8885-xrq4-j47h](https://github.com/wekan/wekan/security/advisories/GHSA-8885-xrq4-j47h)).
 Weddy shares that settings document but never read it, so with export off,
@@ -49,6 +51,24 @@ avatars, and rewrite @mentions and requested-by / assigned-by, as WeKan's
 `anonymizeExportIdentities`; copying a board keeps its names. A test finds no
 real name in nine exports, and the negative test fails on any export function
 that reads users without the anonymizer.
+
+</details>
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/aa415a97cee1b79d715418483659b1b81a378b8d">WeKan in Weddy: a list that refuses a role refuses it every write in that list</a>. Thanks to tsurutanmen and xet7.</summary>
+
+[ListLockBleed](https://wekan.fi/hall-of-fame/listlockbleed/),
+[GHSA-4734-8vrg-8j3w](https://github.com/wekan/wekan/security/advisories/GHSA-4734-8vrg-8j3w).
+Weddy shares WeKan's database but never read a list's role exceptions
+(WeKan's #4527), so a list a board admin locked in WeKan was open to every
+write through Weddy. Every card write now asks the card's list - edits,
+deletes, members, labels, checklists, attachments, custom fields, comments,
+new cards, copies, moves in and out, bulk routes and methods - and answers
+403. A refusal shows in Admin Panel -> Problems and never disables the
+account. WeKan's checklist rename (#1037) is added too.
+`TestEveryCardWriteAsksTheList` fails on any card write route that does not
+ask the list, and WeKan's own ListLockBleed spec
+([synced](https://github.com/wekan/weddy/commit/60fa295d1caeda818d09a56abf963dfb931ed32f)) passes against Weddy.
 
 </details>
 

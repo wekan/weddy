@@ -13,6 +13,7 @@ upstream Caddy and the plugins, and released with its source **with and without
 history** and binaries for **every platform**. It serves **many WeKan domains**,
 each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
-Gitea's own.
+Gitea's own. WeKan's fixes of **CrossBoardExportBleed** and **ListLockBleed**
+hold in Weddy too.
 
 [All changes so far](CHANGELOG-big.md#upcoming-weddy-release)

@@ -50,8 +50,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   them as Meteor does without one (403).
 - **Outgoing webhooks, the rest**: a board's activity goes to its webhooks
   through the SSRF guard; still to come are Notification delivery's grouping
-  and schedule for webhooks, "Leave my name out of outgoing webhooks",
-  Mattermost direct messages, a two-way webhook's reply editing the comment,
+  and schedule for webhooks, Member Settings' notification page (where
+  "Leave my name out" is set - Weddy honours it), Mattermost direct messages, a two-way webhook's reply editing the comment,
   and an outbound proxy.
 
 

@@ -57,15 +57,17 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   notification is mailed as WeKan decides, and the drawer filters unread or
   all and groups by card or board; e-mail goes through WeKan's durable
   outbox with its schedules, grouping and retries, and every activity
-  through WeKan's durable intents and plans with their recovery, paused,
-  cancelled and retried from Admin Panel / Problems / Recovery; still to
-  come are the e-mail outbox's own controls on that page (WeKan's
-  emailRecoveryReports).
+  through WeKan's durable intents and plans with their recovery; both the
+  e-mail queue and the activity notifications are paused, cancelled and
+  retried from Admin Panel / Problems / Recovery; still to come are WeKan's
+  SMTP phase timeouts (MAIL_GREETING_TIMEOUT_MS, MAIL_SOCKET_TIMEOUT_MS,
+  MAIL_TOTAL_TIMEOUT_MS and the rest) and receipt retention
+  (EMAIL_RECEIPT_METADATA_DAYS).
 
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 310 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 315 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

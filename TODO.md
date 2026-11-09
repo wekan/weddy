@@ -8,11 +8,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 
 ## WeKan in Go (caddy-wekan-plugin)
 
-- **WeKan's pages as Go Pug templates.** 18 of WeKan's 174 Jade templates are
+- **WeKan's pages as Go Pug templates.** 19 of WeKan's 174 Jade templates are
   started: sign-in and sign-up, All Boards, the board, its swimlanes, lists and
   cards, a card's title, description and attachments, the profile and the
   language, People, the Cloud Panel, the sidebar's board menu and the Export
-  pop-over, comments and activities. The other 156 are listed in caddy-wekan-plugin's
+  pop-over, comments and activities, and Problems' Recovery. The other 155 are listed in caddy-wekan-plugin's
   [TEMPLATES.md](https://github.com/wekan/caddy-wekan-plugin/blob/main/TEMPLATES.md):
   card details (dates, members, labels, checklists, comments, attachments,
   custom fields), the board header and its menus, the board views, Admin Panel,
@@ -57,14 +57,15 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   notification is mailed as WeKan decides, and the drawer filters unread or
   all and groups by card or board; e-mail goes through WeKan's durable
   outbox with its schedules, grouping and retries, and every activity
-  through WeKan's durable intents and plans with their recovery; still
-  to come are WeKan's administrator controls of them (pause, cancel,
-  the recovery report).
+  through WeKan's durable intents and plans with their recovery, paused,
+  cancelled and retried from Admin Panel / Problems / Recovery; still to
+  come are the e-mail outbox's own controls on that page (WeKan's
+  emailRecoveryReports).
 
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 305 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 310 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

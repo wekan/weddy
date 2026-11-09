@@ -239,3 +239,4 @@ rule-trigger-vars.e2e.js
 advanced-filter-field-identity.e2e.js
 advanced-filter-card-dates.e2e.js
 card-write-activities.e2e.js
+rule-copy-card.e2e.js

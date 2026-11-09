@@ -269,6 +269,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Rules: set a date relative to now, and sort a list](https://github.com/wekan/caddy-wekan-plugin/commit/afbc953cf888e2084127b9340b705e7f0c54f77d) - minutes to calendar months as WeKan's #5621, and a list's cards by name, creation, modification or due date, both on the Rules page. Thanks to xet7.
 - [Rules: link the card into a list of a board](https://github.com/wekan/caddy-wekan-plugin/commit/9f6b887819bf6f46b71050a51fe7800fa155bca3) - a linked card of the original, with only that board's fields, never on a board its user may not change. Thanks to xet7.
 - [Rules: send an e-mail, with the rule's variables and the card at its end](https://github.com/wekan/caddy-wekan-plugin/commit/79ba56fba55b3a9411bca25d9fbd54dcab63cc4b) - people tokens and @members as their addresses, a non-member's dropped, the subject one line, as WeKan's prepareEmailAction. Thanks to xet7.
+- [Rules: scheduled triggers - a calendar, a card's date, its days in a list, or cron](https://github.com/wekan/caddy-wekan-plugin/commit/0baf129c906ea908362b7a9644daafdb1725a908) - once a minute and once each, as WeKan's scheduledRules, cron in UTC as GitHub Actions runs it, on the Rules page too. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

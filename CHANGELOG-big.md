@@ -271,6 +271,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Rules: send an e-mail, with the rule's variables and the card at its end](https://github.com/wekan/caddy-wekan-plugin/commit/79ba56fba55b3a9411bca25d9fbd54dcab63cc4b) - people tokens and @members as their addresses, a non-member's dropped, the subject one line, as WeKan's prepareEmailAction. Thanks to xet7.
 - [Rules: scheduled triggers - a calendar, a card's date, its days in a list, or cron](https://github.com/wekan/caddy-wekan-plugin/commit/0baf129c906ea908362b7a9644daafdb1725a908) - once a minute and once each, as WeKan's scheduledRules, cron in UTC as GitHub Actions runs it, on the Rules page too. Thanks to xet7.
 - [Rules: edit a rule's trigger and action from the Rules page](https://github.com/wekan/caddy-wekan-plugin/commit/df03849ff98e1130d2f5d4c01fda2255879c9587), as WeKan's #2713, saved in place; [a Weddy spec of it](https://github.com/wekan/weddy/commit/489cfd9ab030d5b91e652c2cf2cd7765dd3a7d50). Thanks to xet7.
+- [Rules: import and export a Wrike workflow](https://github.com/wekan/caddy-wekan-plugin/commit/b37a0816fd2294bd8aff94d67cef217071d1eff3) - Wrike's statuses as lists and the rules their groups mean, once, as WeKan's wrikeWorkflow; WeKan's Wrike workflow tests run against Weddy (<a href="https://github.com/wekan/weddy/commit/cae656ab89a07710b637ffd4ee54df0ad915cf3d">wekan-specs.txt</a>), 400 tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

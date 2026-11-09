@@ -51,14 +51,14 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   selection, Import / Export of JSON and a workflow view; still to come
   are the mail action's card details, checklists,
   comments and attachments, importing
-  CSV, Trello Butler and Wrike workflows, the workflow view's palette,
+  CSV and Trello Butler, the workflow view's palette,
   the bots and blocks views, and the
   bot actions.
 
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 395 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 400 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

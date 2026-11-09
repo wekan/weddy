@@ -49,7 +49,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   CSV, Trello Butler and Wrike workflows, the workflow view's palette,
   the bots and blocks views,
   triggers with {tokens},
-  advanced-filter and text-contains triggers, and the
+  advanced-filter triggers, and the
   e-mail, bot, copy, link, sort and relative-date actions.
 
 ## Tests

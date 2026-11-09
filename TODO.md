@@ -41,20 +41,23 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   page; the other sources' pages and WeKan's import of many sheets and
   members mapping are not); inbound e-mail; and a card's bot
   runs.
+- **Meteor's collection writes**: Weddy answers every client write of a
+  collection as Meteor does without an allow rule (403); WeKan's client
+  writes cards with /cards/update under its Cards.allow rules, which its
+  advanced-filter card dates spec uses to fire the rule.
 - **Rules, the rest**: rules run on activities, button rules from
   rules.runButton, and the Rules page with board, card, checklist and
   button triggers, board, card and checklist actions, rule details and
   selection, Import / Export of JSON and a workflow view; still to come
   are the scheduled triggers, the mail actions, editing a rule, importing
   CSV, Trello Butler and Wrike workflows, the workflow view's palette,
-  the bots and blocks views,
-  advanced-filter triggers, and the
+  the bots and blocks views, and the
   e-mail, bot, copy, link, sort and relative-date actions.
 
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 387 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 392 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

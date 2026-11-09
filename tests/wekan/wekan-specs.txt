@@ -98,7 +98,7 @@ rest-list-archive.e2e.js: a list is archived and restored by REST, and not by so
 rest-user-update.e2e.js: user PUT checks authentication and site-admin access before missing-user responses
 rest-user-update.e2e.js: user PUT preserves successful updates and hides session secrets
 rtl-check-mark.e2e.js: a checked checkbox sits on its own square left-to-right and right-to-left
-rule-variables.e2e.js: an unknown token adds nobody and the rule does not fail the card creation
+rule-variables.e2e.js
 sanitize-html-nested-iframe.e2e.js: a board whose card holds nested iframes exports and imports, and nobody is locked out
 scrum-native-export.e2e.js: private board export refuses assigned-only members instead of exposing unassigned data
 01-boards-users.e2e.js: board admin can change a member role to admin
@@ -235,3 +235,4 @@ avatar-sub-path.e2e.js
 activity-notification-recovery.e2e.js
 email-recovery-controls.e2e.js
 rule-move-direction.e2e.js
+rule-trigger-vars.e2e.js

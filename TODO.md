@@ -39,8 +39,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   domains;
   imports from other tools (CSV/TSV and Excel are in, from the import
   page; the other sources' pages and WeKan's import of many sheets and
-  members mapping are not); inbound e-mail; and a card's bot
-  runs.
+  members mapping are not); and inbound e-mail.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers
@@ -56,8 +55,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   selection, Import / Export of JSON, CSV, Trello Butler commands and visual
   workflows, a workflow view, and the mail action with the card's
   details, checklists, comments and attachments, a linked card's or
-  board's too; still to come are the bots and blocks views, and the bot
-  actions.
+  board's too; and bots - handing a card over, the runner's
+  reports, the Rules action; still to come are the bots and blocks views.
 
 ## Tests
 

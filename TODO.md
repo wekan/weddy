@@ -60,7 +60,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   workflows, a workflow view, and the mail action with the card's
   details, checklists, comments and attachments, a linked card's or
   board's too; and bots - handing a card over, the runner's
-  reports, the Rules action; still to come are the bots and blocks views.
+  reports, the Rules action; and the Bots view; still to come is the Blocks view.
 
 ## Tests
 

@@ -237,3 +237,5 @@ email-recovery-controls.e2e.js
 rule-move-direction.e2e.js
 rule-trigger-vars.e2e.js
 advanced-filter-field-identity.e2e.js
+advanced-filter-card-dates.e2e.js
+card-write-activities.e2e.js

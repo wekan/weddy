@@ -51,18 +51,6 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   triggers with {tokens},
   advanced-filter, move-direction and text-contains triggers, and the
   e-mail, bot, copy, link, sort and relative-date actions.
-- **Notifications, the rest**: activities notify as Node.js WeKan's do, the
-  header shows the unread ones, and the drawer lists them, marks them all
-  read and deletes them all, a list is watched from its menu, and each
-  notification is mailed as WeKan decides, and the drawer filters unread or
-  all and groups by card or board; e-mail goes through WeKan's durable
-  outbox with its schedules, grouping and retries, and every activity
-  through WeKan's durable intents and plans with their recovery; both the
-  e-mail queue and the activity notifications are paused, cancelled and
-  retried from Admin Panel / Problems / Recovery; still to come are WeKan's
-  SMTP phase timeouts (MAIL_GREETING_TIMEOUT_MS, MAIL_SOCKET_TIMEOUT_MS,
-  MAIL_TOTAL_TIMEOUT_MS and the rest) and receipt retention
-  (EMAIL_RECEIPT_METADATA_DAYS).
 
 ## Tests
 

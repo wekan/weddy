@@ -50,8 +50,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   button triggers, board, card and checklist actions, rule details and
   selection, Import / Export of JSON, CSV, Trello Butler commands and visual
   workflows, and a workflow view; still to come
-  are the mail action's attachments, a linked board's discussion, and in
-  its card details votes, Scrum fields, string-template formatting and a
+  are the mail action's linked board discussion, and in its card details
+  votes, Scrum fields, string-template formatting and a
   linked card's or board's source, the bots and blocks views, and the bot
   actions.
 

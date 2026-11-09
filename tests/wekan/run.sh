@@ -63,7 +63,11 @@ http://127.0.0.1:$PORT {
 	wekan
 }
 CADDY
-MAIL_URL="smtp://127.0.0.1:$SMTPPORT" EMAIL_NOTIFICATION_TIMEOUT=100 ACTIVITY_NOTIFICATION_PLAN_CLEANUP_INTERVAL_MS=1000 "$BIN" run --config "$WORK/Caddyfile" --adapter caddyfile > "$LOG_DIR/weddy-server.log" 2>&1 &
+# The recovery scan every 5 s, not WeKan's default 1 s: activity-notification-
+# recovery's manual retry and cancellation lost the lease race against the
+# scan in two of five full runs (TODO.md) - the right answer for that moment,
+# not what the spec waits for. Its later steps take either path.
+MAIL_URL="smtp://127.0.0.1:$SMTPPORT" EMAIL_NOTIFICATION_TIMEOUT=100 ACTIVITY_NOTIFICATION_PLAN_CLEANUP_INTERVAL_MS=1000 ACTIVITY_NOTIFICATION_RECOVERY_INTERVAL_MS=5000 "$BIN" run --config "$WORK/Caddyfile" --adapter caddyfile > "$LOG_DIR/weddy-server.log" 2>&1 &
 PID=$!
 cleanup() { kill "$PID" 2>/dev/null || true; wait "$PID" 2>/dev/null || true; rm -rf "$WORK"; }
 trap cleanup EXIT

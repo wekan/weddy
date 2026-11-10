@@ -19,7 +19,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   copied; items given an assignee, a due date and a new
   order; not yet dragged between checklists -
   comments, attachments, custom fields), the board header and its menus, the board views, Admin Panel,
-  Member Settings, search, templates, rules, import and export.
+  Member Settings, search, templates, rules, import and export. The card
+  description is edited in place; the list's "+" card composer
+  (.open-minicard-composer, 16-card-members-description's add-card test)
+  is not yet WeKan's.
 - **Attachments, the rest**: previews of documents and video, thumbnails in
   WebP as WeKan's (pure Go writes JPEG and PNG), writing to GridFS (Weddy
   reads it), and the cloud stores (S3 and the others) that Node.js WeKan can
@@ -69,8 +72,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
-  has; WeKan's tests of the calendar, new board, swimlane, add-list,
-  description and subtask editors wait for those editors.
+  has; WeKan's tests of the calendar, new board, swimlane, add-list and
+  subtask editors wait for those editors.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers

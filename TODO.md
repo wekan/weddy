@@ -36,8 +36,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   missing: the Scrum charts' rows (Weddy has no sprints yet), the
   other tools' formats (Trello, Todoist and the rest - Markdown, OPML and
   todo.txt are in) of a board and of the export of all boards; Admin
-  Panel's attachment settings, OAuth providers, passwordless login and all
-  domains;
+  Panel's OAuth providers and passwordless login (they need those logins in
+  Weddy first - its attachment settings and all domains are done);
   imports from other tools (CSV/TSV and Excel are in, from the import
   page; the other sources' pages and WeKan's import of many sheets and
   members mapping are not); and inbound e-mail.

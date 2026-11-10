@@ -49,18 +49,15 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   title, description, color and archived; WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers
   them as Meteor does without one (403).
-- **Outgoing webhooks, the rest**: a board's activity goes to its webhooks
-  through the SSRF guard, grouped or scheduled as WeKan's #3695, with the
-  property groups chosen; "Leave my name out" is honoured, a two-way webhook's
-  answer edits its comment, Mattermost direct messages go to the card's
-  people, and a proxy and a trusted certificate are used. Still to come is
-  Member Settings' notification page, where a member chooses these for
-  themselves - they are set in WeKan for now.
+- **Notification delivery settings, the rest**: a member sets their own on
+  the profile page, and setNotificationDelivery sets every level; the Board
+  Settings and Admin Panel panes and each webhook's own form that call it are
+  not pages in Weddy yet.
 
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 402 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 417 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

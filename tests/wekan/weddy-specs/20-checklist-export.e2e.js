@@ -47,3 +47,34 @@ test('a checklist\'s menu opens its Export, scoped to the checklist', async ({ b
     db.deleteMany('checklists', { cardId: card });
   }
 });
+
+test('a checklist is renamed, and its item edited and deleted, in the card details', async ({ boardPage: page, board }) => {
+  const card = db.findCardIdByTitle({ boardId: board.boardId, title: 'Alpha Card' });
+  const cl = db.uid('cl'), it = db.uid('it');
+  db.insertOne('checklists', { _id: cl, cardId: card, title: 'Before', sort: 0, createdAt: new Date() });
+  db.insertOne('checklistItems', { _id: it, checklistId: cl, cardId: card, title: 'Old item', sort: 0, isFinished: false });
+  try {
+    await page.goto(`/b/${board.boardId}/${board.slug}/${card}`);
+    const box = page.locator(`.js-checklist[data-checklist="${cl}"]`);
+    await box.locator('h4.title.is-editable').click();
+    await box.locator('form.js-edit-checklist-title textarea').fill('After');
+    await box.locator('form.js-edit-checklist-title textarea').press('Enter');
+    await expect(box.locator('h4.title')).toHaveText('After');
+    expect(db.findOne('checklists', { _id: cl }).title).toBe('After');
+
+    await box.locator('.js-checklist-item .item-title.is-editable').click();
+    const edit = box.locator('form.js-edit-checklist-item');
+    await edit.locator('textarea').fill('New item');
+    await edit.locator('button.js-submit-edit-checklist-item-form').click();
+    await expect(box.locator('.js-checklist-item .item-title')).toHaveText('New item');
+
+    await box.locator('.js-checklist-item .item-title.is-editable').click();
+    await box.locator('form.js-edit-checklist-item .js-delete-checklist-item').click();
+    await page.locator('.js-pop-over button.js-confirm').click();
+    await expect(box.locator('.js-checklist-item')).toHaveCount(0);
+    expect(db.countDocuments('checklistItems', { _id: it })).toBe(0);
+  } finally {
+    db.deleteMany('checklistItems', { cardId: card });
+    db.deleteMany('checklists', { cardId: card });
+  }
+});

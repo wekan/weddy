@@ -244,3 +244,5 @@ rule-copy-card.e2e.js
 44-rules.e2e.js: #6489: Rules Workflow view renders the palette and can add a rule
 list-lock-checklists.e2e.js
 attachment-thumbnail.e2e.js: a private attachment is private and revalidated in every response
+attachment-range-streaming.e2e.js
+card-creation-activity.e2e.js

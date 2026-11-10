@@ -336,6 +336,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Imports: OpenProject and Markdown](https://github.com/wekan/caddy-wekan-plugin/commit/a723c6791dc37fa242027676de451da63be8f4b4) - as WeKan's parsers, Markdown as the first text source; [WeKan's OpenProject UI import test on Weddy](https://github.com/wekan/weddy/commit/7fa1701be8089bf2f083728544208538c8c19c36), 431 tests in all. Thanks to xet7.
 - [Imports: todo.txt and Taskwarrior](https://github.com/wekan/caddy-wekan-plugin/commit/c72846d0cd9164c3d192b4463b60df9ea2303a25) - as WeKan's parsers, matched against WeKan's own; [WeKan's UI import tests for them on Weddy](https://github.com/wekan/weddy/commit/2c0e45782b3711ed5fff0bd6d792cbc304e99cd9), 433 tests in all. Thanks to xet7.
 - [Imports: Nullboard and Kanri](https://github.com/wekan/caddy-wekan-plugin/commit/c27c9ef094e7920574b712932360a6819a3c8eb3) - as WeKan's parsers, Kanri's all-data export with every board as a swimlane; [WeKan's UI import tests for them on Weddy](https://github.com/wekan/weddy/commit/ced7f79295403a4c358f5eb6f2895b370367dd47), 435 tests in all. Thanks to xet7.
+- [Imports: OPML and Leo outlines](https://github.com/wekan/caddy-wekan-plugin/commit/1a37e0de89efbbf62267f07e788a1dbd82852228) - as WeKan's parsers, the XML read leniently and never resolving a DTD or an external entity; [WeKan's OPML UI import test on Weddy](https://github.com/wekan/weddy/commit/5a0c5cd64820c2ef81508753aaf1d7c733810ddd), 436 tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

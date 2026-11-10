@@ -20,9 +20,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   order; not yet dragged between checklists -
   comments, attachments, custom fields), the board header and its menus, the board views, Admin Panel,
   Member Settings, search, templates, rules, import and export. The card
-  description is edited in place; the list's "+" card composer
-  (.open-minicard-composer, 16-card-members-description's add-card test)
-  is not yet WeKan's.
+  description is edited in place, and a list ends with WeKan's "+ Add card".
 - **Attachments, the rest**: previews of documents and video, thumbnails in
   WebP as WeKan's (pure Go writes JPEG and PNG), writing to GridFS (Weddy
   reads it), and the cloud stores (S3 and the others) that Node.js WeKan can

@@ -61,8 +61,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   importing, and Wrike, Teamwork.com, monday.com, Businessmap and Microsoft
   Planner workbooks, Notion and Plane exports too; their sprints and
   releases, Jira (its own creator, with Scrum) and the API sources,
-  downloading the attachments a parser finds, a card's own Excel export
-  in ExporterExcelCard's layout (a board's is in, both layouts), the PDF in
+  downloading the attachments a parser finds, the PDF in
   the same card layout (cardDocument.js is in), the swimlane and list scopes
   of the exports (?swimlaneId=, ?listId=), and assertFieldExport's refusal
   of a value whose field the reader may not see (the admin-only one is in)

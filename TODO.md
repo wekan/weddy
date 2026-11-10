@@ -14,8 +14,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   language, People, the Cloud Panel, the sidebar's board menu and the Export
   pop-over, comments and activities, and Problems' Recovery. The other 155 are listed in caddy-wekan-plugin's
   [TEMPLATES.md](https://github.com/wekan/caddy-wekan-plugin/blob/main/TEMPLATES.md):
-  card details (dates, members, labels, checklists, comments, attachments,
-  custom fields), the board header and its menus, the board views, Admin Panel,
+  card details (dates, members, labels, checklists - drawn with their
+  progress and their menu's Export, not yet added to, checked or edited -
+  comments, attachments, custom fields), the board header and its menus, the board views, Admin Panel,
   Member Settings, search, templates, rules, import and export. WeKan's
   "comments, checklists and card fields survive a UI import" tests of
   Kanboard, Asana and Zenkit wait for the card details' checklists: what they
@@ -64,10 +65,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   WeKan's) and the API sources, WeKan's Unicode PDF (GNU
   Unifont's two OpenType fonts subset into the file, as buildUnicodePdf.js
   does with PDFKit; the PDF is WeKan's base-font one, in the card layout and
-  with its scope, byte for byte) and a checklist's own Export pop-up (the
-  swimlane, list and card menus' Export and Import are in, and the list
-  menu's only for those who may change the board, as Weddy's list menu is)
-  are not; what an import left out is reported, on its page and in Admin
+  with its scope, byte for byte) is not (the swimlane, list, card and
+  checklist menus' Export and Import are in, and the list menu's only for
+  those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other

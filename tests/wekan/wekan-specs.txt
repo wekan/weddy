@@ -254,3 +254,4 @@ import-export-format-audit.e2e.js: forgejo: import adapter fixture text through 
 import-export-format-audit.e2e.js: gitlab: import adapter fixture text through the UI
 import-export-format-audit.e2e.js: asana: import adapter fixture text through the UI
 import-export-format-audit.e2e.js: zenkit: import adapter fixture text through the UI
+import-export-format-audit.e2e.js: openproject: import adapter fixture text through the UI

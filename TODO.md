@@ -60,8 +60,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   and creator, the file's people as WeKan's placeholder users or the person
   importing, and Wrike, Teamwork.com, monday.com, Businessmap and Microsoft
   Planner workbooks, Notion and Plane exports too; their sprints and
-  releases, Jira (its own creator, with Scrum) and the API sources,
-  downloading the attachments a parser finds, WeKan's Unicode PDF (GNU
+  releases, Jira (its own creator, with Scrum, and its attachment test of
+  WeKan's) and the API sources, WeKan's Unicode PDF (GNU
   Unifont's two OpenType fonts subset into the file, as buildUnicodePdf.js
   does with PDFKit; the PDF is WeKan's base-font one, in the card layout and
   with its scope, byte for byte) and a checklist's own Export pop-up (the

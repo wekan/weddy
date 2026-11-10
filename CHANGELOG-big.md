@@ -328,6 +328,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Exports: the board as a Wrike workflow, in WeKan's key order](https://github.com/wekan/caddy-wekan-plugin/commit/754f56821fe0be887a64537da88c90cf1197cabc) - the Rules page's Wrike download too was written with Go's alphabetical keys; thirty-two formats are in. Thanks to xet7.
 - [Exports: Wrike's and Teamwork.com's Excel import workbooks](https://github.com/wekan/caddy-wekan-plugin/commit/fbf287fd14884417e267e2627c794152125ce7f1) - their rows as WeKan's formatters write them, in workbooks with number, date and bold header cells as WeKan's ExcelJS ones; thirty-four formats are in. Thanks to xet7.
 - [Exports: monday.com's, Businessmap's and Microsoft Planner's Excel import workbooks](https://github.com/wekan/caddy-wekan-plugin/commit/bbc8c95117a267157afe612db7633afa70546dba) - their rows as WeKan's formatters write them; thirty-seven formats are in. Thanks to xet7.
+- [Exports: Vikunja's user data export](https://github.com/wekan/caddy-wekan-plugin/commit/35ec25a3d06c7cc1894e7a07e822d39ae775868f) - its data.json as WeKan's byte for byte, in Vikunja's zip; thirty-eight of WeKan's forty other-tool formats are in. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

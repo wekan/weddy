@@ -16,8 +16,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   [TEMPLATES.md](https://github.com/wekan/caddy-wekan-plugin/blob/main/TEMPLATES.md):
   card details (dates, members, labels, checklists - added, renamed,
   deleted and exported, items added, edited, checked and deleted; moved and
-  copied; items given an assignee; not yet reordered or
-  given due dates -
+  copied; items given an assignee and reordered; not yet
+  given due dates or dragged between checklists -
   comments, attachments, custom fields), the board header and its menus, the board views, Admin Panel,
   Member Settings, search, templates, rules, import and export.
 - **Attachments, the rest**: previews of documents and video, thumbnails in

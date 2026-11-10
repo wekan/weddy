@@ -14,8 +14,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   language, People, the Cloud Panel, the sidebar's board menu and the Export
   pop-over, comments and activities, and Problems' Recovery. The other 155 are listed in caddy-wekan-plugin's
   [TEMPLATES.md](https://github.com/wekan/caddy-wekan-plugin/blob/main/TEMPLATES.md):
-  card details (dates, members, labels, checklists - drawn with their
-  progress and their menu's Export, not yet added to, checked or edited -
+  card details (dates, members, labels, checklists - added, items
+  added and checked, deleted, and their Export; not yet edited, moved,
+  copied or given due dates and assignees -
   comments, attachments, custom fields), the board header and its menus, the board views, Admin Panel,
   Member Settings, search, templates, rules, import and export.
 - **Attachments, the rest**: previews of documents and video, thumbnails in

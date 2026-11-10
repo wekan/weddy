@@ -58,9 +58,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   Redmine, Quire, Focalboard, Tasks.org, Super Productivity, Taiga and Vikunja
   are in, from the import page and importBoard, through WeKan's import planner
   and creator, the file's people as WeKan's placeholder users or the person
-  importing; their sprints and releases, the Excel sources (Wrike, Teamwork,
-  monday.com, Businessmap, Planner, which need ExcelJS's typed cells), Notion,
-  Plane, Jira and the API sources, downloading the attachments a parser finds,
+  importing, and Wrike, Teamwork.com, monday.com, Businessmap and Microsoft
+  Planner workbooks too; their sprints and releases, Notion, Plane, Jira and
+  the API sources, the Export pop-over's /export/planner link (WeKan's UI
+  test of it), downloading the attachments a parser finds,
   WeKan's import of many sheets, the members-mapping step (and its UI test),
   the page's 64 MB Vikunja .zip (its form takes 32 MB), and the Recovery report of an import's
   losses are not); and inbound e-mail.

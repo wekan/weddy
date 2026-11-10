@@ -50,7 +50,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   Weddy first - its attachment settings and all domains are done);
   imports from other tools (CSV/TSV, Excel, Kanboard, NextCloud Deck,
   GitHub, Gitea, Forgejo, GitLab, Asana, Zenkit, OpenProject, Markdown,
-  todo.txt, Taskwarrior, Nullboard, Kanri, OPML and Leo are in, from the import
+  todo.txt, Taskwarrior, Nullboard, Kanri, OPML, Leo, Obsidian Kanban and Org mode are in, from the import
   page, through WeKan's import planner and creator; their sprints and
   releases, the other sources' parsers, downloading the
   attachments a parser finds, WeKan's import of many sheets, placeholder

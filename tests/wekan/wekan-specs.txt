@@ -336,3 +336,6 @@ latin-card-archive.e2e.js: Latin card export popup has the translated action tit
 import-export-format-audit.e2e.js: kanboard: comments, checklists and card fields survive a UI import
 import-export-format-audit.e2e.js: asana: comments, checklists and card fields survive a UI import
 import-export-format-audit.e2e.js: zenkit: comments, checklists and card fields survive a UI import
+checklist-single-submit.e2e.js: #6700 one checklist persists after click
+checklist-single-submit.e2e.js: #6700 one checklist persists after Enter
+checklist-single-submit.e2e.js: #6700 one checklist persists after Control+Enter

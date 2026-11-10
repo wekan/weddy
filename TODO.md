@@ -17,10 +17,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   card details (dates, members, labels, checklists - drawn with their
   progress and their menu's Export, not yet added to, checked or edited -
   comments, attachments, custom fields), the board header and its menus, the board views, Admin Panel,
-  Member Settings, search, templates, rules, import and export. WeKan's
-  "comments, checklists and card fields survive a UI import" tests of
-  Kanboard, Asana and Zenkit wait for the card details' checklists: what they
-  import is already right.
+  Member Settings, search, templates, rules, import and export.
 - **Attachments, the rest**: previews of documents and video, thumbnails in
   WebP as WeKan's (pure Go writes JPEG and PNG), writing to GridFS (Weddy
   reads it), and the cloud stores (S3 and the others) that Node.js WeKan can

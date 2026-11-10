@@ -333,3 +333,6 @@ security-cross-board-export.e2e.js: "Anonymize export users" leaves no real name
 external-export-extras.e2e.js: Kanboard and Asana exports carry comments and checklists, and the selection removes them
 security-import-placement.e2e.js: an import is refused beside another board's list, swimlane or card, and accepted beside its own
 latin-card-archive.e2e.js: Latin card export popup has the translated action title
+import-export-format-audit.e2e.js: kanboard: comments, checklists and card fields survive a UI import
+import-export-format-audit.e2e.js: asana: comments, checklists and card fields survive a UI import
+import-export-format-audit.e2e.js: zenkit: comments, checklists and card fields survive a UI import

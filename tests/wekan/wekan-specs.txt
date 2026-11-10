@@ -282,6 +282,29 @@ import-export-format-audit.e2e.js: Wrike: custom statuses of a workflow import a
 import-export-format-audit.e2e.js: Teamwork.com: an import template imports with its task list, fields and subtask
 import-export-format-audit.e2e.js: Businessmap: a workbook imports with its column, lane, deadline, priority, comment and parent
 import-export-format-audit.e2e.js: Microsoft Planner: an exported plan imports through the page
+import-export-format-audit.e2e.js: Microsoft Planner: the export menu link returns a Planner workbook and refuses an unrelated user
+import-export-format-audit.e2e.js: Hawaiian opml import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian orgmode import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian meistertask import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian obsidian import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian linear import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian ticktick import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian clickup import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian nullboard import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian kanri import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian pivotal import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian tasksorg import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian monday import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian superproductivity import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian taiga import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian vikunja import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian quire import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian wrike import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian teamwork import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian businessmap import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian redmine import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian notion import instructions render without an English fallback
+import-export-format-audit.e2e.js: Hawaiian plane import instructions render without an English fallback
 import-export-format-audit.e2e.js: Notion: an export .zip imports through the page with its status lists, page body, labels, date and checkbox
 import-export-format-audit.e2e.js: Notion: a pasted database CSV imports, and a zip without a database is refused
 import-export-format-audit.e2e.js: Plane: an export .zip imports through the page with its states, projects, parent, comment and fields

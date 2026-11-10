@@ -362,3 +362,7 @@ checklist-item-reorder.e2e.js: #6723 third-position drop follows placeholder (ha
 11-labels-duedates.e2e.js: changing an existing due date saves the replacement (#6607)
 editor-enter-preference.e2e.js: description editor follows submit-on-Enter=false
 editor-enter-preference.e2e.js: description editor follows submit-on-Enter=true
+03-cards-operations.e2e.js: custom fields panel opens from card details
+03-cards-operations.e2e.js: checkbox custom fields toggle and can be removed from a card
+03-cards-operations.e2e.js: currency custom fields save and offer an X beside Save
+03-cards-operations.e2e.js: a date custom field tooltip names the field, not "Starts on"

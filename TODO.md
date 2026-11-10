@@ -63,7 +63,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   releases, Jira (its own creator, with Scrum) and the API sources, the
   Export pop-over's field selection (WeKan's "every external export menu
   link" UI test needs it), downloading the attachments a parser finds,
-  WeKan's import of many sheets, the members-mapping step (and its UI test),
+  WeKan's import of many sheets,
   and the page's 64 MB Vikunja .zip (its form takes 32 MB) are not; what
   an import left out is reported, on its page and in Admin Panel -> Recovery);
   and inbound e-mail.

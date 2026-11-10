@@ -38,9 +38,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   todo.txt, Taskwarrior, Zenkit, Nullboard, Obsidian Kanban, Org mode,
   Kanri, Deck, Kanboard, OpenProject, GitHub, Gitea, Forgejo, GitLab, Trello,
   Asana, Leo, MeisterTask, Todoist, Linear, TickTick, ClickUp, Pivotal Tracker,
-  Quire, Redmine, Notion, Focalboard, Tasks.org and Super Productivity are in -
-  Jira, Taiga, Vikunja, Wrike, Teamwork, monday.com, Businessmap and Planner
-  are not - checked against
+  Quire, Redmine, Notion, Focalboard, Tasks.org, Super Productivity and the
+  Wrike workflow are in - Jira and Taiga (their custom fields and sprints),
+  Vikunja's archive and the Wrike, Teamwork, monday.com, Businessmap and
+  Planner workbooks are not - checked against
   WeKan's own
   formatters by testdata/external) of a board and of the export of all
   boards, with the custom fields and the export boundary's sanitizing

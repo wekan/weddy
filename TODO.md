@@ -50,7 +50,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   Weddy first - its attachment settings and all domains are done);
   imports from other tools (CSV/TSV, Excel, Kanboard, NextCloud Deck,
   GitHub, Gitea, Forgejo, GitLab, Asana, Zenkit, OpenProject, Markdown,
-  todo.txt and Taskwarrior are in, from the import
+  todo.txt, Taskwarrior, Nullboard and Kanri are in, from the import
   page, through WeKan's import planner and creator; their sprints and
   releases, the other sources' parsers, downloading the
   attachments a parser finds, WeKan's import of many sheets, placeholder
@@ -64,7 +64,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 433 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 435 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

@@ -17,9 +17,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   card details (dates, members, labels, checklists, comments, attachments,
   custom fields), the board header and its menus, the board views, Admin Panel,
   Member Settings, search, templates, rules, import and export.
-- **Attachments, the rest**: thumbnails and previews, writing to GridFS
-  (Weddy reads it), and the cloud stores (S3 and the others) that Node.js
-  WeKan can use.
+- **Attachments, the rest**: previews of documents and video, thumbnails in
+  WebP as WeKan's (pure Go writes JPEG and PNG), writing to GridFS (Weddy
+  reads it), and the cloud stores (S3 and the others) that Node.js WeKan can
+  use.
 - **Users, the rest**: outgoing e-mail, invitations, e-mail verification
   (sent at sign-up too), forgot password, avatars, and organizations' and
   teams' feature flags and group sync, and Admin Panel / People's users,

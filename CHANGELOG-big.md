@@ -321,6 +321,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Exports: Taskwarrior and Zenkit, and the other tools' exports carry WeKan's fields](https://github.com/wekan/caddy-wekan-plugin/commit/b94dac96f370796251ea0accc224920855f4c635) - as WeKan's collect(): people, comments and parents, anonymized when Admin Panel says so; every format checked byte for byte against WeKan's own formatters, which found todo.txt folding only ASCII spaces. Thanks to xet7.
 - [Exports: Nullboard, Obsidian Kanban, Org mode and Kanri](https://github.com/wekan/caddy-wekan-plugin/commit/a26445a4271af00ce659d20e77073dfee9aa500b) - as WeKan's formatters, byte for byte; nine of the other tools' formats are in. Thanks to xet7.
 - [Exports: NextCloud Deck, Kanboard, OpenProject, GitHub, Gitea, Forgejo, GitLab, Trello and Asana](https://github.com/wekan/caddy-wekan-plugin/commit/3d20d632c0a1e28c234bc2cdd84812a6183a3c14) - as WeKan's formatters, byte for byte, Kanboard's task links from both ends included; eighteen formats are in. Thanks to xet7.
+- [Exports: Leo, MeisterTask, Todoist, Linear and TickTick](https://github.com/wekan/caddy-wekan-plugin/commit/4052ee6f6da004226b3712f541b719b7597263fa) - as WeKan's formatters, byte for byte, each tool's CSV quoting included; twenty-three formats are in. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

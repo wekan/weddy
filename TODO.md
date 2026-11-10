@@ -55,8 +55,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   releases, the other sources' parsers, downloading the
   attachments a parser finds, WeKan's import of many sheets, placeholder
   users and the members-mapping step, and the Recovery report of an import's
-  losses, and the import boundary's sanitizing of what a file carries, which
-  WeKan's Leo import test checks, are not); and inbound e-mail.
+  losses are not); and inbound e-mail.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers

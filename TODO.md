@@ -34,8 +34,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   28 and 40 now run against Weddy, and the board, card and chart exports as
   Excel and PDF, every chart included; these routes of WeKan's are still
   missing: the Scrum charts' rows (Weddy has no sprints yet), the
-  other tools' formats (Trello, Todoist and the rest - Markdown, OPML and
-  todo.txt are in) of a board and of the export of all boards; Admin
+  other tools' formats (Trello, Todoist and the rest - Markdown, OPML,
+  todo.txt, Taskwarrior and Zenkit are in, checked against WeKan's own
+  formatters by testdata/external) of a board and of the export of all
+  boards, with the custom fields and the export boundary's sanitizing
+  WeKan's carry; Admin
   Panel's OAuth providers and passwordless login (they need those logins in
   Weddy first - its attachment settings and all domains are done);
   imports from other tools (CSV/TSV and Excel are in, from the import

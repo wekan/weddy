@@ -14,8 +14,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   language, People, the Cloud Panel, the sidebar's board menu and the Export
   pop-over, comments and activities, and Problems' Recovery. The other 155 are listed in caddy-wekan-plugin's
   [TEMPLATES.md](https://github.com/wekan/caddy-wekan-plugin/blob/main/TEMPLATES.md):
-  card details (dates - WeKan's date picker is in, for the checklists' due
-  dates - members, labels, checklists - added, renamed,
+  card details (members, labels, checklists - added, renamed,
   deleted and exported, items added, edited, checked and deleted; moved and
   copied; items given an assignee, a due date and a new
   order; not yet dragged between checklists -

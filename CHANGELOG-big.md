@@ -324,6 +324,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Exports: Leo, MeisterTask, Todoist, Linear and TickTick](https://github.com/wekan/caddy-wekan-plugin/commit/4052ee6f6da004226b3712f541b719b7597263fa) - as WeKan's formatters, byte for byte, each tool's CSV quoting included; twenty-three formats are in. Thanks to xet7.
 - [Exports: ClickUp, Pivotal Tracker and Quire](https://github.com/wekan/caddy-wekan-plugin/commit/3d63726540c951c4116ec71a74667e09a9c2de4b) - as WeKan's formatters, byte for byte; twenty-six formats are in. Thanks to xet7.
 - [Exports: Redmine, Notion and Focalboard](https://github.com/wekan/caddy-wekan-plugin/commit/5af18bb23a8854214e91c403b9f3e811544a6def) - as WeKan's formatters, byte for byte, JavaScript's rounding and key order included; twenty-nine formats are in. Thanks to xet7.
+- [Exports: Tasks.org and Super Productivity](https://github.com/wekan/caddy-wekan-plugin/commit/a0f4a8506b7e94d4e1b0f303de8bac7109a48d31) - as WeKan's formatters, byte for byte; checking it found WeKan's own Super Productivity export failing for a card whose list is archived, [fixed in WeKan](https://github.com/wekan/wekan/commit/45ea501d86294c83dd510c342f1099aa5efe9002) too; thirty-one formats are in. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

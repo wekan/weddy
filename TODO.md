@@ -61,11 +61,13 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   importing, and Wrike, Teamwork.com, monday.com, Businessmap and Microsoft
   Planner workbooks, Notion and Plane exports too; their sprints and
   releases, Jira (its own creator, with Scrum) and the API sources,
-  downloading the attachments a parser finds, the PDF in
-  the same card layout (cardDocument.js is in), the swimlane and list scopes
-  of the exports (?swimlaneId=, ?listId=), and assertFieldExport's refusal
-  of a value whose field the reader may not see (the admin-only one is in)
-  are not; what an import left out is reported, on its page and in Admin
+  downloading the attachments a parser finds, the PDF in the same card
+  layout (cardDocument.js is in) and its scope, the swimlane, list, card and
+  checklist menus' Export and Import pop-ups and WeKan's importScoped (the
+  JSON, .zip and Excel exports take ?swimlaneId=, ?listId=, ?cardId= and
+  ?checklistId= and the selection), and assertFieldExport's refusal of a
+  value whose field the reader may not see (the admin-only one is in) are
+  not; what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other

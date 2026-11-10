@@ -262,5 +262,24 @@ import-export-format-audit.e2e.js: Nullboard: a .nbx board imports with its list
 import-export-format-audit.e2e.js: OPML: an outline imports with its lists, notes, checklist and done state
 import-export-format-audit.e2e.js: Obsidian Kanban: a plugin board imports with its lanes, limit, tags, due date and done cards
 import-export-format-audit.e2e.js: Org mode: headings import with their keyword, priority, tags, deadline, body and checkboxes
+import-export-format-audit.e2e.js: Todoist: a project template imports with its sections, labels, description, sub-tasks and notes
+import-export-format-audit.e2e.js: MeisterTask: a project CSV imports with its sections, notes, due date and tags
+import-export-format-audit.e2e.js: Linear: a CSV export imports with its statuses, team, labels, priority and parent issue
+import-export-format-audit.e2e.js: TickTick: a backup imports with its list, column, tags, due date and checklist
+import-export-format-audit.e2e.js: ClickUp: a task export imports with its status, list, tags, due date and subtask
+import-export-format-audit.e2e.js: Pivotal Tracker: a stories CSV imports with its states, labels, comments and tasks
+import-export-format-audit.e2e.js: Redmine: an issues CSV imports with its statuses, tracker, parent task and relations
+import-export-format-audit.e2e.js: Tasks.org: a backup imports with its lists, notes, tags, priority, due date and subtask
+import-export-format-audit.e2e.js: Quire: a project CSV imports with its statuses, subtask, tags, dates and priority
+import-export-format-audit.e2e.js: Focalboard: a board.jsonl imports with its lists, labels, description, checklist and comments
+import-export-format-audit.e2e.js: Super Productivity: a backup imports with its projects, lists, labels and sub-tasks
+import-export-format-audit.e2e.js: Taiga: malformed JSON and a document that is not a dump are rejected
+import-export-format-audit.e2e.js: Vikunja: an export .zip imports through the page with its buckets, checklist, comment, fields and parent
+import-export-format-audit.e2e.js: Vikunja: a pasted data.json imports, and a broken one or an unrelated zip is refused
+import-export-format-audit.e2e.js: deck: comments, checklists and card fields survive a UI import
+import-export-format-audit.e2e.js: openproject: comments, checklists and card fields survive a UI import
+import-export-format-audit.e2e.js: github: an embedded issue comment becomes a card comment, not description text
+import-people-modes.e2e.js: Make them all me: every person becomes the person importing in en
+import-people-modes.e2e.js: Placeholder users keep the original person, inactive and unable to log in
 leo-outline-import.e2e.js: a Leo outline imports lists, cards, bodies and checklists (en)
 leo-outline-import.e2e.js: text that is not a Leo outline is refused without creating a board

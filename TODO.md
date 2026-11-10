@@ -62,8 +62,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   Planner workbooks, Notion and Plane exports too; their sprints and
   releases, Jira (its own creator, with Scrum) and the API sources,
   downloading the attachments a parser finds, the Excel export's ?fields=
-  (WeKan's card-details layout), and the page's 64 MB Vikunja .zip (its form takes 32 MB) are not; what an import left out is reported,
-  on its page and in Admin Panel -> Recovery); and inbound e-mail.
+  (WeKan's card-details layout), and the page's 64 MB Vikunja .zip (its
+  form takes 32 MB) are not; what an import left out is reported, on its
+  page and in Admin Panel -> Recovery); and inbound e-mail.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers

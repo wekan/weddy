@@ -315,5 +315,6 @@ import-export-format-audit.e2e.js: openproject: comments, checklists and card fi
 import-export-format-audit.e2e.js: github: an embedded issue comment becomes a card comment, not description text
 import-people-modes.e2e.js: Make them all me: every person becomes the person importing in en
 import-people-modes.e2e.js: Placeholder users keep the original person, inactive and unable to log in
+import-people-modes.e2e.js: Choose existing users: the file's people are listed to map; one left unmapped becomes a placeholder
 leo-outline-import.e2e.js: a Leo outline imports lists, cards, bodies and checklists (en)
 leo-outline-import.e2e.js: text that is not a Leo outline is refused without creating a board

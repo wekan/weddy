@@ -67,10 +67,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   checklist menus' Export and Import are in, and the list menu's only for
   those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
-- **Submit on Enter**: WeKan's Member Settings preference
-  (profile.submitOnEnter, editor-enter-preference.e2e.js) - Enter saves or
-  makes a new line in every editor, Ctrl+Enter or Shift+Enter the other;
-  Weddy's editors each keep one fixed key.
+- **Submit on Enter, the rest**: the preference is in every editor Weddy
+  has; WeKan's tests of the calendar, new board, swimlane, add-list,
+  description and subtask editors wait for those editors.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers

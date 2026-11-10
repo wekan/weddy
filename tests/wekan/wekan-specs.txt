@@ -320,3 +320,6 @@ leo-outline-import.e2e.js: a Leo outline imports lists, cards, bodies and checkl
 leo-outline-import.e2e.js: text that is not a Leo outline is refused without creating a board
 import-export-format-audit.e2e.js: every external export menu link returns text and refuses an unrelated user
 import-export-format-audit.e2e.js: Excel: a WeKan export workbook in Finnish with a sheet per board imports as several boards
+import-export-format-audit.e2e.js: CSV: a mapping whose columns are not in the file is refused without creating a board
+import-export-format-audit.e2e.js: Kanri: an all-data export imports every board, one board per project; other documents are refused
+public-csv-export-fields.e2e.js: the public-board export menu applies its column checkboxes to CSV and TSV

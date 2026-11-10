@@ -360,3 +360,5 @@ checklist-item-reorder.e2e.js: #6723 third-position drop follows placeholder (ha
 11-labels-duedates.e2e.js: #6615: an existing card with dates opens and remains editable
 11-labels-duedates.e2e.js: #6809: Save without picking a day saves today
 11-labels-duedates.e2e.js: changing an existing due date saves the replacement (#6607)
+editor-enter-preference.e2e.js: description editor follows submit-on-Enter=false
+editor-enter-preference.e2e.js: description editor follows submit-on-Enter=true

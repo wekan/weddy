@@ -15,8 +15,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   pop-over, comments and activities, and Problems' Recovery. The other 155 are listed in caddy-wekan-plugin's
   [TEMPLATES.md](https://github.com/wekan/caddy-wekan-plugin/blob/main/TEMPLATES.md):
   card details (dates, members, labels, checklists - added, renamed,
-  deleted and exported, items added, edited, checked and deleted; not yet
-  moved, copied, reordered or given due dates and assignees -
+  deleted and exported, items added, edited, checked and deleted; moved and
+  copied; not yet reordered or given due dates and assignees -
   comments, attachments, custom fields), the board header and its menus, the board views, Admin Panel,
   Member Settings, search, templates, rules, import and export.
 - **Attachments, the rest**: previews of documents and video, thumbnails in

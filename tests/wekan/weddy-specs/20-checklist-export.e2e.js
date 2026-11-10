@@ -140,3 +140,29 @@ test('#1618: a checklist item is given to a board member, and to nobody again', 
     db.deleteMany('checklists', { cardId: card });
   }
 });
+
+test('#4755: a checklist item gets a due date from the calendar, a bad time refused', async ({ boardPage: page, board }) => {
+  const card = db.findCardIdByTitle({ boardId: board.boardId, title: 'Alpha Card' });
+  const cl = db.uid('cl'), it = db.uid('it');
+  db.insertOne('checklists', { _id: cl, cardId: card, boardId: board.boardId, title: 'Dated', sort: 0 });
+  db.insertOne('checklistItems', { _id: it, checklistId: cl, cardId: card, title: 'By then', sort: 0, isFinished: false });
+  try {
+    await page.goto(`/b/${board.boardId}/${board.slug}/${card}`);
+    const item = page.locator(`.js-checklist[data-checklist="${cl}"] .js-checklist-item`);
+    await item.locator('.js-checklist-item-due-date').click();
+    const popup = page.locator('.pop-over').filter({ has: page.locator('.edit-date') });
+    await popup.locator('.js-calendar-day').nth(14).click();
+    await popup.locator('.js-time-field').fill('25:00');
+    await popup.locator('.js-submit-date').click();
+    await expect(popup.locator('.js-date-error')).toHaveText('Invalid time');
+    expect(db.findOne('checklistItems', { _id: it }).dueAt).toBeUndefined();
+    await popup.locator('.js-time-field').fill('9:30');
+    await popup.locator('.js-submit-date').click();
+    await expect(item.locator('.checklist-item-due-date time')).toBeVisible();
+    const due = new Date(db.findOne('checklistItems', { _id: it }).dueAt);
+    expect([due.getDate(), due.getHours(), due.getMinutes()]).toEqual([15, 9, 30]);
+  } finally {
+    db.deleteMany('checklistItems', { cardId: card });
+    db.deleteMany('checklists', { cardId: card });
+  }
+});

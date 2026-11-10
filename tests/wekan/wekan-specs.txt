@@ -356,3 +356,4 @@ editor-enter-preference.e2e.js: Member Settings changes the shortcut to false wi
 latin-checklist-actions.e2e.js: Latin checklist menu distinguishes moving from copying
 checklist-item-reorder.e2e.js: #6723 third-position drop follows placeholder (handles false)
 checklist-item-reorder.e2e.js: #6723 third-position drop follows placeholder (handles true)
+12-checklists.e2e.js: checklist deadline uses the visible shared calendar and can be cleared

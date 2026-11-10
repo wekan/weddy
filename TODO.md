@@ -35,7 +35,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   Excel and PDF, every chart included; these routes of WeKan's are still
   missing: the Scrum charts' rows (Weddy has no sprints yet), the
   other tools' formats (Trello, Todoist and the rest - Markdown, OPML,
-  todo.txt, Taskwarrior and Zenkit are in, checked against WeKan's own
+  todo.txt, Taskwarrior, Zenkit, Nullboard, Obsidian Kanban, Org mode and
+  Kanri are in, checked against WeKan's own
   formatters by testdata/external) of a board and of the export of all
   boards, with the custom fields and the export boundary's sanitizing
   WeKan's carry; Admin

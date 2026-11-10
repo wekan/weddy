@@ -58,7 +58,7 @@ test('a checklist is renamed, and its item edited and deleted, in the card detai
     const box = page.locator(`.js-checklist[data-checklist="${cl}"]`);
     await box.locator('h4.title.is-editable').click();
     await box.locator('form.js-edit-checklist-title textarea').fill('After');
-    await box.locator('form.js-edit-checklist-title textarea').press('Enter');
+    await box.locator('form.js-edit-checklist-title textarea').press('Control+Enter');
     await expect(box.locator('h4.title')).toHaveText('After');
     expect(db.findOne('checklists', { _id: cl }).title).toBe('After');
 

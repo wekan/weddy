@@ -339,3 +339,17 @@ import-export-format-audit.e2e.js: zenkit: comments, checklists and card fields 
 checklist-single-submit.e2e.js: #6700 one checklist persists after click
 checklist-single-submit.e2e.js: #6700 one checklist persists after Enter
 checklist-single-submit.e2e.js: #6700 one checklist persists after Control+Enter
+editor-enter-preference.e2e.js: card editor follows submit-on-Enter=false
+editor-enter-preference.e2e.js: checklist editor follows submit-on-Enter=false
+editor-enter-preference.e2e.js: item editor follows submit-on-Enter=false
+editor-enter-preference.e2e.js: comment editor follows submit-on-Enter=false
+editor-enter-preference.e2e.js: title editor follows submit-on-Enter=false
+editor-enter-preference.e2e.js: copy editor follows submit-on-Enter=false
+editor-enter-preference.e2e.js: card editor follows submit-on-Enter=true
+editor-enter-preference.e2e.js: checklist editor follows submit-on-Enter=true
+editor-enter-preference.e2e.js: item editor follows submit-on-Enter=true
+editor-enter-preference.e2e.js: comment editor follows submit-on-Enter=true
+editor-enter-preference.e2e.js: title editor follows submit-on-Enter=true
+editor-enter-preference.e2e.js: copy editor follows submit-on-Enter=true
+editor-enter-preference.e2e.js: Member Settings changes the shortcut to true without reloading
+editor-enter-preference.e2e.js: Member Settings changes the shortcut to false without reloading

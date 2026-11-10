@@ -61,14 +61,14 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   importing, and Wrike, Teamwork.com, monday.com, Businessmap and Microsoft
   Planner workbooks, Notion and Plane exports too; their sprints and
   releases, Jira (its own creator, with Scrum) and the API sources,
-  downloading the attachments a parser finds, the PDF in the same card
-  layout (cardDocument.js is in) and its scope, a checklist's own Export
-  pop-up (the swimlane, list and card menus' Export and Import are in, and
-  the list menu's only for those who may change the board, as Weddy's list
-  menu is), and assertFieldExport's refusal of a value whose field the
-  reader may not see (the admin-only one is in) are not; what an import
-  left out is reported, on its page and in Admin Panel -> Recovery); and
-  inbound e-mail.
+  downloading the attachments a parser finds, WeKan's Unicode PDF (GNU
+  Unifont's two OpenType fonts subset into the file, as buildUnicodePdf.js
+  does with PDFKit; the PDF is WeKan's base-font one, in the card layout and
+  with its scope, byte for byte) and a checklist's own Export pop-up (the
+  swimlane, list and card menus' Export and Import are in, and the list
+  menu's only for those who may change the board, as Weddy's list menu is)
+  are not; what an import left out is reported, on its page and in Admin
+  Panel -> Recovery); and inbound e-mail.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers

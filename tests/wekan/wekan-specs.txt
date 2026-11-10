@@ -323,3 +323,4 @@ import-export-format-audit.e2e.js: Excel: a WeKan export workbook in Finnish wit
 import-export-format-audit.e2e.js: CSV: a mapping whose columns are not in the file is refused without creating a board
 import-export-format-audit.e2e.js: Kanri: an all-data export imports every board, one board per project; other documents are refused
 public-csv-export-fields.e2e.js: the public-board export menu applies its column checkboxes to CSV and TSV
+import-export-format-audit.e2e.js: Vikunja: the export menu link returns a Vikunja export zip and refuses an unrelated user

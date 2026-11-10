@@ -14,9 +14,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   language, People, the Cloud Panel, the sidebar's board menu and the Export
   pop-over, comments and activities, and Problems' Recovery. The other 155 are listed in caddy-wekan-plugin's
   [TEMPLATES.md](https://github.com/wekan/caddy-wekan-plugin/blob/main/TEMPLATES.md):
-  card details (dates, members, labels, checklists - added, items
-  added and checked, deleted, and their Export; not yet edited, moved,
-  copied or given due dates and assignees -
+  card details (dates, members, labels, checklists - added, renamed,
+  deleted and exported, items added, edited, checked and deleted; not yet
+  moved, copied, reordered or given due dates and assignees -
   comments, attachments, custom fields), the board header and its menus, the board views, Admin Panel,
   Member Settings, search, templates, rules, import and export.
 - **Attachments, the rest**: previews of documents and video, thumbnails in
@@ -67,6 +67,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   checklist menus' Export and Import are in, and the list menu's only for
   those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
+- **Submit on Enter**: WeKan's Member Settings preference
+  (profile.submitOnEnter, editor-enter-preference.e2e.js) - Enter saves or
+  makes a new line in every editor, Ctrl+Enter or Shift+Enter the other;
+  Weddy's editors each keep one fixed key.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers

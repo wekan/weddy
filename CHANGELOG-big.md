@@ -371,6 +371,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Tests: WeKan's Kanboard, Asana and Zenkit UI-import fidelity tests on Weddy](https://github.com/wekan/weddy/commit/800d18fdb050f60562c4b9a4224c976f7178d99c) - their comments, checklists and card fields, now that the card details draw the checklists; 517 tests in all. Thanks to xet7.
 - [Card details: a checklist added, an item added and checked, a checklist deleted](https://github.com/wekan/caddy-wekan-plugin/commit/2b91bdc3c3d9074e863df2975bba8188a5f147cd) - WeKan's checklist writes with their activities and the checklist's completion, a Worker ticking boxes only; WeKan's 12-checklists specs now run through on Weddy, 517 tests pass. Thanks to xet7.
 - [Tests: WeKan's #6700 single-submit checklist tests on Weddy](https://github.com/wekan/weddy/commit/723fe65798ed3138881b3e9db4fa0e8d840e7591) - a checklist added by a click, Enter or Ctrl+Enter is stored and drawn once; 520 tests in all. Thanks to xet7.
+- [Card details: a checklist renamed, its items edited and deleted](https://github.com/wekan/caddy-wekan-plugin/commit/e5e601961ef3e44d783229199d2564d3105ba933) - WeKan's edit forms and item delete pop-up, and the live refresh no longer throws away a form being written in the card details; [the UI test on Weddy](https://github.com/wekan/weddy/commit/8e21652032668d9b442147858fde1866cec6cedf), 521 tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

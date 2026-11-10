@@ -324,3 +324,9 @@ import-export-format-audit.e2e.js: CSV: a mapping whose columns are not in the f
 import-export-format-audit.e2e.js: Kanri: an all-data export imports every board, one board per project; other documents are refused
 public-csv-export-fields.e2e.js: the public-board export menu applies its column checkboxes to CSV and TSV
 import-export-format-audit.e2e.js: Vikunja: the export menu link returns a Vikunja export zip and refuses an unrelated user
+board-excel-export.e2e.js: a missing board Excel export returns 404 with or without a token
+board-excel-export.e2e.js: the board menu exports Excel and a deleted board link returns 404
+board-excel-export.e2e.js: public board Excel exports still produce both workbook layouts
+board-excel-export.e2e.js: private board Excel exports still refuse an unrelated member
+security-cross-board-export.e2e.js: "Disable all export" refuses every export route, the streaming CSV/TSV first among them
+security-cross-board-export.e2e.js: "Anonymize export users" leaves no real name in the streaming CSV/TSV or the external formats

@@ -59,8 +59,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   are in, from the import page and importBoard, through WeKan's import planner
   and creator, the file's people as WeKan's placeholder users or the person
   importing, and Wrike, Teamwork.com, monday.com, Businessmap and Microsoft
-  Planner workbooks too; their sprints and releases, Notion, Plane, Jira and
-  the API sources, the Export pop-over's /export/planner link (WeKan's UI
+  Planner workbooks, Notion and Plane exports too; their sprints and
+  releases, Jira (its own creator, with Scrum) and the API sources, the Export pop-over's /export/planner link (WeKan's UI
   test of it), downloading the attachments a parser finds,
   WeKan's import of many sheets, the members-mapping step (and its UI test),
   the page's 64 MB Vikunja .zip (its form takes 32 MB), and the Recovery report of an import's

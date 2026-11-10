@@ -370,6 +370,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Card details: the checklists, and a checklist's own Export pop-up](https://github.com/wekan/caddy-wekan-plugin/commit/fa4cf45f4b12ad48cc39efce80c6afee3697a849) - WeKan's checklists drawn with their progress and items, and checklistActionsPopup's Export / Import opening the export scoped to the checklist; [the checklist Export UI test on Weddy](https://github.com/wekan/weddy/commit/345db3ac40290e6f0529159b06d828388199beac), 514 tests in all. Thanks to xet7.
 - [Tests: WeKan's Kanboard, Asana and Zenkit UI-import fidelity tests on Weddy](https://github.com/wekan/weddy/commit/800d18fdb050f60562c4b9a4224c976f7178d99c) - their comments, checklists and card fields, now that the card details draw the checklists; 517 tests in all. Thanks to xet7.
 - [Card details: a checklist added, an item added and checked, a checklist deleted](https://github.com/wekan/caddy-wekan-plugin/commit/2b91bdc3c3d9074e863df2975bba8188a5f147cd) - WeKan's checklist writes with their activities and the checklist's completion, a Worker ticking boxes only; WeKan's 12-checklists specs now run through on Weddy, 517 tests pass. Thanks to xet7.
+- [Tests: WeKan's #6700 single-submit checklist tests on Weddy](https://github.com/wekan/weddy/commit/723fe65798ed3138881b3e9db4fa0e8d840e7591) - a checklist added by a click, Enter or Ctrl+Enter is stored and drawn once; 520 tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

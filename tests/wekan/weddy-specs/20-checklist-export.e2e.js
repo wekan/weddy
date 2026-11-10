@@ -117,3 +117,26 @@ test('a checklist is moved and copied to another card through its menu', async (
     db.deleteMany('checklists', { cardId: { $in: [from, to] } });
   }
 });
+
+test('#1618: a checklist item is given to a board member, and to nobody again', async ({ boardPage: page, board, user }) => {
+  const card = db.findCardIdByTitle({ boardId: board.boardId, title: 'Alpha Card' });
+  const cl = db.uid('cl'), it = db.uid('it');
+  db.insertOne('checklists', { _id: cl, cardId: card, boardId: board.boardId, title: 'Who does it', sort: 0 });
+  db.insertOne('checklistItems', { _id: it, checklistId: cl, cardId: card, title: 'A task', sort: 0, isFinished: false });
+  try {
+    await page.goto(`/b/${board.boardId}/${board.slug}/${card}`);
+    const item = page.locator(`.js-checklist[data-checklist="${cl}"] .js-checklist-item`);
+    await item.locator('.js-checklist-item-assignee').click();
+    await page.locator(`.js-pop-over .js-set-checklist-item-assignee[data-user-id="${user.id}"]`).click();
+    await expect(item.locator('.js-checklist-item-assignee-name')).toHaveText('E2E Test User');
+    expect(db.findOne('checklistItems', { _id: it }).assigneeId).toBe(user.id);
+    await item.locator('.js-checklist-item-assignee').click();
+    await expect(page.locator(`.js-pop-over .js-set-checklist-item-assignee[data-user-id="${user.id}"]`)).toHaveClass(/is-active/);
+    await page.locator('.js-pop-over .js-set-checklist-item-assignee[value=""]').click();
+    await expect(item.locator('.js-checklist-item-assignee-name')).toHaveCount(0);
+    expect(db.findOne('checklistItems', { _id: it }).assigneeId).toBeUndefined();
+  } finally {
+    db.deleteMany('checklistItems', { cardId: card });
+    db.deleteMany('checklists', { cardId: card });
+  }
+});

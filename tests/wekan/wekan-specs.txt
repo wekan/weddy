@@ -319,3 +319,4 @@ import-people-modes.e2e.js: Choose existing users: the file's people are listed 
 leo-outline-import.e2e.js: a Leo outline imports lists, cards, bodies and checklists (en)
 leo-outline-import.e2e.js: text that is not a Leo outline is refused without creating a board
 import-export-format-audit.e2e.js: every external export menu link returns text and refuses an unrelated user
+import-export-format-audit.e2e.js: Excel: a WeKan export workbook in Finnish with a sheet per board imports as several boards

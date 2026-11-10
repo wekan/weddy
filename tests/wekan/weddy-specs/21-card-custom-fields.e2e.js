@@ -42,3 +42,34 @@ test('a custom field is created from the card, put on it, and its text and dropd
   await expect(size).toContainText('Large');
   expect(db.getCard(card).customFields.find(f => f._id === drop).value).toBe('large');
 });
+
+test('a multi-select and a string template are saved through their editors', async ({ boardPage: page, board }) => {
+  const card = db.findCardIdByTitle({ boardId: board.boardId, title: 'Alpha Card' });
+  const multi = db.uid('cf'), tpl = db.uid('cf');
+  db.insertMany('customFields', [
+    { _id: multi, boardIds: [board.boardId], name: 'E2E Tags', type: 'dropdownMultiSelect', showOnCard: true,
+      settings: { dropdownItems: [{ _id: 'red', name: 'Red' }, { _id: 'blue', name: 'Blue' }] } },
+    { _id: tpl, boardIds: [board.boardId], name: 'E2E Codes', type: 'stringtemplate', showOnCard: true,
+      settings: { stringtemplateFormat: '#%{value}', stringtemplateSeparator: ', ' } },
+  ]);
+  db.updateOne('cards', { _id: card }, { $push: { customFields: { $each: [{ _id: multi, value: null }, { _id: tpl, value: null }] } } });
+  await page.goto(`/b/${board.boardId}/${board.slug}/${card}`);
+  const details = page.locator('.board-wrapper > .js-card-details');
+
+  const tags = details.locator('.card-details-item-customfield').filter({ hasText: 'E2E Tags' });
+  await tags.locator('a.js-edit-card-custom-field-value').click();
+  await tags.locator('input[value="red"]').check();
+  await tags.locator('input[value="blue"]').check();
+  await tags.locator('button[type="submit"]').click();
+  await expect(tags).toContainText('Red, Blue');
+  expect(db.getCard(card).customFields.find(f => f._id === multi).value).toEqual(['red', 'blue']);
+
+  const codes = details.locator('.card-details-item-customfield').filter({ hasText: 'E2E Codes' });
+  await codes.locator('a.js-edit-card-custom-field-value').click();
+  await codes.locator('.js-card-customfield-stringtemplate-item.last').fill('A1');
+  await codes.locator('.js-card-customfield-stringtemplate-item.last').press('Enter');
+  await codes.locator('.js-card-customfield-stringtemplate-item.last').fill('B2');
+  await codes.locator('button[type="submit"]').click();
+  await expect(codes).toContainText('#A1, #B2');
+  expect(db.getCard(card).customFields.find(f => f._id === tpl).value).toEqual(['A1', 'B2']);
+});

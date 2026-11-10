@@ -366,3 +366,4 @@ editor-enter-preference.e2e.js: description editor follows submit-on-Enter=true
 03-cards-operations.e2e.js: checkbox custom fields toggle and can be removed from a card
 03-cards-operations.e2e.js: currency custom fields save and offer an X beside Save
 03-cards-operations.e2e.js: a date custom field tooltip names the field, not "Starts on"
+03-cards-operations.e2e.js: custom field layout toggle switches and persists its layout

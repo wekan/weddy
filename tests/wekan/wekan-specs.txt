@@ -353,3 +353,4 @@ editor-enter-preference.e2e.js: title editor follows submit-on-Enter=true
 editor-enter-preference.e2e.js: copy editor follows submit-on-Enter=true
 editor-enter-preference.e2e.js: Member Settings changes the shortcut to true without reloading
 editor-enter-preference.e2e.js: Member Settings changes the shortcut to false without reloading
+latin-checklist-actions.e2e.js: Latin checklist menu distinguishes moving from copying

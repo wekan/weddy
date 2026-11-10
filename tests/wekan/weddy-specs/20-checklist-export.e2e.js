@@ -78,3 +78,42 @@ test('a checklist is renamed, and its item edited and deleted, in the card detai
     db.deleteMany('checklists', { cardId: card });
   }
 });
+
+test('a checklist is moved and copied to another card through its menu', async ({ boardPage: page, board }) => {
+  const from = db.findCardIdByTitle({ boardId: board.boardId, title: 'Alpha Card' });
+  const to = db.findCardIdByTitle({ boardId: board.boardId, title: 'Beta Card' });
+  const mv = db.uid('cl'), cp = db.uid('cl');
+  db.insertMany('checklists', [
+    { _id: mv, cardId: from, boardId: board.boardId, title: 'Going', sort: 0 },
+    { _id: cp, cardId: from, boardId: board.boardId, title: 'Twice', sort: 1 },
+  ]);
+  db.insertMany('checklistItems', [
+    { _id: db.uid('it'), checklistId: mv, cardId: from, title: 'Goes along', sort: 0, isFinished: true },
+    { _id: db.uid('it'), checklistId: cp, cardId: from, title: 'Copied along', sort: 0, isFinished: false },
+  ]);
+  const choose = async (button, id) => {
+    await page.locator(`.js-checklist[data-checklist="${id}"] .js-open-checklist-details-menu`).click();
+    await page.locator(`.js-pop-over ${button}`).click();
+    const form = page.locator('.js-pop-over .js-checklist-target');
+    await expect(form.locator('.js-select-cards option')).not.toHaveCount(0);
+    await form.locator('.js-select-lists').selectOption(board.listIds[1]);
+    await form.locator('.js-select-cards').selectOption(to);
+    await form.locator('.js-done').click();
+  };
+  try {
+    await page.goto(`/b/${board.boardId}/${board.slug}/${from}`);
+    await choose('.js-move-checklist', mv);
+    await expect(page.locator(`.js-checklist[data-checklist="${mv}"]`)).toHaveCount(0);
+    expect(db.findOne('checklists', { _id: mv }).cardId).toBe(to);
+    expect(db.find('checklistItems', { checklistId: mv }).map(i => i.cardId)).toEqual([to]);
+
+    await choose('.js-copy-checklist', cp);
+    await expect.poll(() => db.find('checklists', { cardId: to, title: 'Twice' }).length).toBe(1);
+    expect(db.findOne('checklists', { _id: cp }).cardId).toBe(from);
+    const copy = db.findOne('checklists', { cardId: to, title: 'Twice' });
+    expect(db.find('checklistItems', { checklistId: copy._id }).map(i => i.title)).toEqual(['Copied along']);
+  } finally {
+    db.deleteMany('checklistItems', { cardId: { $in: [from, to] } });
+    db.deleteMany('checklists', { cardId: { $in: [from, to] } });
+  }
+});

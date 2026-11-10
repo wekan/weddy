@@ -37,7 +37,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   other tools' formats (Trello, Todoist and the rest - Markdown, OPML,
   todo.txt, Taskwarrior, Zenkit, Nullboard, Obsidian Kanban, Org mode,
   Kanri, Deck, Kanboard, OpenProject, GitHub, Gitea, Forgejo, GitLab, Trello,
-  Asana, Leo, MeisterTask, Todoist, Linear and TickTick are in, checked against
+  Asana, Leo, MeisterTask, Todoist, Linear, TickTick, ClickUp, Pivotal Tracker
+  and Quire are in, checked against
   WeKan's own
   formatters by testdata/external) of a board and of the export of all
   boards, with the custom fields and the export boundary's sanitizing

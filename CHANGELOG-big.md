@@ -322,6 +322,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Exports: Nullboard, Obsidian Kanban, Org mode and Kanri](https://github.com/wekan/caddy-wekan-plugin/commit/a26445a4271af00ce659d20e77073dfee9aa500b) - as WeKan's formatters, byte for byte; nine of the other tools' formats are in. Thanks to xet7.
 - [Exports: NextCloud Deck, Kanboard, OpenProject, GitHub, Gitea, Forgejo, GitLab, Trello and Asana](https://github.com/wekan/caddy-wekan-plugin/commit/3d20d632c0a1e28c234bc2cdd84812a6183a3c14) - as WeKan's formatters, byte for byte, Kanboard's task links from both ends included; eighteen formats are in. Thanks to xet7.
 - [Exports: Leo, MeisterTask, Todoist, Linear and TickTick](https://github.com/wekan/caddy-wekan-plugin/commit/4052ee6f6da004226b3712f541b719b7597263fa) - as WeKan's formatters, byte for byte, each tool's CSV quoting included; twenty-three formats are in. Thanks to xet7.
+- [Exports: ClickUp, Pivotal Tracker and Quire](https://github.com/wekan/caddy-wekan-plugin/commit/3d63726540c951c4116ec71a74667e09a9c2de4b) - as WeKan's formatters, byte for byte; twenty-six formats are in. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

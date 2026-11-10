@@ -48,9 +48,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   WeKan's carry; Admin
   Panel's OAuth providers and passwordless login (they need those logins in
   Weddy first - its attachment settings and all domains are done);
-  imports from other tools (CSV/TSV and Excel are in, from the import
-  page; the other sources' pages and WeKan's import of many sheets and
-  members mapping are not); and inbound e-mail.
+  imports from other tools (CSV/TSV, Excel and Kanboard are in, from the
+  import page, Kanboard through WeKan's import planner and creator; the other
+  sources' parsers, WeKan's import of many sheets, placeholder users and the
+  members-mapping step, and the Recovery report of an import's losses are
+  not); and inbound e-mail.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers
@@ -59,7 +61,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 422 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 423 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

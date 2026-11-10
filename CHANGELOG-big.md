@@ -330,6 +330,7 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Exports: monday.com's, Businessmap's and Microsoft Planner's Excel import workbooks](https://github.com/wekan/caddy-wekan-plugin/commit/bbc8c95117a267157afe612db7633afa70546dba) - their rows as WeKan's formatters write them; thirty-seven formats are in. Thanks to xet7.
 - [Exports: Vikunja's user data export](https://github.com/wekan/caddy-wekan-plugin/commit/35ec25a3d06c7cc1894e7a07e822d39ae775868f) - its data.json as WeKan's byte for byte, in Vikunja's zip; thirty-eight of WeKan's forty other-tool formats are in. Thanks to xet7.
 - [Exports: the board's Export pop-over offers the other tools' exports](https://github.com/wekan/caddy-wekan-plugin/commit/7e712332f7475ed435f726d32a5e12ec5e6f1e75) - with WeKan's labels and icons, in its order; they were reachable only over REST; [a Weddy spec of it](https://github.com/wekan/weddy/commit/11258343ba03299689e5d4351b6cfcca66c051fb), 422 tests in all. Thanks to xet7.
+- [Imports: a Kanboard project, with WeKan's import planner and creator](https://github.com/wekan/caddy-wekan-plugin/commit/79079f58faee019bd4841cf4c07ae356a125064d) - as WeKan's KanboardCreator: lists, swimlanes, labels, cards, checklists, comments and links, the planner and parser matched against WeKan's own; [WeKan's Kanboard UI import test on Weddy](https://github.com/wekan/weddy/commit/db4c459a09526c4e2605d83fee409a69df157324), 423 tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

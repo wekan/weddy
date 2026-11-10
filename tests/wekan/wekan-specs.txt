@@ -282,6 +282,7 @@ import-export-format-audit.e2e.js: Wrike: custom statuses of a workflow import a
 import-export-format-audit.e2e.js: Teamwork.com: an import template imports with its task list, fields and subtask
 import-export-format-audit.e2e.js: Businessmap: a workbook imports with its column, lane, deadline, priority, comment and parent
 import-export-format-audit.e2e.js: Microsoft Planner: an exported plan imports through the page
+import-export-format-audit.e2e.js: imports with losses record one Recovery row; a complete import records none
 import-export-format-audit.e2e.js: Microsoft Planner: the export menu link returns a Planner workbook and refuses an unrelated user
 import-export-format-audit.e2e.js: Hawaiian opml import instructions render without an English fallback
 import-export-format-audit.e2e.js: Hawaiian orgmode import instructions render without an English fallback

@@ -18,10 +18,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   deleted and exported, items added, edited, checked and deleted; moved and
   copied; items given an assignee, a due date and a new
   order; not yet dragged between checklists -
-  comments, attachments, custom fields - shown, put on and taken off,
-  created, and text, number, checkbox, currency, date and dropdown values
-  edited; multi-select and string-template values and the fields' one per
-  row layout toggle not yet), the board header and its menus, the board views, Admin Panel,
+  comments, attachments, custom fields - done), the board header and its menus, the board views, Admin Panel,
   Member Settings, search, templates, rules, import and export. The card
   description is edited in place, and a list ends with WeKan's "+ Add card".
 - **Attachments, the rest**: previews of documents and video, thumbnails in

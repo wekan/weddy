@@ -49,15 +49,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   title, description, color and archived; WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers
   them as Meteor does without one (403).
-- **Notification delivery settings, the rest**: a member sets their own on
-  the profile page, a board's admins the board's on its Notifications page,
-  and setNotificationDelivery sets every level; Admin Panel's pane and each
-  webhook's own form that call it are not pages in Weddy yet.
 
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 418 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 420 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

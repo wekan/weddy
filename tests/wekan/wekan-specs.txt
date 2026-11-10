@@ -367,3 +367,10 @@ editor-enter-preference.e2e.js: description editor follows submit-on-Enter=true
 03-cards-operations.e2e.js: currency custom fields save and offer an X beside Save
 03-cards-operations.e2e.js: a date custom field tooltip names the field, not "Starts on"
 03-cards-operations.e2e.js: custom field layout toggle switches and persists its layout
+07-attachments-links.e2e.js: stored HTML is forced to a safe download on the original Meteor-Files route
+07-attachments-links.e2e.js: card description can contain a link that renders as a clickable anchor
+07-attachments-links.e2e.js: paste image listener is attached to the card description editor
+07-attachments-links.e2e.js: copy-link row copies a valid URL to the clipboard
+69-comment-card-boundary.e2e.js: DDP cannot attach a comment to a foreign private-board card
+attachment-range-streaming.e2e.js: a range is answered 206 with just those bytes
+attachment-range-streaming.e2e.js: negative: an unsatisfiable range is 416, a stale If-Range gets the whole file

@@ -77,6 +77,8 @@ for _ in $(seq 1 100); do
   sleep 0.2
 done
 
+# Where WeKan's specs seed attachment files: Weddy's own files directory.
+export WEKAN_FILES_PATH="$WORK/data/files"
 export WEKAN_BASE_URL="http://127.0.0.1:$PORT" WEKAN_MONGO_URL="mongodb://127.0.0.1:$DBPORT/wekan" WEKAN_TEST_SMTP_PORT="$SMTPPORT" WEKAN_TEST_ACTIVITY_PLAN_CLEANUP=1
 export WEDDY_TEST_RESULTS="$LOG_DIR/test-results" WEDDY_TEST_REPORT="$LOG_DIR/playwright-report"
 cd "$HERE"

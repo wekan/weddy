@@ -61,12 +61,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   importing, and Wrike, Teamwork.com, monday.com, Businessmap and Microsoft
   Planner workbooks, Notion and Plane exports too; their sprints and
   releases, Jira (its own creator, with Scrum) and the API sources,
-  downloading the attachments a parser finds, importBoard's csv and excel
-  sources (WeKan's "CSV: a mapping whose columns are not in the file" UI
-  test needs them), the "One board per project" split (splitBy), the CSV,
-  TSV and Excel exports' ?fields= columns (WeKan's "export menu applies its
-  column checkboxes to CSV and TSV" UI test), and the page's 64 MB Vikunja
-  .zip (its form takes 32 MB) are not; what an import left out is reported,
+  downloading the attachments a parser finds, the Excel export's ?fields=
+  (WeKan's card-details layout), and the page's 64 MB Vikunja .zip (its form takes 32 MB) are not; what an import left out is reported,
   on its page and in Admin Panel -> Recovery); and inbound e-mail.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other

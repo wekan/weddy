@@ -16,7 +16,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   [TEMPLATES.md](https://github.com/wekan/caddy-wekan-plugin/blob/main/TEMPLATES.md):
   card details (dates, members, labels, checklists, comments, attachments,
   custom fields), the board header and its menus, the board views, Admin Panel,
-  Member Settings, search, templates, rules, import and export.
+  Member Settings, search, templates, rules, import and export. WeKan's
+  "comments, checklists and card fields survive a UI import" tests of
+  Kanboard, Asana and Zenkit wait for the card details' checklists: what they
+  import is already right.
 - **Attachments, the rest**: previews of documents and video, thumbnails in
   WebP as WeKan's (pure Go writes JPEG and PNG), writing to GridFS (Weddy
   reads it), and the cloud stores (S3 and the others) that Node.js WeKan can
@@ -50,11 +53,16 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   Weddy first - its attachment settings and all domains are done);
   imports from other tools (CSV/TSV, Excel, Kanboard, NextCloud Deck,
   GitHub, Gitea, Forgejo, GitLab, Asana, Zenkit, OpenProject, Markdown,
-  todo.txt, Taskwarrior, Nullboard, Kanri, OPML, Leo, Obsidian Kanban and Org mode are in, from the import
-  page, through WeKan's import planner and creator; their sprints and
-  releases, the other sources' parsers, downloading the
-  attachments a parser finds, WeKan's import of many sheets, placeholder
-  users and the members-mapping step, and the Recovery report of an import's
+  todo.txt, Taskwarrior, Nullboard, Kanri, OPML, Leo, Obsidian Kanban, Org
+  mode, Todoist, MeisterTask, Linear, TickTick, ClickUp, Pivotal Tracker,
+  Redmine, Quire, Focalboard, Tasks.org, Super Productivity, Taiga and Vikunja
+  are in, from the import page and importBoard, through WeKan's import planner
+  and creator, the file's people as WeKan's placeholder users or the person
+  importing; their sprints and releases, the Excel sources (Wrike, Teamwork,
+  monday.com, Businessmap, Planner, which need ExcelJS's typed cells), Notion,
+  Plane, Jira and the API sources, downloading the attachments a parser finds,
+  WeKan's import of many sheets, the members-mapping step (and its UI test),
+  the page's 64 MB Vikunja .zip (its form takes 32 MB), and the Recovery report of an import's
   losses are not); and inbound e-mail.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other

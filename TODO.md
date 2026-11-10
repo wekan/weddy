@@ -59,7 +59,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 421 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 422 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

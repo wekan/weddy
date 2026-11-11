@@ -404,3 +404,5 @@ rules-blocks.e2e.js: Blocks keeps rule writes restricted to board admins
 background-bleed.e2e.js
 hook-bleed.e2e.js
 prototype-bleed.e2e.js
+repoint-bleed.e2e.js
+42-import-bleed.e2e.js

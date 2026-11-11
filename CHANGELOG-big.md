@@ -105,8 +105,21 @@ pointed at another board's file, and anything but the card-opened notice sent
 through a board's webhook - by the new `outgoingWebhooks`, which builds that
 notice from the stored webhook and the card alone. The ordinary call beside
 each is not recorded. The negative test fails on a database path built from a
-request's value without the guard. WeKan's own BackgroundBleed, HookBleed and
-PrototypeBleed specs pass against Weddy.
+request's value without the guard. WeKan's own BackgroundBleed, HookBleed,
+PrototypeBleed and RepointBleed specs pass against Weddy.
+
+</details>
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/c19e7e19c80ab1c0fb42d46c9a100980c57fcad6">WeKan in Weddy: the REST API no longer sends a member an admin-only field's value</a>. Thanks to xet7.</summary>
+
+[AdminFieldBleed](https://wekan.fi/hall-of-fame/adminfieldbleed/). Weddy's card
+page hid admin-only custom fields, but the REST API sent the card whole, so any
+member of the board read a value an admin had hidden, and could search for a
+guessed one. As in WeKan, only an admin of the card's board reads the value: a
+member gets the field with the value null, the card's integrity digests too, and
+searching by such a field is 403. The negative test asks every GET route of the
+REST API, read from the source, as an ordinary member.
 
 </details>
 
@@ -443,6 +456,14 @@ and fixes the following bugs:
 - [A board member keeps every field WeKan wrote, grantedBy included](https://github.com/wekan/caddy-wekan-plugin/commit/263c070092d6ad83fda6cca4f69631cf90fd46f7) - Weddy's rewrites of a board's members dropped the orgs and teams a membership came through (\#4178), so leaving the group no longer took the board away. Thanks to xet7.
 - [FerretDB: a negation over an array of documents holds only for every element](https://github.com/wekan/FerretDB/commit/9e211ce9468cf229ecaf2b7489d3178504fcb409) - `$ne`, `$nin` and `$not` on a path such as `teams.teamId` matched when any element differed, so an add-once update pushed duplicates. Thanks to xet7.
 - [A local rebuild of the same Weddy commit replaces its .xz instead of failing](https://github.com/wekan/weddy/commit/b6fff13a19ecbd9c659dce3422edf94432c373de). Thanks to xet7.
+- [Meteor's /integrations/update and /customFields/update, under WeKan's allow rules](https://github.com/wekan/caddy-wekan-plugin/commit/d9003aafa53cfb5a4dce4ead51746f4d67e942de) -
+  a board admin edits their board's webhook and a writer a custom field's
+  definition, as WeKan's pages do; a move to another board stays RepointBleed.
+  Thanks to xet7.
+- [A logged-out method call gets the error WeKan's method throws](https://github.com/wekan/caddy-wekan-plugin/commit/a4adb0bfabdf1b4b4fcd6eafa9158fa776056299) -
+  error-notAuthorized for importBoard and importScoped, not-logged-in for the
+  collapse and the star, so WeKan's ImportBleed spec passes against Weddy.
+  Thanks to xet7.
 - [The WeKan and FerretDB plugins follow the dependencies wekan/FerretDB updated](https://github.com/wekan/caddy-wekan-plugin/commit/7bb0566ca653a24961f5a4987fb1ed8e952e4b1d) - SAP/go-hdb v1.21.0,
   golang.org/x/sys v0.50.0 and modernc.org/libc v1.80.1, for which go vet and go
   test asked for go mod tidy; [the same in caddy-ferretdb-plugin](https://github.com/wekan/caddy-ferretdb-plugin/commit/5fb52acc85e2ecb4929c17476241f95ddd41419a). Thanks to xet7.

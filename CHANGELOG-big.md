@@ -470,6 +470,11 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   download token of their own, for the export routes only;
   [WeKan's daily-history tests on Weddy](https://github.com/wekan/weddy/commit/9dc8b1944850d8c354f03e5927cc6721f376b05b),
   519 tests in all. Thanks to xet7.
+- [Scrum: the Sprint Report's scope and burndown, change by change](https://github.com/wekan/caddy-wekan-plugin/commit/85ed43a180ac09ce08cc434f8aaecff4d60e413a) -
+  replayed from History as WeKan's scrumScopeReplay, and marked incomplete
+  when History does not reproduce the sprint's own snapshots;
+  [WeKan's scope-history test on Weddy](https://github.com/wekan/weddy/commit/69a4108d802e86760ed4aa613f864cb5f8b788f3),
+  520 tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

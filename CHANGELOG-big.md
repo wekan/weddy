@@ -463,6 +463,11 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 **Many domains** - the Cloud Panel, in Weddy.
 
+- [WeKan's password policy settings, with WeKan's report-only default](https://github.com/wekan/caddy-wekan-plugin/commit/9b98046e3a4cfc534077648daf9e844c181c9969) -
+  PASSWORD_MIN_LENGTH, PASSWORD_MIN_LENGTH_ENFORCE and PASSWORD_CHECK_PWNED,
+  overridden in Admin Panel's login settings. Weddy's default changes: a
+  password under 8 characters is accepted unless the minimum is enforced, as in
+  WeKan. Thanks to xet7.
 - [WIP limits, and the Archive's Restore into a list full at a hard limit](https://github.com/wekan/caddy-wekan-plugin/commit/ffbed2c3623264d47730664822fbb9138c69a848) -
   WeKan's applyWipLimit, enableWipLimit and enableSoftLimit; a card whose list
   is full goes to a list with room the Archive offers, and Restore all says how

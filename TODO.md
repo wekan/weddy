@@ -72,15 +72,13 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.
-- **WeKan's password policy settings**: Weddy always refuses a new password
-  under 8 characters (users.go); the maintainer's decision (2026-11-11) is to
-  follow WeKan's default exactly, report-only. WeKan's PASSWORD_MIN_LENGTH (default 8)
-  only reports a shorter one unless PASSWORD_MIN_LENGTH_ENFORCE is true -
-  then it refuses it and has the account change its password - with Admin
-  Panel's table of accounts under the minimum, PASSWORD_CHECK_PWNED's
-  breached-password check, and the sign-up page's `getPasswordPolicy`,
-  asked logged out (models/lib/passwordPolicy.js, server/lib/passwordPolicy.js;
-  WeKan's password-min-length-signup-login and password-length-report specs).
+- **WeKan's password policy, the rest**: PASSWORD_MIN_LENGTH, _ENFORCE and
+  PASSWORD_CHECK_PWNED and their Admin Panel overrides are in, with WeKan's
+  report-only default; still missing are Admin Panel / Problems / Password
+  length (the accounts under the minimum), the change asked of an account
+  that signs in with a short password while enforced, and the
+  breached-password lookup. WeKan's own password specs also drive its
+  `AccountsTemplates` client.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived, /integrations/update a webhook
   and /customFields/update a field's definition; WeKan's client writes other
@@ -105,13 +103,13 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
     `Meteor.loggingIn`, `Meteor.subscribe`, the DDP stream - which Weddy's Go
     pages do not load; they pass only with a client shim of those objects, or
     rewritten against the pages.
-  - 72 call a method Weddy has not got, most for whole features:
+  - 70 call a method Weddy has not got, most for whole features:
     `setListSyncSource` 15 (List Sync, WeKan's server/lib/listSync*.js -
     about 2,900 lines), Scrum 28 (`scrum.saveSprint` 15, `scrum.updateCard` 6,
     `scrum.configure` 3, `scrum.saveRelease` 2, two more), then
     `moveBoardObjects`, `getSamlConfigSources` and `changeHistory.page` 3
-    each, `lists.softRemove`, `inviteUserToBoard` and
-    `getPasswordPolicy` 2 each, and 16 more once each.
+    each, `lists.softRemove` and `inviteUserToBoard` 2 each,
+    and 16 more once each.
   - the rest wait for a page, control or text Weddy draws differently.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

@@ -77,15 +77,22 @@ if node and os.path.isdir(module):
     script = (
         "const { Minimatch } = require(process.argv[1]);"
         # 16 "x/**/../y" segments: about 9 s on 10.2.6 (growing ~10x every two
-        # more), about 20 ms on 11.0.7.
+        # more). 11.0.7 either compiles it in milliseconds or refuses it at
+        # once with a RangeError ("too many patterns from '**/..'") - both are
+        # the fix; only the time spent getting there matters.
         "const p = Array.from({ length: 16 }, () => 'x/**/../y').join('/');"
-        "const t = Date.now(); new Minimatch(p, { optimizationLevel: 2 });"
-        "process.stdout.write(String(Date.now() - t));"
+        "const t = Date.now(); let how = 'compiled';"
+        "try { new Minimatch(p, { optimizationLevel: 2 }); }"
+        "catch (e) { if (!(e instanceof RangeError)) throw e; how = 'refused'; }"
+        "process.stdout.write(String(Date.now() - t) + ' ' + how);"
     )
     try:
         out = subprocess.run([node, "-e", script, module], capture_output=True, text=True, timeout=60)
-        took = int(out.stdout.strip() or "-1")
-        check(f"an amplifying **/../ pattern compiles at once ({took} ms)", 0 <= took < 2000)
+        took, _, how = (out.stdout.strip() or "-1 failed").partition(" ")
+        took = int(took)
+        if took < 0:
+            print(out.stderr.strip())
+        check(f"an amplifying **/../ pattern is {how} at once ({took} ms)", 0 <= took < 2000)
     except subprocess.TimeoutExpired:
         check("an amplifying **/../ pattern compiles at once (timed out)", False)
 else:

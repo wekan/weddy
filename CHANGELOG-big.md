@@ -476,6 +476,9 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   overridden in Admin Panel's login settings. Weddy's default changes: a
   password under 8 characters is accepted unless the minimum is enforced, as in
   WeKan. Thanks to xet7.
+- [Password policy, the rest: short sign-ins listed for Admin Panel, and the change required while enforced](https://github.com/wekan/caddy-wekan-plugin/commit/af549acf643a90ce6944b172ee2055059bdcb315) -
+  as WeKan, changing one's own password now signs every session out, this one
+  too, and a reset no longer signs in. Thanks to xet7.
 - [WIP limits, and the Archive's Restore into a list full at a hard limit](https://github.com/wekan/caddy-wekan-plugin/commit/ffbed2c3623264d47730664822fbb9138c69a848) -
   WeKan's applyWipLimit, enableWipLimit and enableSoftLimit; a card whose list
   is full goes to a list with room the Archive offers, and Restore all says how
@@ -497,6 +500,9 @@ and fixes the following bugs:
   the report was asked once, so a row loaded while automatic recovery held its
   lease kept its buttons disabled until a reload; it now asks again while a row
   is processing, as WeKan's reactive report updates. Thanks to xet7.
+- [Problems -> Recovery: an administrator's retry, pause and cancel wait a moment for automatic recovery's lease](https://github.com/wekan/caddy-wekan-plugin/commit/b3be01d165428d77775d188d8d6a0186d459e18c) -
+  a click in that moment, and a stale request, were answered "busy" at once.
+  Thanks to xet7.
 - [A logged-out method call gets the error WeKan's method throws](https://github.com/wekan/caddy-wekan-plugin/commit/a4adb0bfabdf1b4b4fcd6eafa9158fa776056299) -
   error-notAuthorized for importBoard and importScoped, not-logged-in for the
   collapse and the star, so WeKan's ImportBleed spec passes against Weddy.

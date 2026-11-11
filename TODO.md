@@ -79,9 +79,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   History's durable undo and redo with request ids, a stopped operation's
   recovery and an interrupted import's online resume are in, with WeKan's
   stored shapes - every Scrum spec of WeKan's runs on Weddy but one test.
-  Left: Card Settings' Scrum rows (WeKan's scrum.e2e card-settings test
-  drives Blaze's Popup), and a close's background rollover of a very large
-  sprint (Weddy rolls it over in the call).
+  A large sprint's close rolls over in the background and a large change's
+  History is a batch undone whole, as WeKan's. Left: Card Settings' Scrum
+  rows (WeKan's scrum.e2e card-settings test drives Blaze's Popup).
 - **WeKan's change history** (the maintainer's next choice, 2026-11-11;
   WeKan's docs/Features/General/History/History.md): the row hash, the
   writer gate and both chains, and a list's soft delete with undo and redo
@@ -107,7 +107,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 593 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 596 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
   The run of every candidate spec on 2026-11-11 passed 134 and failed 659, in
   these areas (a test can be in two): card details 90, translations and help

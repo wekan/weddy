@@ -454,3 +454,4 @@ scrum-import-online-recovery.e2e.js
 scrum-pending-import.e2e.js
 scrum-close-recovery.e2e.js
 scrum-multiple-releases.e2e.js
+scrum-snapshot-limits.e2e.js

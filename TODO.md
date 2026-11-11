@@ -76,8 +76,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   2026-11-11): settings, sprints - started, closed with their rollover, and
   cancelled - releases, events, card, list and swimlane metadata, the
   Sprints, Product Backlog, Velocity and Sprint Report views and their
-  exports are in, with WeKan's stored shapes and Scrum History rows. Daily
-  observations, their chart and export are in too. Left: the change-by-change scope history (getScopeHistory), the
+  exports are in, with WeKan's stored shapes and Scrum History rows, and the
+  daily observations and the scope history replayed from History. Left: the
   native Scrum transfer (export, import into a board, importIntoBoard) and its
   import recovery, the minicard and card details' Scrum fields and Card
   Settings' Scrum rows, a close's background rollover of a very large sprint
@@ -108,7 +108,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 519 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 520 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
   The run of every candidate spec on 2026-11-11 passed 134 and failed 659, in
   these areas (a test can be in two): card details 90, translations and help

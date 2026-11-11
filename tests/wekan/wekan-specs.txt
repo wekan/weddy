@@ -374,3 +374,4 @@ editor-enter-preference.e2e.js: description editor follows submit-on-Enter=true
 69-comment-card-boundary.e2e.js: DDP cannot attach a comment to a foreign private-board card
 attachment-range-streaming.e2e.js: a range is answered 206 with just those bytes
 attachment-range-streaming.e2e.js: negative: an unsatisfiable range is 416, a stale If-Range gets the whole file
+unassigned-attach-bleed.e2e.js: an unassigned assigned-only member can no longer upload to or delete from the card

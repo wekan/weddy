@@ -375,3 +375,7 @@ editor-enter-preference.e2e.js: description editor follows submit-on-Enter=true
 attachment-range-streaming.e2e.js: a range is answered 206 with just those bytes
 attachment-range-streaming.e2e.js: negative: an unsatisfiable range is 416, a stale If-Range gets the whole file
 unassigned-attach-bleed.e2e.js: an unassigned assigned-only member can no longer upload to or delete from the card
+07-attachments-links.e2e.js: attachment panel button opens from card details
+07-attachments-links.e2e.js: file input for attachments is present in the DOM
+07-attachments-links.e2e.js: the attachment overlay provides native PDF and isolated Office previews
+07-attachments-links.e2e.js: attachment area displays existing attachments without errors

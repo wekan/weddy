@@ -434,3 +434,18 @@ structural-selection.e2e.js: reject invalid moving-target before writes
 structural-selection.e2e.js: mixed list, card and checklist move across boards at the selected position
 structural-selection.e2e.js: moving a swimlane preserves nested lists and cards and leaves a source lane
 structural-selection.e2e.js: read-only members cannot use mixed moves or see selection checkboxes
+scrum-read-access.e2e.js
+scrum.e2e.js: Scrum menus plan work, retain closed snapshots and export Excel/PDF
+scrum.e2e.js: Scrum fields default hidden and non-admin members cannot configure or start sprints
+scrum.e2e.js: release and event editors update existing records and retain linked follow-up cards
+scrum-backlog-paging.e2e.js
+scrum-chart-scope.e2e.js
+scrum-container-move.e2e.js: list move retains destination Scrum list category
+scrum-history.e2e.js: Scrum metadata history preserves unrelated card edits and rejects conflicting metadata
+scrum-history.e2e.js: ordinary board writers cannot restore administrator sprint configuration
+scrum-history.e2e.js: planning record creation can be undone and redone without deleting referenced releases
+scrum-multiple-releases.e2e.js: the Product Backlog puts a card in several releases, reports it in each, and undoes
+scrum-native-export.e2e.js: private board export refuses assigned-only members instead of exposing unassigned data
+scrum-pending-import.e2e.js: a private import checkpoint blocks Scrum before the first sprint exists
+scrum-release-assignment.e2e.js: equal backlog ranks stay ordered by card ID after refresh and metadata edits
+scrum-release-assignment.e2e.js: backlog release assignment saves, clears and restores through History

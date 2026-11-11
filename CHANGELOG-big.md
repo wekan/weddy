@@ -471,6 +471,8 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   [changeHistory.page](https://github.com/wekan/caddy-wekan-plugin/commit/c40231931dfabc804f13e7bae0368d68d14d7c66),
   [changeHistory.restore and the row access check](https://github.com/wekan/caddy-wekan-plugin/commit/fd1f936122bfab0d195dd5a828800721442df37b),
   [the History page and Ctrl+Z / Ctrl+Shift+Z](https://github.com/wekan/caddy-wekan-plugin/commit/867ca54b6a44b8f29493160ac110ab382c445f2c),
+  [Member Settings' History](https://github.com/wekan/caddy-wekan-plugin/commit/9f0d9fba4654a3bc3f76bfb4de8ed9a787db7c86),
+  [attachments' upload, delete and restore](https://github.com/wekan/caddy-wekan-plugin/commit/73fbe71c65590d4199d992f8ef27b76692a311a4),
   and [a list's soft delete with undo and redo](https://github.com/wekan/caddy-wekan-plugin/commit/3ca9b1d0bc23de8b9d1bffd5503150090c8c2f82) -
   rows Weddy writes pass WeKan's own audit, WeKan and Weddy writing one board
   never fork its chain, and undo restores a deleted list with only the cards

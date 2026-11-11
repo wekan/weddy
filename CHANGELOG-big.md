@@ -463,6 +463,13 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   language](https://github.com/wekan/caddy-wekan-plugin/commit/30fbaf15cb89b08e660105fde5aa04f431f62fc2);
   [WeKan's Scrum tests on Weddy](https://github.com/wekan/weddy/commit/0d02d6cf84b2a311c78553dc5f1994ffe2ccab85),
   17 of them. Thanks to xet7.
+- [Scrum: daily observations, their chart and export](https://github.com/wekan/caddy-wekan-plugin/commit/5af999377bf44c7e305f27e0877439177867adea) -
+  the first observation of each UTC day of an active sprint, kept as
+  measured and the reader's cards only, drawn in the Sprint Report and
+  exported with WeKan's notices; the chart Export pop-over's links carry a
+  download token of their own, for the export routes only;
+  [WeKan's daily-history tests on Weddy](https://github.com/wekan/weddy/commit/9dc8b1944850d8c354f03e5927cc6721f376b05b),
+  519 tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

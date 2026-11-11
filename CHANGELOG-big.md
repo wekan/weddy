@@ -475,6 +475,17 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   when History does not reproduce the sprint's own snapshots;
   [WeKan's scope-history test on Weddy](https://github.com/wekan/weddy/commit/69a4108d802e86760ed4aa613f864cb5f8b788f3),
   520 tests in all. Thanks to xet7.
+- [Scrum: the native Scrum transfer in the board export](https://github.com/wekan/caddy-wekan-plugin/commit/61d9577c94de0da5813f484d3d43ba2f87cd400c),
+  [imported with a board](https://github.com/wekan/caddy-wekan-plugin/commit/8b9256fe0cf8c0498dfa8a7eaf4f1c0d2bd6d28e),
+  [and into an existing board](https://github.com/wekan/caddy-wekan-plugin/commit/083cdc16662bd680e5c8e7f8d50744ccfe0b6456) -
+  WeKan's wekan-scrum-2 file: sprints with their snapshots, releases, events,
+  observations and the cards' planning, what a scoped export left out named;
+  an import gets new ids and the same outcomes, refuses a file that does not
+  hold together, and into an existing board matches what it has, never
+  duplicating it - one History row; [the import page takes a pasted WeKan
+  export](https://github.com/wekan/caddy-wekan-plugin/commit/5c2cedafca9e2ec34dd0077b2d195bd758710a0d);
+  [WeKan's tests on Weddy](https://github.com/wekan/weddy/commit/0ab1e907ae7ca62c209610fb9775d39ddfae31d8), 529
+  tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

@@ -76,9 +76,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **WeKan's change history** (the maintainer's next choice, 2026-11-11;
   WeKan's docs/Features/General/History/History.md): the row hash, the
   writer gate and both chains, and a list's soft delete with undo and redo
-  are in. Next: recording and undoing the other groups - cards' titles,
-  descriptions, positions and the rest (server/models/changeHistoryHooks.js)
-  - then `changeHistory.page` and `restore`, and the History views.
+  are in, and a card's field edits recorded and undone. Next: moves as one
+  position row, attachments' and checklists' rows, lists' and swimlanes'
+  field edits (the guard in history_fields_test.go lists every card write
+  still unrecorded, with why), then `changeHistory.page` and `restore`, and
+  the History views.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.

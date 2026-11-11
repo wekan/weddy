@@ -21,8 +21,8 @@ upstream Caddy and the plugins, and released with its source **with and without
 history** and binaries for **every platform**. It serves **many WeKan domains**,
 each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
-Gitea's own. WeKan's fixes of **CrossBoardExportBleed**, **ListLockBleed** and
-**FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
+Gitea's own. WeKan's fixes of **CrossBoardExportBleed**, **ListLockBleed**,
+**ListLockAttachBleed** and **FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
 WeKan's **change history** and **Scrum** sprints and reports are in Weddy too.
 
 This release fixes the following CRITICAL SECURITY ISSUES:
@@ -70,6 +70,23 @@ account. WeKan's checklist rename (#1037) is added too.
 `TestEveryCardWriteAsksTheList` fails on any card write route that does not
 ask the list, and WeKan's own ListLockBleed spec
 ([synced](https://github.com/wekan/weddy/commit/60fa295d1caeda818d09a56abf963dfb931ed32f)) passes against Weddy.
+
+</details>
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/09f82f22d4736d196c3b14c34786f1da04248009">WeKan in Weddy: a list's refusal holds for the attachment API, and its guard says so</a>. Thanks to Furkan Derse and xet7.</summary>
+
+[ListLockAttachBleed](https://wekan.fi/hall-of-fame/listlockattachbleed/).
+In WeKan the attachment API's upload, delete, copy and move asked the board
+but not the card's list, so a member a list refused still added and removed
+its cards' files. Weddy was not affected: its attachment upload and delete
+already ask the list, and it has no copy or move. But its guard had the same
+blind spot as WeKan's: it read only routes with the card in the path, and
+`/api/attachment/upload` and `/api/attachment/delete/{id}` name their card
+in the body or by the file. `TestEveryCardWriteAsksTheList` reads them now,
+and `TestListLock` refuses an upload to and a delete from a locked list's
+card, over REST and `api.attachment.delete`, and still takes an upload in an
+open list.
 
 </details>
 
@@ -573,6 +590,12 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 and fixes the following bugs:
 
+- [WeKan's indexes on a database Weddy alone runs](https://github.com/wekan/caddy-wekan-plugin/commit/1b3127e93a42456d9fc0dd0e006b5d68d2d8c547) -
+  `cmd/sync-indexes` copies WeKan's 186 `ensureIndex` calls, with their sparse,
+  unique and TTL options, and Weddy creates them before its first request, so
+  the LDAP id, cards' assignees and members, and History by entity and hash
+  (wekan/wekan#6892) are indexed without a WeKan ever starting there. Thanks to
+  Raymond-Voogt and xet7.
 - [A language set from the page changes the page at once, as in WeKan](https://github.com/wekan/caddy-wekan-plugin/commit/53471ff4ac819a607a268d0811ca7128667a86b4) - it stayed in the old language until the next load. Thanks to xet7.
 - [The seven WeKan languages whose file is not named by their tag are offered](https://github.com/wekan/caddy-wekan-plugin/commit/49e46755bca8661bba3954f12144144851fd3514) - be-BE, ca-ES, ca-valencia, de-DE, ja-Hira, or-IN and zh-SG were left out by the translation copy; 244 languages now. Thanks to xet7.
 - [A board member keeps every field WeKan wrote, grantedBy included](https://github.com/wekan/caddy-wekan-plugin/commit/263c070092d6ad83fda6cca4f69631cf90fd46f7) - Weddy's rewrites of a board's members dropped the orgs and teams a membership came through (\#4178), so leaving the group no longer took the board away. Thanks to xet7.

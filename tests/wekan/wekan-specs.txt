@@ -381,3 +381,23 @@ unassigned-attach-bleed.e2e.js: an unassigned assigned-only member can no longer
 07-attachments-links.e2e.js: attachment area displays existing attachments without errors
 svg-attachment.e2e.js: an uploaded SVG is sanitized, previewed, a cover and a board background
 minicard-comment-beside-assignees.e2e.js: the comment has its own full-width line, not covered by the avatars
+
+frame-bleed.e2e.js
+# Passed in the 2026-11-11 run of every candidate WeKan spec against Weddy.
+09-my-cards-filter.e2e.js: My Cards, filter & sort › changing a custom field value saves without breaking the card
+09-my-cards-filter.e2e.js: My Cards, filter & sort › changing the list (category) from the card list-selector moves it correctly
+09-my-cards-filter.e2e.js: My Cards, filter & sort › sorting cards by date does not crash and reorders list
+31-templates-allboards.e2e.js: #2339 #5850 All Boards / Templates redesign › #6643: Archive shows an archived subtasks helper board
+accepted-audit-fixes.e2e.js: A05: password reveal is reachable by Tab and never submits
+accepted-audit-fixes.e2e.js: F01 A01 A02: keyboard rule controls save string checklist and item names
+card-copy-boundary.e2e.js: the copy dialog still creates a renamed card
+corsican-rule-controls.e2e.js: Latin rule actions distinguish top and bottom of the current list
+corsican-rule-controls.e2e.js: Latin rule import dialog explains partial conversion and keeps format identifiers
+corsican-rule-controls.e2e.js: Latin workflow toolbox distinguishes its trigger and action labels
+haitian-rule-semantics.e2e.js: Haitian checklist actions distinguish unchecking from disabling
+hook-bleed.e2e.js: moving a card with a webhook enabled is no HookBleed, and the mover keeps their account
+inactive-account-security.e2e.js: admin-created administrator flags persist and ordinary users cannot create accounts
+inactive-account-security.e2e.js: People Active control uses the authorized method and persists its change
+list-sync-estimate.e2e.js: dotted checkbox writes emit false once and removing a valued field emits an unset
+rules-back-to-board-6852.e2e.js: #6852 Rules page Back to the board › Back on the Rules page opens the board
+rules-blocks.e2e.js: Blocks keeps rule writes restricted to board admins

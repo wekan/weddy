@@ -21,8 +21,8 @@ upstream Caddy and the plugins, and released with its source **with and without
 history** and binaries for **every platform**. It serves **many WeKan domains**,
 each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
-Gitea's own. WeKan's fixes of **CrossBoardExportBleed** and **ListLockBleed**
-hold in Weddy too.
+Gitea's own. WeKan's fixes of **CrossBoardExportBleed**, **ListLockBleed** and
+**FrameBleed** hold in Weddy too.
 
 This release fixes the following CRITICAL SECURITY ISSUES:
 
@@ -69,6 +69,24 @@ account. WeKan's checklist rename (#1037) is added too.
 `TestEveryCardWriteAsksTheList` fails on any card write route that does not
 ask the list, and WeKan's own ListLockBleed spec
 ([synced](https://github.com/wekan/weddy/commit/60fa295d1caeda818d09a56abf963dfb931ed32f)) passes against Weddy.
+
+</details>
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/1846e7eb7ff1d33b49d6af1cc7713f7aaf9191c5">WeKan in Weddy: its pages refuse to be framed by another site</a>. Thanks to xet7.</summary>
+
+[FrameBleed](https://wekan.fi/hall-of-fame/framebleed/). Weddy's pages carried
+no framing header at all, so any site could load a signed-in user's WeKan in an
+invisible frame and have them click through it - what Node.js WeKan fixed again
+on 2026-10-02. Every response of every domain now gets `Content-Security-Policy:
+frame-ancestors 'self'` and `X-Frame-Options: SAMEORIGIN`, on unless
+`BROWSER_POLICY_ENABLED` is `false`, and `TRUSTED_URL` names the origins that
+may frame it, as in WeKan. A file keeps its own stricter policy, on its 304s
+too. There is nothing for Admin Panel -> Problems: the browser refuses the
+frame, so the attempt never reaches the server. The tests check every kind of
+answer, and the negative test fails on a route that adds a second policy or
+on anything answering past `Server.ServeHTTP`. WeKan's own FrameBleed spec
+passes against Weddy.
 
 </details>
 
@@ -405,6 +423,9 @@ and fixes the following bugs:
 - [A board member keeps every field WeKan wrote, grantedBy included](https://github.com/wekan/caddy-wekan-plugin/commit/263c070092d6ad83fda6cca4f69631cf90fd46f7) - Weddy's rewrites of a board's members dropped the orgs and teams a membership came through (\#4178), so leaving the group no longer took the board away. Thanks to xet7.
 - [FerretDB: a negation over an array of documents holds only for every element](https://github.com/wekan/FerretDB/commit/9e211ce9468cf229ecaf2b7489d3178504fcb409) - `$ne`, `$nin` and `$not` on a path such as `teams.teamId` matched when any element differed, so an add-once update pushed duplicates. Thanks to xet7.
 - [A local rebuild of the same Weddy commit replaces its .xz instead of failing](https://github.com/wekan/weddy/commit/b6fff13a19ecbd9c659dce3422edf94432c373de). Thanks to xet7.
+- [The WeKan and FerretDB plugins follow the dependencies wekan/FerretDB updated](https://github.com/wekan/caddy-wekan-plugin/commit/7bb0566ca653a24961f5a4987fb1ed8e952e4b1d) - SAP/go-hdb v1.21.0,
+  golang.org/x/sys v0.50.0 and modernc.org/libc v1.80.1, for which go vet and go
+  test asked for go mod tidy; [the same in caddy-ferretdb-plugin](https://github.com/wekan/caddy-ferretdb-plugin/commit/5fb52acc85e2ecb4929c17476241f95ddd41419a). Thanks to xet7.
 
 and fixes the following SECURITY ISSUES found by GitHub CodeQL code scanning:
 
@@ -416,5 +437,9 @@ and fixes the following SECURITY ISSUES found by Dependabot:
 
 - [No go-jose v3 in any plugin: go.step.sm/crypto v0.92.0 and smallstep/certificates at Caddy master's commit](https://github.com/wekan/caddy-wekan-plugin/commit/1a1c8fb30f7e22e8fb4274c772b6556bbaf7478a) - go-jose v3 <= 3.0.5 ([GHSA-mgcc-cww5-fp2q](https://github.com/advisories/GHSA-mgcc-cww5-fp2q), [GHSA-4w3g-jfj2-cw2q](https://github.com/advisories/GHSA-4w3g-jfj2-cw2q), [GHSA-vvm8-gf78-28g4](https://github.com/advisories/GHSA-vvm8-gf78-28g4)) has no patched release; also in [caddy-ferretdb-plugin](https://github.com/wekan/caddy-ferretdb-plugin/commit/926d05287ddb43c3dec197f1d979215f456a006c), [caddy-gitea-plugin](https://github.com/wekan/caddy-gitea-plugin/commit/7701fabcfaf1d1962d70d57652958ca1b76667cb) and [caddy-rclone-plugin](https://github.com/wekan/caddy-rclone-plugin/commit/7e06669906020a1ef0a96d7f41c9578790e1fd95). Thanks to Dependabot.
 - [The test harness's minimatch is 11.0.7](https://github.com/wekan/weddy/commit/cb5e6cad67d3d2b0db5fb3ceed352b7ddc1a43ab) - Dependabot alert #1: minimatch >= 7.0.0, < 11.0.1 lets a pattern's "**/../" multiply its glob parts and then compares them pairwise; archiver's readdir-glob asks for ^10, so tests/wekan/package.json overrides it to ^11.0.1, as WeKan does, and tests/dependencySecurity.test.py pins the lockfiles and runs an amplifying pattern - about 9 s on 10.2.6, milliseconds on 11.0.7. Thanks to Dependabot.
+- [The minimatch check passes when 11.0.7 refuses the amplifying pattern at once](https://github.com/wekan/weddy/commit/ddc27a6df37c26798720fa95371eae157c638fec) -
+  it read only a number from node, so the RangeError counted as a failure;
+  compiling and refusing quickly are both the fix, and 10.2.4 still takes about
+  9 s. Thanks to xet7.
 
 Thanks to above GitHub users for their contributions and translators for their translations.

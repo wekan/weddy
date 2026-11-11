@@ -72,6 +72,13 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.
+- **Refused attacks, recorded and the account disabled as in WeKan**: Weddy
+  refuses them, but WeKan's specs of BackgroundBleed, RepointBleed,
+  PrototypeBleed and HookBleed also expect the Admin Panel -> Problems row and,
+  for the first three, the sender's account disabled (`loginDisabled`), and
+  CopyIdentityBleed's copy methods (`copyBoard`, the card copy) are not in
+  Weddy yet (404). ImportBleed's logged-out DDP import answers
+  `not-authorized` where WeKan answers `error-notAuthorized`.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived; WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers
@@ -80,8 +87,17 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 436 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 454 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
+  The run of every candidate spec on 2026-11-11 passed 134 and failed 659, in
+  these areas (a test can be in two): card details 90, translations and help
+  texts of the Latin, Sesotho, Corsican, Haitian and Malagasy pages 84, the
+  board views (calendar, map, whiteboard, table, time, e-mail and chat) 59,
+  Admin Panel's settings panes 55, Scrum 49, search and filters 42, security
+  specs 36 (most need Meteor's client in the page - `Meteor.subscribe`,
+  `Meteor.status`, the DDP stream - which Weddy's pages do not load), imports
+  35, history 34, list sync 27, subtasks 22, rules 20, templates 19 and Assist
+  16. Run log: `log/2026-11-11_03-18-42/`.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the
   development sandbox Firefox crashes at start (SIGSEGV: its own sandbox

@@ -486,6 +486,14 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   export](https://github.com/wekan/caddy-wekan-plugin/commit/5c2cedafca9e2ec34dd0077b2d195bd758710a0d);
   [WeKan's tests on Weddy](https://github.com/wekan/weddy/commit/0ab1e907ae7ca62c209610fb9775d39ddfae31d8), 529
   tests in all. Thanks to xet7.
+- [Scrum: board and card copies carry it as WeKan's do](https://github.com/wekan/caddy-wekan-plugin/commit/60d7002730038e8841d764bb80961c79c1a058b2),
+  [WeKan's copyList and copySwimlane](https://github.com/wekan/caddy-wekan-plugin/commit/40bb04a64f2814425296d4111591042af042b015)
+  and [moves, with WeKan's moveSwimlane](https://github.com/wekan/caddy-wekan-plugin/commit/a584bdf52b17ae2f21c0ba3a39de9b46a233f970) -
+  on its own board a copy keeps its Scrum; on another, its sprint and
+  releases are linked by name and the rest of the board left's is dropped,
+  and a list keeps its category; a copied card never carries the source's
+  List Sync binding; [WeKan's tests on Weddy](https://github.com/wekan/weddy/commit/ec60f2eef5fcbec7e01854ba3fcb247089da1850),
+  535 tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

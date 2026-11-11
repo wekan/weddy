@@ -494,6 +494,19 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   and a list keeps its category; a copied card never carries the source's
   List Sync binding; [WeKan's tests on Weddy](https://github.com/wekan/weddy/commit/ec60f2eef5fcbec7e01854ba3fcb247089da1850),
   535 tests in all. Thanks to xet7.
+- [Scrum: the card's and minicard's Scrum fields](https://github.com/wekan/caddy-wekan-plugin/commit/269b8d28264b8e6a6fd7462668f7e036a833f3f4),
+  [History's durable undo, redo and Restore with request ids](https://github.com/wekan/caddy-wekan-plugin/commit/39181cdcb2fd823070615ad4fdc734a8d305c3e9),
+  [keyed Ctrl+Z and the Scrum views' History](https://github.com/wekan/caddy-wekan-plugin/commit/82039ee6672d7980990e6ff8f68207c64e85fba7),
+  [a stopped History operation's rollback or discard](https://github.com/wekan/caddy-wekan-plugin/commit/37672b224418a46284e1ad72c315ea782809561a),
+  [an interrupted import finished online](https://github.com/wekan/caddy-wekan-plugin/commit/453e72662ed5da125e4abccb69628c597d7d5ae4)
+  and [Scrum and rule rows' details in History](https://github.com/wekan/caddy-wekan-plugin/commit/e49d601a8a1d7589e7b069fe7c2a39702d5fe8ae) -
+  a Scrum undo is a checkpoint saved before its first write, resumed without
+  repeating one and never over a newer edit, its receipts WeKan's so either
+  server finishes the other's; a retried Ctrl+Z repeats its request rather
+  than undoing more. [FerretDB: a field named rowId was read as SQLite's
+  ROWID](https://github.com/wekan/FerretDB/commit/e45515c155860a3d12844bee4cff32c19e702cc4), so the receipts were
+  never found by it. [WeKan's tests on Weddy](https://github.com/wekan/weddy/commit/92a57e021a495f38d37e84c67f88ad088ad711ac),
+  593 tests in all: every Scrum spec but one test. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

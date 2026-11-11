@@ -507,6 +507,9 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   ROWID](https://github.com/wekan/FerretDB/commit/e45515c155860a3d12844bee4cff32c19e702cc4), so the receipts were
   never found by it. [WeKan's tests on Weddy](https://github.com/wekan/weddy/commit/92a57e021a495f38d37e84c67f88ad088ad711ac),
   593 tests in all: every Scrum spec but one test. Thanks to xet7.
+- [History: a keyed Ctrl+Z settles its request as soon as the reply arrives](https://github.com/wekan/caddy-wekan-plugin/commit/01981d3919f0d9d84b388912cc374cec1263e24e) -
+  it waited for a refresh of the user, and WeKan's test found the request
+  still stored now and then. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

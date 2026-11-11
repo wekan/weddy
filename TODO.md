@@ -72,6 +72,14 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.
+- **WeKan's password policy settings**: Weddy always refuses a new password
+  under 8 characters (users.go). WeKan's PASSWORD_MIN_LENGTH (default 8)
+  only reports a shorter one unless PASSWORD_MIN_LENGTH_ENFORCE is true -
+  then it refuses it and has the account change its password - with Admin
+  Panel's table of accounts under the minimum, PASSWORD_CHECK_PWNED's
+  breached-password check, and the sign-up page's `getPasswordPolicy`,
+  asked logged out (models/lib/passwordPolicy.js, server/lib/passwordPolicy.js;
+  WeKan's password-min-length-signup-login and password-length-report specs).
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived, /integrations/update a webhook
   and /customFields/update a field's definition; WeKan's client writes other

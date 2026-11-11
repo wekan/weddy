@@ -463,6 +463,11 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 **Many domains** - the Cloud Panel, in Weddy.
 
+- [Board members: WeKan's inviteUserToBoard and searchUsers, the invitee's bell, and the same-Organization/Team restriction](https://github.com/wekan/caddy-wekan-plugin/commit/cfcba67585ff5ad4ea1f5f1828ea668f9a5a6399) -
+  by username or e-mail in any letter case, a new address as a new account,
+  an existing invitee told in the bell (#3136); and Admin Panel's "board members
+  only from the same Organization / Team", which Weddy ignored, now holds for
+  the method, the Members widget and the search (#6116). Thanks to xet7.
 - [WeKan's password policy settings, with WeKan's report-only default](https://github.com/wekan/caddy-wekan-plugin/commit/9b98046e3a4cfc534077648daf9e844c181c9969) -
   PASSWORD_MIN_LENGTH, PASSWORD_MIN_LENGTH_ENFORCE and PASSWORD_CHECK_PWNED,
   overridden in Admin Panel's login settings. Weddy's default changes: a

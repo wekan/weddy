@@ -410,3 +410,6 @@ card-copy-boundary.e2e.js
 card-copy-destination.e2e.js
 # WIP limits and the Archive's Restore.
 restore-wip-limit.e2e.js
+# Inviting board members.
+board-invite-tray.e2e.js
+invite-member-email-case.e2e.js

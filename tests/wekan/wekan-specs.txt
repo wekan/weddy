@@ -390,7 +390,6 @@ frame-bleed.e2e.js
 31-templates-allboards.e2e.js: #2339 #5850 All Boards / Templates redesign › #6643: Archive shows an archived subtasks helper board
 accepted-audit-fixes.e2e.js: A05: password reveal is reachable by Tab and never submits
 accepted-audit-fixes.e2e.js: F01 A01 A02: keyboard rule controls save string checklist and item names
-card-copy-boundary.e2e.js: the copy dialog still creates a renamed card
 corsican-rule-controls.e2e.js: Latin rule actions distinguish top and bottom of the current list
 corsican-rule-controls.e2e.js: Latin rule import dialog explains partial conversion and keeps format identifiers
 corsican-rule-controls.e2e.js: Latin workflow toolbox distinguishes its trigger and action labels
@@ -406,3 +405,6 @@ hook-bleed.e2e.js
 prototype-bleed.e2e.js
 repoint-bleed.e2e.js
 42-import-bleed.e2e.js
+board-copy-boundary.e2e.js
+card-copy-boundary.e2e.js
+card-copy-destination.e2e.js

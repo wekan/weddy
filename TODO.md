@@ -72,8 +72,6 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.
-- **Refused attacks, the rest of WeKan's specs**: CopyIdentityBleed's copy
-  methods (`copyBoard`, the card copy) are not in Weddy yet (404).
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived, /integrations/update a webhook
   and /customFields/update a field's definition; WeKan's client writes other
@@ -83,7 +81,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 459 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 465 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
   The run of every candidate spec on 2026-11-11 passed 134 and failed 659, in
   these areas (a test can be in two): card details 90, translations and help
@@ -93,7 +91,19 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   specs 36 (most need Meteor's client in the page - `Meteor.subscribe`,
   `Meteor.status`, the DDP stream - which Weddy's pages do not load), imports
   35, history 34, list sync 27, subtasks 22, rules 20, templates 19 and Assist
-  16. Run log: `log/2026-11-11_03-18-42/`.
+  16. Run log: `log/2026-11-11_03-18-42/`. By what they wait for:
+  - 113 drive WeKan's Blaze client itself - `Popup`, `Package`, `Blaze`,
+    `Meteor.loggingIn`, `Meteor.subscribe`, the DDP stream - which Weddy's Go
+    pages do not load; they pass only with a client shim of those objects, or
+    rewritten against the pages.
+  - 75 call a method Weddy has not got, most for whole features:
+    `setListSyncSource` 15 (List Sync, WeKan's server/lib/listSync*.js -
+    about 2,900 lines), Scrum 28 (`scrum.saveSprint` 15, `scrum.updateCard` 6,
+    `scrum.configure` 3, `scrum.saveRelease` 2, two more), then
+    `moveBoardObjects`, `getSamlConfigSources`, `changeHistory.page` and
+    `applyWipLimit` 3 each, `lists.softRemove`, `inviteUserToBoard` and
+    `getPasswordPolicy` 2 each, and 16 more once each.
+  - the rest wait for a page, control or text Weddy draws differently.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the
   development sandbox Firefox crashes at start (SIGSEGV: its own sandbox

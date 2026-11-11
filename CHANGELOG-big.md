@@ -123,6 +123,22 @@ REST API, read from the source, as an ordinary member.
 
 </details>
 
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/5e1f311052014f29f7bf68d5504f5ad7d9222697">WeKan in Weddy: copyBoard and copyCard change only the copy, never the source</a>. Thanks to xet7.</summary>
+
+[CopyIdentityBleed](https://wekan.fi/hall-of-fame/copyidentitybleed/). WeKan's
+board menu and copy dialog copy with these two methods, which Weddy had not got.
+They now copy as WeKan's do: the caller changes a board copy's title, sort, type
+and parts, or a card copy's title and description, and nothing else - an `_id`
+once made WeKan copy another, private, board or card. Anything else is refused
+before anything is read, recorded, and costs the account; a wrong type is
+refused unrecorded. A board copy keeps its members exactly, and a card copy
+goes only to a swimlane and list of its destination board. WeKan's
+board-copy-boundary, card-copy-boundary and card-copy-destination specs pass
+against Weddy.
+
+</details>
+
 and adds the following new features:
 
 **Build** - from upstream Caddy and the plugins, like gitea-patches.
@@ -460,6 +476,10 @@ and fixes the following bugs:
   a board admin edits their board's webhook and a writer a custom field's
   definition, as WeKan's pages do; a move to another board stays RepointBleed.
   Thanks to xet7.
+- [Problems -> Recovery: a row being delivered turns back by itself when its lease is released](https://github.com/wekan/caddy-wekan-plugin/commit/c1849fdf3511857b1217e1f5b11a1983f8f375df) -
+  the report was asked once, so a row loaded while automatic recovery held its
+  lease kept its buttons disabled until a reload; it now asks again while a row
+  is processing, as WeKan's reactive report updates. Thanks to xet7.
 - [A logged-out method call gets the error WeKan's method throws](https://github.com/wekan/caddy-wekan-plugin/commit/a4adb0bfabdf1b4b4fcd6eafa9158fa776056299) -
   error-notAuthorized for importBoard and importScoped, not-logged-in for the
   collapse and the star, so WeKan's ImportBleed spec passes against Weddy.

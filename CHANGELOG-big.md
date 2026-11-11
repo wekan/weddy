@@ -466,6 +466,10 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Change history: WeKan's row integrity hash](https://github.com/wekan/caddy-wekan-plugin/commit/cc61229faee776eab7e5bc02f4ccd9bee9a7ad2e),
   [its writer gate and both chains](https://github.com/wekan/caddy-wekan-plugin/commit/cd6543cd0daba0c5e0c69ab1ebd52a2fa83c96f0),
   [a card's field edits recorded and undone](https://github.com/wekan/caddy-wekan-plugin/commit/040110d7f66027f1a8716ec75daffe11bdba1777),
+  [a card's move as one position row](https://github.com/wekan/caddy-wekan-plugin/commit/3f09d41f3eb520a2c24c2b88ad2b1214c7aa8fdf),
+  [lists', swimlanes', checklists', items' and comments' edits](https://github.com/wekan/caddy-wekan-plugin/commit/0c327d2eaad8ab49d23c548082f37e8b48fc5d1c),
+  [changeHistory.page](https://github.com/wekan/caddy-wekan-plugin/commit/c40231931dfabc804f13e7bae0368d68d14d7c66),
+  [changeHistory.restore and the row access check](https://github.com/wekan/caddy-wekan-plugin/commit/fd1f936122bfab0d195dd5a828800721442df37b),
   and [a list's soft delete with undo and redo](https://github.com/wekan/caddy-wekan-plugin/commit/3ca9b1d0bc23de8b9d1bffd5503150090c8c2f82) -
   rows Weddy writes pass WeKan's own audit, WeKan and Weddy writing one board
   never fork its chain, and undo restores a deleted list with only the cards

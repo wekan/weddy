@@ -76,11 +76,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **WeKan's change history** (the maintainer's next choice, 2026-11-11;
   WeKan's docs/Features/General/History/History.md): the row hash, the
   writer gate and both chains, and a list's soft delete with undo and redo
-  are in, and a card's field edits recorded and undone. Next: moves as one
-  position row, attachments' and checklists' rows, lists' and swimlanes'
-  field edits (the guard in history_fields_test.go lists every card write
-  still unrecorded, with why), then `changeHistory.page` and `restore`, and
-  the History views.
+  are in; cards', lists', swimlanes', checklists', items' and comments'
+  edits and moves are recorded and undone, and `changeHistory.page` and
+  `restore` answer. Next: the History views on Weddy's pages (the card's,
+  the board's, Member Settings'), attachments' and rules' history, and the
+  writes the guards in history_fields_test.go still list with their reason.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.
@@ -97,7 +97,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 483 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 490 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
   The run of every candidate spec on 2026-11-11 passed 134 and failed 659, in
   these areas (a test can be in two): card details 90, translations and help
@@ -112,13 +112,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
     `Meteor.loggingIn`, `Meteor.subscribe`, the DDP stream - which Weddy's Go
     pages do not load; they pass only with a client shim of those objects, or
     rewritten against the pages.
-  - 62 call a method Weddy has not got, most for whole features:
+  - 58 call a method Weddy has not got, most for whole features:
     `setListSyncSource` 15 (List Sync, WeKan's server/lib/listSync*.js -
     about 2,900 lines), Scrum 28 (`scrum.saveSprint` 15, `scrum.updateCard` 6,
     `scrum.configure` 3, `scrum.saveRelease` 2, two more), then
-    WeKan's change history 4 (`changeHistory.page` 3 and `restore`),
-    `getSamlConfigSources` 3,
-    and 13 more once each.
+    `getSamlConfigSources` 3, and 13 more once each.
   - the rest wait for a page, control or text Weddy draws differently.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.
   Both browsers are installed under `.tools/ms-playwright`, but in the

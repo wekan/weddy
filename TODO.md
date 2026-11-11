@@ -73,6 +73,15 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   selection as WeKan's does, but the board has no structural selection
   checkboxes, mixed drag or destination popup for it yet - eight tests of
   WeKan's structural-selection spec wait for them.
+- **WeKan's change history** (the maintainer's next choice, 2026-11-11;
+  WeKan's docs/Features/General/History/History.md): step 1, the row
+  integrity hash identical to WeKan's, is in. Next, in order: the writer
+  gate and both chains of server/lib/historyWriterGate.js,
+  historyChainAppend.js and models/lib/historyLegacyAppend.js - every
+  writer of a board takes part, or WeKan and Weddy writing one board fork
+  its chain; then recording a list's and a card's soft delete, and
+  `changeHistory.page`, `undoLast`, `redoLast` and `restore`, with
+  `lists.softRemove`; then the other groups' recording.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.

@@ -15,5 +15,6 @@ each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
 Gitea's own. WeKan's fixes of **CrossBoardExportBleed**, **ListLockBleed** and
 **FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
+WeKan's **change history** and **Scrum** sprints and reports are in Weddy too.
 
 [All changes so far](CHANGELOG-big.md#upcoming-weddy-release)

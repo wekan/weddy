@@ -23,6 +23,7 @@ each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
 Gitea's own. WeKan's fixes of **CrossBoardExportBleed**, **ListLockBleed** and
 **FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
+WeKan's **change history** and **Scrum** sprints and reports are in Weddy too.
 
 This release fixes the following CRITICAL SECURITY ISSUES:
 
@@ -454,6 +455,14 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [Card details: WeKan's attachment gallery, its upload pop-up and the viewer](https://github.com/wekan/caddy-wekan-plugin/commit/d0945ef5b49cbce1dda5aa51f66bdb6bb05d3d8f) - tiles with size and download, the "+" and its Computer upload, and images, PDFs, video, audio and text in the overlay; [WeKan's attachment tests on Weddy](https://github.com/wekan/weddy/commit/97a9fa750e16ad4de0ee6ec911e442a41c11021d), 564 tests in all. Thanks to xet7.
 - [Attachments: an SVG shown sanitized, a card's cover and the board's background](https://github.com/wekan/caddy-wekan-plugin/commit/d3338db8a15f9b2819683d8ea56d0620183c159c) - WeKan's SVG sanitizer and headers, removals recorded as FileBleed, covers on minicards and a board admin's background; [WeKan's SVG test on Weddy](https://github.com/wekan/weddy/commit/d51f88ac6bb5deb401a225951403e5031182bab6), 565 tests in all. Thanks to xet7.
 - [Minicards: their assignees, and their newest comments on lines of their own](https://github.com/wekan/caddy-wekan-plugin/commit/e52b0aba0907d3f4747c7e845b39dff9e34715ff) - avatars as the board shows them, three comments cut at 140 characters and never covered by the avatars; [WeKan's minicard comment test on Weddy](https://github.com/wekan/weddy/commit/a0b7efcb9a137bab10016b16b073de9c01f83fb8), 566 tests in all. Thanks to xet7.
+- [Scrum: sprints, releases, events and the Sprints, Product Backlog, Velocity and Sprint Report views](https://github.com/wekan/caddy-wekan-plugin/commit/1406d005e5226821770a80a0f279ce5893d9e58b) -
+  WeKan's Scrum methods with its validation, permissions and revisions, a
+  sprint started and closed with its unfinished cards rolled over, stored as
+  WeKan stores it, one History row per change with undo and redo, the Board
+  View menu, and every chart's Excel in WeKan's layout; [the views in every
+  language](https://github.com/wekan/caddy-wekan-plugin/commit/30fbaf15cb89b08e660105fde5aa04f431f62fc2);
+  [WeKan's Scrum tests on Weddy](https://github.com/wekan/weddy/commit/0d02d6cf84b2a311c78553dc5f1994ffe2ccab85),
+  17 of them. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

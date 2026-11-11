@@ -22,7 +22,7 @@ history** and binaries for **every platform**. It serves **many WeKan domains**,
 each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
 Gitea's own. WeKan's fixes of **CrossBoardExportBleed**, **ListLockBleed** and
-**FrameBleed** hold in Weddy too.
+**FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
 
 This release fixes the following CRITICAL SECURITY ISSUES:
 
@@ -87,6 +87,26 @@ frame, so the attempt never reaches the server. The tests check every kind of
 answer, and the negative test fails on a route that adds a second policy or
 on anything answering past `Server.ServeHTTP`. WeKan's own FrameBleed spec
 passes against Weddy.
+
+</details>
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/9f7279918d25b1951a10761921f31d6f6ee615a4">WeKan in Weddy: refused attacks are in Admin Panel - Problems, and cost the account</a>. Thanks to xet7.</summary>
+
+Weddy refused [PrototypeBleed](https://wekan.fi/hall-of-fame/prototypebleed/),
+[RepointBleed](https://wekan.fi/hall-of-fame/repointbleed/),
+[BackgroundBleed](https://wekan.fi/hall-of-fame/backgroundbleed/) and
+[HookBleed](https://wekan.fi/hall-of-fame/hookbleed/) attempts without a word,
+so nobody could see somebody had tried, and the account kept working. Each is
+now recorded under WeKan's key and disables the sender's account, as WeKan's
+guards do: a `__proto__`, `.` or `$` layout key, a client write moving a
+trigger, rule, action, webhook or custom field to another board, a background
+pointed at another board's file, and anything but the card-opened notice sent
+through a board's webhook - by the new `outgoingWebhooks`, which builds that
+notice from the stored webhook and the card alone. The ordinary call beside
+each is not recorded. The negative test fails on a database path built from a
+request's value without the guard. WeKan's own BackgroundBleed, HookBleed and
+PrototypeBleed specs pass against Weddy.
 
 </details>
 

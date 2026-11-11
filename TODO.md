@@ -72,10 +72,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.
-- **Refused attacks, recorded and the account disabled as in WeKan**: Weddy
-  refuses them, but WeKan's specs of BackgroundBleed, RepointBleed,
-  PrototypeBleed and HookBleed also expect the Admin Panel -> Problems row and,
-  for the first three, the sender's account disabled (`loginDisabled`), and
+- **Refused attacks, the rest of WeKan's specs**: PrototypeBleed,
+  RepointBleed, BackgroundBleed and HookBleed are recorded and cost the
+  account, as in WeKan; RepointBleed's spec still waits for a board admin's
+  ordinary `/integrations/update` and `/customFields/update` (below), and
   CopyIdentityBleed's copy methods (`copyBoard`, the card copy) are not in
   Weddy yet (404). ImportBleed's logged-out DDP import answers
   `not-authorized` where WeKan answers `error-notAuthorized`.
@@ -87,7 +87,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 454 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 457 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
   The run of every candidate spec on 2026-11-11 passed 134 and failed 659, in
   these areas (a test can be in two): card details 90, translations and help

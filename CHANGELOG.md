@@ -14,6 +14,6 @@ history** and binaries for **every platform**. It serves **many WeKan domains**,
 each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
 Gitea's own. WeKan's fixes of **CrossBoardExportBleed**, **ListLockBleed** and
-**FrameBleed** hold in Weddy too.
+**FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
 
 [All changes so far](CHANGELOG-big.md#upcoming-weddy-release)

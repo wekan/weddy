@@ -395,9 +395,12 @@ corsican-rule-controls.e2e.js: Latin rule actions distinguish top and bottom of 
 corsican-rule-controls.e2e.js: Latin rule import dialog explains partial conversion and keeps format identifiers
 corsican-rule-controls.e2e.js: Latin workflow toolbox distinguishes its trigger and action labels
 haitian-rule-semantics.e2e.js: Haitian checklist actions distinguish unchecking from disabling
-hook-bleed.e2e.js: moving a card with a webhook enabled is no HookBleed, and the mover keeps their account
 inactive-account-security.e2e.js: admin-created administrator flags persist and ordinary users cannot create accounts
 inactive-account-security.e2e.js: People Active control uses the authorized method and persists its change
 list-sync-estimate.e2e.js: dotted checkbox writes emit false once and removing a valued field emits an unset
 rules-back-to-board-6852.e2e.js: #6852 Rules page Back to the board › Back on the Rules page opens the board
 rules-blocks.e2e.js: Blocks keeps rule writes restricted to board admins
+# Refused attacks recorded in Admin Panel -> Problems, as WeKan's guards do.
+background-bleed.e2e.js
+hook-bleed.e2e.js
+prototype-bleed.e2e.js

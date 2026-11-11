@@ -76,13 +76,17 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   2026-11-11): settings, sprints - started, closed with their rollover, and
   cancelled - releases, events, card, list and swimlane metadata, the
   Sprints, Product Backlog, Velocity and Sprint Report views and their
-  exports are in, with WeKan's stored shapes and Scrum History rows, and the
-  daily observations and the scope history replayed from History. Left: the
-  native Scrum transfer (export, import into a board, importIntoBoard) and its
-  import recovery, the minicard and card details' Scrum fields and Card
-  Settings' Scrum rows, a close's background rollover of a very large sprint
-  (Weddy rolls it over in the call), and the interrupted-History journal and
-  checkpoint recovery (scrumHistoryPending is honored, never written).
+  exports, the daily observations, the scope history replayed from History,
+  and the native Scrum transfer - in the board export, imported with a board
+  and into an existing one - are in, with WeKan's stored shapes and Scrum
+  History rows. Left: the minicard and card details' Scrum fields and Card
+  Settings' Scrum rows (WeKan's scrum.e2e card-settings and
+  scrum-multiple-releases card-details tests), a close's background rollover
+  of a very large sprint (Weddy rolls it over in the call), the
+  interrupted-History journal, its request keys and checkpoint recovery
+  (scrumHistoryPending, scrumHistoryCompletions; nine of scrum-history's
+  tests), the Scrum import journal and its online recovery, and Scrum's
+  part of board and card copies (scrum-board-copy, scrum-card-copy).
 - **WeKan's change history** (the maintainer's next choice, 2026-11-11;
   WeKan's docs/Features/General/History/History.md): the row hash, the
   writer gate and both chains, and a list's soft delete with undo and redo
@@ -108,7 +112,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 520 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 529 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
   The run of every candidate spec on 2026-11-11 passed 134 and failed 659, in
   these areas (a test can be in two): card details 90, translations and help

@@ -438,11 +438,6 @@ scrum.e2e.js: Scrum fields default hidden and non-admin members cannot configure
 scrum.e2e.js: release and event editors update existing records and retain linked follow-up cards
 scrum-backlog-paging.e2e.js
 scrum-chart-scope.e2e.js
-scrum-history.e2e.js: Scrum metadata history preserves unrelated card edits and rejects conflicting metadata
-scrum-history.e2e.js: ordinary board writers cannot restore administrator sprint configuration
-scrum-history.e2e.js: planning record creation can be undone and redone without deleting referenced releases
-scrum-multiple-releases.e2e.js: the Product Backlog puts a card in several releases, reports it in each, and undoes
-scrum-pending-import.e2e.js: a private import checkpoint blocks Scrum before the first sprint exists
 scrum-release-assignment.e2e.js: equal backlog ranks stay ordered by card ID after refresh and metadata edits
 scrum-release-assignment.e2e.js: backlog release assignment saves, clears and restores through History
 scrum-daily-history.e2e.js
@@ -453,3 +448,9 @@ scrum-import-into-board.e2e.js
 scrum-board-copy.e2e.js
 scrum-card-copy.e2e.js
 scrum-container-move.e2e.js
+scrum-history.e2e.js
+scrum-history-checkpoint-recovery.e2e.js
+scrum-import-online-recovery.e2e.js
+scrum-pending-import.e2e.js
+scrum-close-recovery.e2e.js
+scrum-multiple-releases.e2e.js

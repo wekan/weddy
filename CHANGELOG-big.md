@@ -463,6 +463,9 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 **Many domains** - the Cloud Panel, in Weddy.
 
+- [moveBoardObjects: WeKan's Move of a mixed selection, within and across boards](https://github.com/wekan/caddy-wekan-plugin/commit/bbbb9476ef1b49b4049d42256e60f9a013edc7c7) -
+  swimlanes, lists, cards, checklists and items at once, everything checked
+  before anything is written, before or after an anchor. Thanks to xet7.
 - [Board members: WeKan's inviteUserToBoard and searchUsers, the invitee's bell, and the same-Organization/Team restriction](https://github.com/wekan/caddy-wekan-plugin/commit/cfcba67585ff5ad4ea1f5f1828ea668f9a5a6399) -
   by username or e-mail in any letter case, a new address as a new account,
   an existing invitee told in the bell (#3136); and Admin Panel's "board members

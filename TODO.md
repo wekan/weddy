@@ -69,6 +69,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   checklist menus' Export and Import are in, and the list menu's only for
   those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
+- **The multi-selection's own UI**: moveBoardObjects moves a mixed
+  selection as WeKan's does, but the board has no structural selection
+  checkboxes, mixed drag or destination popup for it yet - eight tests of
+  WeKan's structural-selection spec wait for them.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.
@@ -88,7 +92,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 474 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 481 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
   The run of every candidate spec on 2026-11-11 passed 134 and failed 659, in
   these areas (a test can be in two): card details 90, translations and help
@@ -103,13 +107,13 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
     `Meteor.loggingIn`, `Meteor.subscribe`, the DDP stream - which Weddy's Go
     pages do not load; they pass only with a client shim of those objects, or
     rewritten against the pages.
-  - 68 call a method Weddy has not got, most for whole features:
+  - 65 call a method Weddy has not got, most for whole features:
     `setListSyncSource` 15 (List Sync, WeKan's server/lib/listSync*.js -
     about 2,900 lines), Scrum 28 (`scrum.saveSprint` 15, `scrum.updateCard` 6,
     `scrum.configure` 3, `scrum.saveRelease` 2, two more), then
     WeKan's change history 7 (`changeHistory.page` 3, `lists.softRemove` 2 -
     its undo is change history's - `undoLast` and `restore`, docs History.md),
-    `moveBoardObjects` and `getSamlConfigSources` 3 each,
+    `getSamlConfigSources` 3,
     and 13 more once each.
   - the rest wait for a page, control or text Weddy draws differently.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.

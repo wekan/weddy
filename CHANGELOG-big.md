@@ -510,6 +510,14 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [History: a keyed Ctrl+Z settles its request as soon as the reply arrives](https://github.com/wekan/caddy-wekan-plugin/commit/01981d3919f0d9d84b388912cc374cec1263e24e) -
   it waited for a refresh of the user, and WeKan's test found the request
   still stored now and then. Thanks to xet7.
+- [Scrum: a large sprint's close rolls over in the background, and a large change's History is a batch](https://github.com/wekan/caddy-wekan-plugin/commit/50f7b573a2f03180eb087866dad7c469e2a24ab1) -
+  a close over 2000 cards returns at once, its progress in the Scrum view;
+  History rows of at most 1000 records or 3 MB a side, one undo taking back
+  the whole batch, in the background when it is long. [FerretDB: an `$eq`
+  filter uses the SQL filter and the indexes](https://github.com/wekan/FerretDB/commit/3d06e00bea47e1118a7fcae54672217cd3263b28),
+  so a lookup by id no longer scans its collection. [WeKan's
+  snapshot-limits tests on Weddy](https://github.com/wekan/weddy/commit/adf2d19fe4e40a437773b17da77fd499b43e1430),
+  596 tests in all. Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

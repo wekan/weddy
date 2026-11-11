@@ -417,6 +417,15 @@ invite-member-email-case.e2e.js
 list-delete-undo.e2e.js
 history-read-scope.e2e.js
 history-nested-dates.e2e.js
+rules-history.e2e.js: ordinary board members cannot restore rule configuration through History
+rules-history.e2e.js: undo refuses to overwrite another administrator’s newer rule edit
+rules-history.e2e.js: Rules REST writes create one attributed History entry per compound operation
+rules-history.e2e.js: method deletion preserves shared rule components and History restores without overwriting them
+rules-history.e2e.js: REST deletion preserves shared rule components and History restores without overwriting them
+rules-history.e2e.js: method editing isolates shared rule components and supports undo/redo
+rules-history.e2e.js: REST editing isolates shared rule components and supports undo/redo
+rules-history.e2e.js: method button trigger changes synchronize menu metadata and History
+rules-history.e2e.js: REST button trigger changes synchronize menu metadata and History
 # moveBoardObjects; the multi-selection UI's tests wait for that UI.
 structural-selection.e2e.js: mixed checklist and loose item create one card; selected descendants move once
 structural-selection.e2e.js: reject invalid destination before writes

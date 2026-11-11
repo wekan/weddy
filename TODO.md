@@ -79,9 +79,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   are in; cards', lists', swimlanes', checklists', items' and comments'
   edits and moves are recorded and undone, and `changeHistory.page` and
   `restore` answer; the board's and the card's History page and Ctrl+Z /
-  Ctrl+Shift+Z, Member Settings' History and attachments' history are in.
-  Next: rules' history, and the writes the guards in history_fields_test.go
-  still list with their reason.
+  Ctrl+Shift+Z, Member Settings' History, attachments' and rules' history
+  are in. Left: the writes the guards in history_fields_test.go still list
+  with their reason (a rule's own actions, Restore all, planning poker), and
+  Scrum's history, which waits for Scrum.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.
@@ -98,7 +99,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 490 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 499 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
   The run of every candidate spec on 2026-11-11 passed 134 and failed 659, in
   these areas (a test can be in two): card details 90, translations and help

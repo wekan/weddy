@@ -73,7 +73,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.
 - **WeKan's password policy settings**: Weddy always refuses a new password
-  under 8 characters (users.go). WeKan's PASSWORD_MIN_LENGTH (default 8)
+  under 8 characters (users.go); the maintainer's decision (2026-11-11) is to
+  follow WeKan's default exactly, report-only. WeKan's PASSWORD_MIN_LENGTH (default 8)
   only reports a shorter one unless PASSWORD_MIN_LENGTH_ENFORCE is true -
   then it refuses it and has the account change its password - with Admin
   Panel's table of accounts under the minimum, PASSWORD_CHECK_PWNED's
@@ -89,7 +90,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 465 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 468 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
   The run of every candidate spec on 2026-11-11 passed 134 and failed 659, in
   these areas (a test can be in two): card details 90, translations and help
@@ -104,12 +105,12 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
     `Meteor.loggingIn`, `Meteor.subscribe`, the DDP stream - which Weddy's Go
     pages do not load; they pass only with a client shim of those objects, or
     rewritten against the pages.
-  - 75 call a method Weddy has not got, most for whole features:
+  - 72 call a method Weddy has not got, most for whole features:
     `setListSyncSource` 15 (List Sync, WeKan's server/lib/listSync*.js -
     about 2,900 lines), Scrum 28 (`scrum.saveSprint` 15, `scrum.updateCard` 6,
     `scrum.configure` 3, `scrum.saveRelease` 2, two more), then
-    `moveBoardObjects`, `getSamlConfigSources`, `changeHistory.page` and
-    `applyWipLimit` 3 each, `lists.softRemove`, `inviteUserToBoard` and
+    `moveBoardObjects`, `getSamlConfigSources` and `changeHistory.page` 3
+    each, `lists.softRemove`, `inviteUserToBoard` and
     `getPasswordPolicy` 2 each, and 16 more once each.
   - the rest wait for a page, control or text Weddy draws differently.
 - **Firefox and WebKit**: the browser tests have run in Chromium only.

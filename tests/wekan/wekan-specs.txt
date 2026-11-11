@@ -408,3 +408,5 @@ repoint-bleed.e2e.js
 board-copy-boundary.e2e.js
 card-copy-boundary.e2e.js
 card-copy-destination.e2e.js
+# WIP limits and the Archive's Restore.
+restore-wip-limit.e2e.js

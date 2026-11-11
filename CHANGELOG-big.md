@@ -463,6 +463,10 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 **Many domains** - the Cloud Panel, in Weddy.
 
+- [WIP limits, and the Archive's Restore into a list full at a hard limit](https://github.com/wekan/caddy-wekan-plugin/commit/ffbed2c3623264d47730664822fbb9138c69a848) -
+  WeKan's applyWipLimit, enableWipLimit and enableSoftLimit; a card whose list
+  is full goes to a list with room the Archive offers, and Restore all says how
+  many it left out (#6772). Thanks to xet7.
 - [Many WeKan domains from one Weddy, with the Cloud Panel](https://github.com/wekan/weddy/commit/ab862c2e81d0caa20f453ebe7f54d462b3a2c076). Thanks to xet7.
 
 and fixes the following bugs:

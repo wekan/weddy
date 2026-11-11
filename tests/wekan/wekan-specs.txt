@@ -413,6 +413,8 @@ restore-wip-limit.e2e.js
 # Inviting board members.
 board-invite-tray.e2e.js
 invite-member-email-case.e2e.js
+# Change history: a list deleted, undone and redone.
+list-delete-undo.e2e.js
 # moveBoardObjects; the multi-selection UI's tests wait for that UI.
 structural-selection.e2e.js: mixed checklist and loose item create one card; selected descendants move once
 structural-selection.e2e.js: reject invalid destination before writes

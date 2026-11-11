@@ -463,6 +463,13 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 **Many domains** - the Cloud Panel, in Weddy.
 
+- [Change history: WeKan's row integrity hash](https://github.com/wekan/caddy-wekan-plugin/commit/cc61229faee776eab7e5bc02f4ccd9bee9a7ad2e),
+  [its writer gate and both chains](https://github.com/wekan/caddy-wekan-plugin/commit/cd6543cd0daba0c5e0c69ab1ebd52a2fa83c96f0),
+  and [a list's soft delete with undo and redo](https://github.com/wekan/caddy-wekan-plugin/commit/3ca9b1d0bc23de8b9d1bffd5503150090c8c2f82) -
+  rows Weddy writes pass WeKan's own audit, WeKan and Weddy writing one board
+  never fork its chain, and undo restores a deleted list with only the cards
+  deleted with it (#1023). The board no longer shows what is soft-deleted.
+  Thanks to xet7.
 - [moveBoardObjects: WeKan's Move of a mixed selection, within and across boards](https://github.com/wekan/caddy-wekan-plugin/commit/bbbb9476ef1b49b4049d42256e60f9a013edc7c7) -
   swimlanes, lists, cards, checklists and items at once, everything checked
   before anything is written, before or after an anchor. Thanks to xet7.

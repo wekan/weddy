@@ -449,3 +449,4 @@ scrum-native-export.e2e.js: private board export refuses assigned-only members i
 scrum-pending-import.e2e.js: a private import checkpoint blocks Scrum before the first sprint exists
 scrum-release-assignment.e2e.js: equal backlog ranks stay ordered by card ID after refresh and metadata edits
 scrum-release-assignment.e2e.js: backlog release assignment saves, clears and restores through History
+scrum-daily-history.e2e.js

@@ -73,6 +73,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   selection as WeKan's does, but the board has no structural selection
   checkboxes, mixed drag or destination popup for it yet - eight tests of
   WeKan's structural-selection spec wait for them.
+- **Scrum** (the maintainer's next choice after change history, 2026-11-11):
+  WeKan's sprints, releases, Scrum settings, daily snapshots and charts -
+  server/models/scrum*.js and server/lib/scrum*.js. 28 of the survey's
+  failures call it; the Scrum chart rows in exports wait for it.
 - **WeKan's change history** (the maintainer's next choice, 2026-11-11;
   WeKan's docs/Features/General/History/History.md): the row hash, the
   writer gate and both chains, and a list's soft delete with undo and redo

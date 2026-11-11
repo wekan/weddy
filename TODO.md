@@ -78,9 +78,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   writer gate and both chains, and a list's soft delete with undo and redo
   are in; cards', lists', swimlanes', checklists', items' and comments'
   edits and moves are recorded and undone, and `changeHistory.page` and
-  `restore` answer. Next: the History views on Weddy's pages (the card's,
-  the board's, Member Settings'), attachments' and rules' history, and the
-  writes the guards in history_fields_test.go still list with their reason.
+  `restore` answer; the board's and the card's History page and Ctrl+Z /
+  Ctrl+Shift+Z are in. Next: Member Settings' History, attachments' and
+  rules' history, and the writes the guards in history_fields_test.go still
+  list with their reason.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.

@@ -78,15 +78,14 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   Sprints, Product Backlog, Velocity and Sprint Report views and their
   exports, the daily observations, the scope history replayed from History,
   and the native Scrum transfer - in the board export, imported with a board
-  and into an existing one - are in, with WeKan's stored shapes and Scrum
-  History rows. Left: the minicard and card details' Scrum fields and Card
+  and into an existing one - and Scrum in board, card, list and swimlane
+  copies and moves are in, with WeKan's stored shapes and Scrum History rows. Left: the minicard and card details' Scrum fields and Card
   Settings' Scrum rows (WeKan's scrum.e2e card-settings and
   scrum-multiple-releases card-details tests), a close's background rollover
   of a very large sprint (Weddy rolls it over in the call), the
   interrupted-History journal, its request keys and checkpoint recovery
   (scrumHistoryPending, scrumHistoryCompletions; nine of scrum-history's
-  tests), the Scrum import journal and its online recovery, and Scrum's
-  part of board and card copies (scrum-board-copy, scrum-card-copy).
+  tests), and the Scrum import journal and its online recovery.
 - **WeKan's change history** (the maintainer's next choice, 2026-11-11;
   WeKan's docs/Features/General/History/History.md): the row hash, the
   writer gate and both chains, and a list's soft delete with undo and redo
@@ -112,7 +111,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 ## Tests
 
 - **More of WeKan's own specs against Weddy**: `tests/wekan/wekan-specs.txt`
-  names 529 tests so far; add each of WeKan's specs, or one test of it, when Weddy
+  names 535 tests so far; add each of WeKan's specs, or one test of it, when Weddy
   has its part. `WEDDY_WEKAN_SPECS=all ./build.sh everything` shows how far it is.
   The run of every candidate spec on 2026-11-11 passed 134 and failed 659, in
   these areas (a test can be in two): card details 90, translations and help

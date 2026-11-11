@@ -476,6 +476,9 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   overridden in Admin Panel's login settings. Weddy's default changes: a
   password under 8 characters is accepted unless the minimum is enforced, as in
   WeKan. Thanks to xet7.
+- [Admin Panel / Problems / Password length](https://github.com/wekan/caddy-wekan-plugin/commit/512955000845c8b51a713aff943d4276d0d80241) -
+  the minimum and enforcing it, over the environment, and the accounts that
+  sign in with a shorter password, by WeKan's filters. Thanks to xet7.
 - [PASSWORD_CHECK_PWNED refuses a breached password, and a refusal says its minimum](https://github.com/wekan/caddy-wekan-plugin/commit/f44e312a52ab32d0c9afecfa0a7ebf68d372c256) -
   only five hex digits of the password's SHA-1 leave Weddy; and a refused
   password's text was its untranslated key. Thanks to xet7.

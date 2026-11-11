@@ -76,10 +76,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.
-- **WeKan's password policy, the rest**: Admin Panel / Problems has no
-  Password length page to show the short sign-ins yet (its method,
-  shortPasswordLoginsPage, is in). WeKan's own password specs drive its
-  `AccountsTemplates` client.
+- **WeKan's password specs**: the password policy is in, with Admin Panel /
+  Problems / Password length; WeKan's password-min-length-signup-login and
+  password-length-report specs drive its `AccountsTemplates` client and
+  its table page component, which Weddy's pages do not have.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived, /integrations/update a webhook
   and /customFields/update a field's definition; WeKan's client writes other

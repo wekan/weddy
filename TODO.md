@@ -71,11 +71,12 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   checklist menus' Export and Import are in, and the list menu's only for
   those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
-- **Card Settings, the rest**: Board Settings / Card has both panes with
-  every section's rows and their checkboxes, the Scrum rows included, and
-  the minicard and the card draw the sides added on 2026-10-02. Left:
-  dragging sections and rows into each side's order, and the sections' and
-  rows' menus.
+- **Card Settings, the rest**: both panes with every section's rows, their
+  checkboxes and their order - sections and rows dragged and moved by the
+  keys - and the opened card and the minicard drawn in it are in. Left: the
+  pop-over's own layout (the panes side by side, each scrolling and folding,
+  the splitter, the corner grip), the sections' and rows' hamburgers and the
+  custom fields edited inline, and Board Settings / Board View's reorder.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has, the swimlane, add-list, new board and subtask ones included;
   WeKan's test of the calendar editor waits for the calendar view.

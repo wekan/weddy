@@ -76,6 +76,12 @@
 admin-attachment-retention.e2e.js: negative: an ordinary user cannot open the retention settings
 admin-new-env-settings.e2e.js: negative: an ordinary user is offered none of them
 card-settings-both-sides.e2e.js
+card-settings-sections-order.e2e.js: a default board: the opened card draws the Card pane's sections in its order, Labels first
+card-settings-sections-order.e2e.js: dragging a section in the Card pane reorders the card, not the minicard
+card-settings-sections-order.e2e.js: dragging Due above Received in the Card pane reorders them on the card, inside Date
+card-settings-sections-order.e2e.js: the minicard follows the Minicard pane: its section order and its rows, and not the card's
+card-settings-sections-order.e2e.js: a checkbox in the Minicard pane is the minicard's, in the Card pane the card's
+settings-drag-reorder.e2e.js: Board Settings / Card reorders each side by drag and drop and by the arrow keys
 duplicate-dependencies.e2e.js: REST accepts both duplicate types and retains board boundary validation
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (ltr)
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (rtl)

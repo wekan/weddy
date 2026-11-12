@@ -637,6 +637,10 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   a destination picked step by step or by dropping them, as WeKan's; the
   minicard shows the checklists marked for it. Thanks to xet7.
 
+- [Folding swimlanes, minicards and their checklists, each the user's own](https://github.com/wekan/caddy-wekan-plugin/commit/be30f2e69f4a8cc3262d8b925553230965188269) -
+  as WeKan's, so a mixed selection drags into and out of folded parts too.
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

@@ -481,3 +481,10 @@ structural-selection.e2e.js: mixed checklist drag across swimlanes (handles fals
 structural-selection.e2e.js: mixed checklist drag across swimlanes (handles true)
 structural-selection.e2e.js: mixed selection popup selects another board and exact card position
 structural-selection.e2e.js: drag a collapsed selected list together with an independent checklist item
+structural-selection.e2e.js: mixed drag resolves the correct collapsed list destination
+structural-selection.e2e.js: mixed drag resolves the correct collapsed shared-list destination
+structural-selection.e2e.js: mixed drag resolves the correct collapsed card destination
+structural-selection.e2e.js: mixed drag resolves the correct collapsed checklist destination
+structural-selection.e2e.js: mixed drag resolves the correct collapsed swimlane destination
+structural-selection.e2e.js: drag a collapsed selected swimlane together with an independent checklist item
+structural-selection.e2e.js: drag a collapsed selected card together with an independent checklist item

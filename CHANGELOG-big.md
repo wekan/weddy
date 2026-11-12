@@ -702,6 +702,9 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 and fixes the following bugs:
 
+- [A live update keeps an opened part of the card details open](https://github.com/wekan/caddy-wekan-plugin/commit/f4c5317afec26b741407eda7f4e652055233a77d) -
+  the Scrum fields' editor closed whenever somebody else's change re-rendered
+  the board. Thanks to xet7.
 - [A large Scrum close's test times out on standing still, not on the whole](https://github.com/wekan/caddy-wekan-plugin/commit/f48f8451dc24f269a3ed7e793a3c0425ef02b2b3) -
   under the plugin's parallel tests the undo's batch job was cut off while
   still advancing. Thanks to xet7.

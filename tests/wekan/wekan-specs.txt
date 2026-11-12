@@ -75,6 +75,7 @@
 70-rest-board-management.e2e.js: normal member cannot rename a board through REST
 admin-attachment-retention.e2e.js: negative: an ordinary user cannot open the retention settings
 admin-new-env-settings.e2e.js: negative: an ordinary user is offered none of them
+card-settings-both-sides.e2e.js: both Show sides list every row of the table
 duplicate-dependencies.e2e.js: REST accepts both duplicate types and retains board boundary validation
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (ltr)
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (rtl)
@@ -434,6 +435,7 @@ structural-selection.e2e.js: moving a swimlane preserves nested lists and cards 
 structural-selection.e2e.js: read-only members cannot use mixed moves or see selection checkboxes
 scrum-read-access.e2e.js
 scrum.e2e.js: Scrum menus plan work, retain closed snapshots and export Excel/PDF
+scrum.e2e.js: Board Settings reveals Scrum minicard fields and preserves independent card visibility
 scrum.e2e.js: Scrum fields default hidden and non-admin members cannot configure or start sprints
 scrum.e2e.js: release and event editors update existing records and retain linked follow-up cards
 scrum-backlog-paging.e2e.js

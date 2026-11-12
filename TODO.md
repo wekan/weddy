@@ -71,16 +71,12 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   checklist menus' Export and Import are in, and the list menu's only for
   those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
-- **Scrum, the rest** (the maintainer's choice after change history,
-  2026-11-11): settings, sprints, releases, events, metadata, the four
-  views and their exports, daily observations, the scope history, the
-  native transfer, copies and moves, the card and minicard fields, and
-  History's durable undo and redo with request ids, a stopped operation's
-  recovery and an interrupted import's online resume are in, with WeKan's
-  stored shapes - every Scrum spec of WeKan's runs on Weddy but one test.
-  A large sprint's close rolls over in the background and a large change's
-  History is a batch undone whole, as WeKan's. Left: Card Settings' Scrum
-  rows (WeKan's scrum.e2e card-settings test drives Blaze's Popup).
+- **Card Settings, the rest**: Board Settings / Card has both panes with
+  every section's rows and their checkboxes, the Scrum rows included. Left:
+  the minicard and the card drawing the sides added on 2026-10-02 (requested
+  by, location, last activity, card colour, the description badge - WeKan's
+  other two card-settings-both-sides tests), dragging sections and rows into
+  each side's order, and the sections' and rows' menus.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has, the swimlane, add-list, new board and subtask ones included;
   WeKan's test of the calendar editor waits for the calendar view.

@@ -641,6 +641,13 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   as WeKan's, so a mixed selection drags into and out of folded parts too.
   Thanks to xet7.
 
+- [Board Settings / Card: WeKan's Card Settings, both sides, its Scrum rows included](https://github.com/wekan/caddy-wekan-plugin/commit/351893b7393c07b41b28f5f58107ca5b49e4d58e) -
+  the Minicard and Card panes with every section's rows, from WeKan's own
+  table; a board admin's checkboxes write only those board fields, the Scrum
+  rows their visibility flags; the minicard shows the work item type's badge;
+  [WeKan's Card Settings tests on Weddy](https://github.com/wekan/weddy/commit/6e3a2f0c4c958bf4e1e184c4736107f3b0c5217e).
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

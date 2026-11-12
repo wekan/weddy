@@ -474,3 +474,6 @@ editor-enter-preference.e2e.js: list editor follows submit-on-Enter=false
 editor-enter-preference.e2e.js: list editor follows submit-on-Enter=true
 editor-enter-preference.e2e.js: board editor follows submit-on-Enter=false
 editor-enter-preference.e2e.js: board editor follows submit-on-Enter=true
+editor-enter-preference.e2e.js: subtask editor follows submit-on-Enter=false
+editor-enter-preference.e2e.js: subtask editor follows submit-on-Enter=true
+subtask-landing-list.e2e.js

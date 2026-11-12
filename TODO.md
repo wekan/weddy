@@ -15,7 +15,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   pop-over, comments and activities, and Problems' Recovery, Password length
   and Security Report. The other 154 are listed in caddy-wekan-plugin's
   [TEMPLATES.md](https://github.com/wekan/caddy-wekan-plugin/blob/main/TEMPLATES.md):
-  card details (members, labels, checklists - added, renamed,
+  card details (members, labels, subtasks - listed and added - checklists - added, renamed,
   deleted and exported, items added, edited, checked and deleted; moved and
   copied; items given an assignee, a due date and a new
   order; not yet dragged between checklists -
@@ -84,8 +84,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   History is a batch undone whole, as WeKan's. Left: Card Settings' Scrum
   rows (WeKan's scrum.e2e card-settings test drives Blaze's Popup).
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
-  has, the swimlane, add-list and new board ones included; WeKan's tests
-  of the calendar and subtask editors wait for those editors.
+  has, the swimlane, add-list, new board and subtask ones included;
+  WeKan's test of the calendar editor waits for the calendar view.
 - **WeKan's password specs**: the password policy is in, with Admin Panel /
   Problems / Password length; WeKan's password-min-length-signup-login and
   password-length-report specs drive its `AccountsTemplates` client and

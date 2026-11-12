@@ -614,6 +614,11 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   for whoever may make a board, each one through the board creation policy.
   Thanks to xet7.
 
+- [Subtasks in the card details, as WeKan's](https://github.com/wekan/caddy-wekan-plugin/commit/c9999f820462126877dfa3e13afa9c4a1218d72f) -
+  the card's subtasks and "Add Subtask", made on the board's subtasks board in
+  the list and swimlane WeKan's landing rules choose, never on a board the
+  maker may not write. Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

@@ -22,7 +22,7 @@ history** and binaries for **every platform**. It serves **many WeKan domains**,
 each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
 Gitea's own. WeKan's fixes of **CrossBoardExportBleed**, **ListLockBleed**,
-**ListLockAttachBleed**, **GroupLinkBleed**, **UploadBleed**, **StampBleed** and **FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
+**ListLockAttachBleed**, **GroupLinkBleed**, **UploadBleed**, **StampBleed**, **AdminFieldBleed** and **FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
 WeKan's **change history** and **Scrum** sprints and reports are in Weddy too.
 
 This release fixes the following CRITICAL SECURITY ISSUES:
@@ -186,6 +186,21 @@ StampBleed - refused, recorded in Admin Panel -> Problems, and a signed-in
 upload attempt blocks the account. Admin Panel's upload switches now stop the
 uploads they name, which Weddy did not read. WeKan's upload-stamp-bleed spec
 passes against Weddy.
+
+</details>
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/1159c1bdc5978b88ecfeafb74991339f201ae898">WeKan in Weddy: an admin-only custom field's value is changed and copied only by an admin</a>. Thanks to xet7.</summary>
+
+[AdminFieldBleed](https://wekan.fi/hall-of-fame/adminfieldbleed/). Weddy hid
+an admin-only value from a member but did not stop them writing it, and a
+member's copy of a card carried the value onto a card they could read it from.
+Every card write is now checked as WeKan's: a change to a value the writer may
+not read, or a read-only value of an admin's, is refused and recorded in Admin
+Panel -> Problems, whether through the card collection, a copy, the REST API
+or a field's definition; a copy keeps only the fields its copier may read, and
+a member still edits a public value. Nine of WeKan's admin-only-custom-fields
+tests pass against Weddy.
 
 </details>
 

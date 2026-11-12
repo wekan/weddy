@@ -90,7 +90,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   password-length-report specs drive its `AccountsTemplates` client and
   its table page component, which Weddy's pages do not have.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
-  title, description, color and archived, /integrations/update a webhook,
+  title, description, color, archived and a custom field's value by index, /integrations/update a webhook,
   /customFields/update a field's definition, /boards/update a member's
   role flags and /checklists/insert a checklist, and Meteor-Files' DDP
   upload stores attachments (setBoardTeams is in; setBoardOrgs and

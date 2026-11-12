@@ -457,3 +457,12 @@ scrum-multiple-releases.e2e.js
 scrum-snapshot-limits.e2e.js
 group-link-bleed.e2e.js
 upload-stamp-bleed.e2e.js
+admin-only-custom-fields.e2e.js: member cannot forge admin-only fields through insert
+admin-only-custom-fields.e2e.js: member cannot forge admin-only fields through replace
+admin-only-custom-fields.e2e.js: member cannot forge admin-only fields through push
+admin-only-custom-fields.e2e.js: member cannot forge admin-only fields through unset
+admin-only-custom-fields.e2e.js: member cannot forge admin-only fields through copy
+admin-only-custom-fields.e2e.js: member cannot forge admin-only fields through rest
+admin-only-custom-fields.e2e.js: member cannot forge admin-only fields through definition
+admin-only-custom-fields.e2e.js: member cannot forge admin-only fields through definition-insert
+admin-only-custom-fields.e2e.js: ordinary member copying retains public values and omits protected values

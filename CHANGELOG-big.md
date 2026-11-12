@@ -22,7 +22,7 @@ history** and binaries for **every platform**. It serves **many WeKan domains**,
 each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
 Gitea's own. WeKan's fixes of **CrossBoardExportBleed**, **ListLockBleed**,
-**ListLockAttachBleed**, **GroupLinkBleed** and **FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
+**ListLockAttachBleed**, **GroupLinkBleed**, **UploadBleed**, **StampBleed** and **FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
 WeKan's **change history** and **Scrum** sprints and reports are in Weddy too.
 
 This release fixes the following CRITICAL SECURITY ISSUES:
@@ -170,6 +170,22 @@ in Admin Panel -> Problems as GroupLinkBleed, without disabling the account; a
 board admin's change of a member's role still works. A new member that
 setBoardTeams lists must also belong to one of the board's teams. WeKan's
 group-link-bleed spec passes against Weddy.
+
+</details>
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/5552c9b2fc1d3b9d918ac31484bd452173bec659">WeKan in Weddy: an upload or a checklist goes only where its card is</a>. Thanks to xet7.</summary>
+
+[UploadBleed](https://wekan.fi/hall-of-fame/uploadbleed/) and
+[StampBleed](https://wekan.fi/hall-of-fame/stampbleed/). Weddy had neither
+Meteor-Files' DDP upload, which WeKan's client uses, nor the checklist
+collection insert. Both are in now, as WeKan's: every upload call is
+authorized, an upload onto another board's card is UploadBleed, and an
+upload or a checklist on one's own card stamped with another board is
+StampBleed - refused, recorded in Admin Panel -> Problems, and a signed-in
+upload attempt blocks the account. Admin Panel's upload switches now stop the
+uploads they name, which Weddy did not read. WeKan's upload-stamp-bleed spec
+passes against Weddy.
 
 </details>
 

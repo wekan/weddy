@@ -456,3 +456,4 @@ scrum-close-recovery.e2e.js
 scrum-multiple-releases.e2e.js
 scrum-snapshot-limits.e2e.js
 group-link-bleed.e2e.js
+upload-stamp-bleed.e2e.js

@@ -91,8 +91,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   its table page component, which Weddy's pages do not have.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color and archived, /integrations/update a webhook,
-  /customFields/update a field's definition and /boards/update a member's
-  role flags (setBoardTeams is in; setBoardOrgs and setBoardDomains are not); WeKan's client writes other
+  /customFields/update a field's definition, /boards/update a member's
+  role flags and /checklists/insert a checklist, and Meteor-Files' DDP
+  upload stores attachments (setBoardTeams is in; setBoardOrgs and
+  setBoardDomains are not); WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers
   them as Meteor does without one (403).
 

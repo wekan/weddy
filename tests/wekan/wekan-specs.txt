@@ -468,3 +468,7 @@ admin-only-custom-fields.e2e.js: member cannot forge admin-only fields through d
 admin-only-custom-fields.e2e.js: ordinary member copying retains public values and omits protected values
 checklist-same-board-canary-6813.e2e.js
 admin-only-custom-fields.e2e.js: blocked field attacks appear as a Problems summary without secret values
+editor-enter-preference.e2e.js: swimlane editor follows submit-on-Enter=false
+editor-enter-preference.e2e.js: swimlane editor follows submit-on-Enter=true
+editor-enter-preference.e2e.js: list editor follows submit-on-Enter=false
+editor-enter-preference.e2e.js: list editor follows submit-on-Enter=true

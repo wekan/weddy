@@ -84,8 +84,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   History is a batch undone whole, as WeKan's. Left: Card Settings' Scrum
   rows (WeKan's scrum.e2e card-settings test drives Blaze's Popup).
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
-  has; WeKan's tests of the calendar, new board, swimlane, add-list and
-  subtask editors wait for those editors.
+  has, the swimlane and add-list ones included; WeKan's tests of the
+  calendar, new board and subtask editors wait for those editors.
 - **WeKan's password specs**: the password policy is in, with Admin Panel /
   Problems / Password length; WeKan's password-min-length-signup-login and
   password-length-report specs drive its `AccountsTemplates` client and

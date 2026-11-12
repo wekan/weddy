@@ -605,6 +605,11 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   from where, by whom and how many times, never a value an attempt carried.
   Thanks to xet7.
 
+- [WeKan's inline Add List composer, after any list](https://github.com/wekan/caddy-wekan-plugin/commit/0dd8e09e3674b31e4a4e7083a99c249841295991) -
+  a list header's + adds lists right after that list, one or one a line, with
+  the member's submit-on-Enter preference, through WeKan's createListAfter.
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

@@ -621,6 +621,9 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [A subtask ticked done from its parent, and the done/total count](https://github.com/wekan/caddy-wekan-plugin/commit/e80829d054dbfb14e1085e1502a82ea81bcc1262) -
   wekan/wekan#4693, by whoever may edit that subtask. Thanks to xet7.
 
+- [An upload goes to GridFS when Admin Panel's default storage is GridFS](https://github.com/wekan/caddy-wekan-plugin/commit/49dc8474c8a3e629f8adf192d4a8afbc6688020b) -
+  as WeKan's, with WeKan's metadata, read back from there. Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

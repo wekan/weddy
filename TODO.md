@@ -23,8 +23,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   Member Settings, search, templates, rules, import and export. The card
   description is edited in place, and a list ends with WeKan's "+ Add card".
 - **Attachments, the rest**: previews of documents and video, thumbnails in
-  WebP as WeKan's (pure Go writes JPEG and PNG), writing to GridFS (Weddy
-  reads it), and the cloud stores (S3 and the others) that Node.js WeKan can
+  WebP as WeKan's (pure Go writes JPEG and PNG), and the cloud stores (S3 and the others) that Node.js WeKan can
   use.
 - **Users, the rest**: outgoing e-mail, invitations, e-mail verification
   (sent at sign-up too), forgot password, avatars, and organizations' and

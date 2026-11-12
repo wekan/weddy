@@ -71,10 +71,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   checklist menus' Export and Import are in, and the list menu's only for
   those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
-- **The multi-selection's own UI**: moveBoardObjects moves a mixed
-  selection as WeKan's does, but the board has no structural selection
-  checkboxes, mixed drag or destination popup for it yet - eight tests of
-  WeKan's structural-selection spec wait for them.
+- **Folding swimlanes**: WeKan's swimlane header folds its swimlane
+  (.js-collapse-swimlane); seven of WeKan's structural-selection tests drag
+  into and out of folded swimlanes, lists and cards and wait for it.
 - **Scrum, the rest** (the maintainer's choice after change history,
   2026-11-11): settings, sprints, releases, events, metadata, the four
   views and their exports, daily observations, the scope history, the

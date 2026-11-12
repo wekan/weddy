@@ -477,3 +477,7 @@ editor-enter-preference.e2e.js: board editor follows submit-on-Enter=true
 editor-enter-preference.e2e.js: subtask editor follows submit-on-Enter=false
 editor-enter-preference.e2e.js: subtask editor follows submit-on-Enter=true
 subtask-landing-list.e2e.js
+structural-selection.e2e.js: mixed checklist drag across swimlanes (handles false)
+structural-selection.e2e.js: mixed checklist drag across swimlanes (handles true)
+structural-selection.e2e.js: mixed selection popup selects another board and exact card position
+structural-selection.e2e.js: drag a collapsed selected list together with an independent checklist item

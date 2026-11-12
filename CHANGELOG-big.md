@@ -632,6 +632,11 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   the settings' scalar fields, each checked as the schema checks it. Thanks to
   xet7.
 
+- [The multi-selection's own UI: selection checkboxes, Move and mixed drag](https://github.com/wekan/caddy-wekan-plugin/commit/0c18f3c2b68590ed845fff79c8f3091bd4a5a2c8) -
+  swimlanes, lists, cards, checklists and items selected and moved together, to
+  a destination picked step by step or by dropping them, as WeKan's; the
+  minicard shows the checklists marked for it. Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

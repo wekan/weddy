@@ -22,7 +22,7 @@ history** and binaries for **every platform**. It serves **many WeKan domains**,
 each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
 Gitea's own. WeKan's fixes of **CrossBoardExportBleed**, **ListLockBleed**,
-**ListLockAttachBleed** and **FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
+**ListLockAttachBleed**, **GroupLinkBleed** and **FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
 WeKan's **change history** and **Scrum** sprints and reports are in Weddy too.
 
 This release fixes the following CRITICAL SECURITY ISSUES:
@@ -154,6 +154,22 @@ refused unrecorded. A board copy keeps its members exactly, and a card copy
 goes only to a swimlane and list of its destination board. WeKan's
 board-copy-boundary, card-copy-boundary and card-copy-destination specs pass
 against Weddy.
+
+</details>
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/36355b5d49c21d284daaaf0292b812580949f5cc">WeKan in Weddy: a board's teams and members are written only past their checks</a>. Thanks to bhaswanthc and xet7.</summary>
+
+[GroupLinkBleed](https://wekan.fi/hall-of-fame/grouplinkbleed/)
+([GHSA-v544-rmr5-38gx](https://github.com/wekan/wekan/security/advisories/GHSA-v544-rmr5-38gx)).
+Weddy had neither WeKan's setBoardTeams nor the board collection write. Both
+are in now, as WeKan's: setBoardTeams adds only the admin's own teams and
+reconciles the members, and a client board write naming organizations, teams
+or domains, or adding a member past inviteUserToBoard, is refused and recorded
+in Admin Panel -> Problems as GroupLinkBleed, without disabling the account; a
+board admin's change of a member's role still works. A new member that
+setBoardTeams lists must also belong to one of the board's teams. WeKan's
+group-link-bleed spec passes against Weddy.
 
 </details>
 

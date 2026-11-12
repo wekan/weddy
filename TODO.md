@@ -95,7 +95,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color, archived and a custom field's value by index, /integrations/update a webhook,
   /customFields/update a field's definition, /boards/update a member's
-  role flags and /checklists/insert a checklist, and Meteor-Files' DDP
+  role flags, /checklists/insert a checklist and /settings/update a site
+  admin's scalar settings, and Meteor-Files' DDP
   upload stores attachments (setBoardTeams, setBoardOrgs and the board
   domain methods are in); WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers

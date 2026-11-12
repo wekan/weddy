@@ -628,6 +628,10 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   read from its central directory, nothing inflated, within WeKan's limits.
   Thanks to xet7.
 
+- [Meteor's /settings/update, a site admin's, as WeKan's allow rule and schema have it](https://github.com/wekan/caddy-wekan-plugin/commit/ff1797b6c4dce8aa761c064a911b44972bdd6a06) -
+  the settings' scalar fields, each checked as the schema checks it. Thanks to
+  xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

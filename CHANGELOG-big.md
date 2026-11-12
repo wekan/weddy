@@ -656,6 +656,13 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   [all of WeKan's card-settings-both-sides spec on Weddy](https://github.com/wekan/weddy/commit/08468576fddf651785ffdb1bfec1d809e8f990b4).
   Thanks to xet7.
 
+- [Card Settings: sections and rows dragged into order, and the opened card follows the Card pane](https://github.com/wekan/caddy-wekan-plugin/commit/f2f24545b8ea3647fcd702a9d996590e8c80332d),
+  [each section full width and a part opened during a redraw kept open](https://github.com/wekan/caddy-wekan-plugin/commit/88ed1b376475c6267472381eeab7d032d80a3f6d),
+  and [the minicard following the Minicard pane, with the user's profile followed live](https://github.com/wekan/caddy-wekan-plugin/commit/8c4fab223ace142da95b1e08fba3db72e6dba261) -
+  WeKan's one section model on both sides, its orders written as WeKan
+  writes them; [WeKan's ordering tests on Weddy](https://github.com/wekan/weddy/commit/719a26f6b2e332de2a6972da13d6a5f0b98a2cc6).
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

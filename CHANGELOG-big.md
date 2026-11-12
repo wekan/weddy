@@ -204,6 +204,18 @@ tests pass against Weddy.
 
 </details>
 
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/a4123a9dff7fdd3a2b623da29283891ec60d51e8">WeKan in Weddy: a checklist moved into another board is in Problems</a>. Thanks to xet7.</summary>
+
+ChecklistBleed (wekan/wekan#6813). A client update moving a checklist or an
+item into a card of a board the mover cannot write to was refused but not
+recorded; it is now WeKan's canary in Admin Panel -> Problems, never costing
+the account, while a drag within one's own board is not. WeKan's
+checklist-same-board-canary spec passes against Weddy - its setup needed the
+positional `$` update operator, [now in FerretDB](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87).
+
+</details>
+
 and adds the following new features:
 
 **Build** - from upstream Caddy and the plugins, like gitea-patches.
@@ -582,6 +594,13 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   so a lookup by id no longer scans its collection. [WeKan's
   snapshot-limits tests on Weddy](https://github.com/wekan/weddy/commit/adf2d19fe4e40a437773b17da77fd499b43e1430),
   596 tests in all. Thanks to xet7.
+
+**FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
+
+- [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -
+  `members.$.isAdmin` with a filter on `members.userId` updates the member the
+  query matched, as in MongoDB, where FerretDB answered "Cannot create field
+  '$'". Thanks to xet7.
 
 **Release** - what a release says it is made of.
 

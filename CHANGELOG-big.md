@@ -648,6 +648,14 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   [WeKan's Card Settings tests on Weddy](https://github.com/wekan/weddy/commit/6e3a2f0c4c958bf4e1e184c4736107f3b0c5217e).
   Thanks to xet7.
 
+- [Card Settings' sides on the minicard and the card, and outside changes redraw the board](https://github.com/wekan/caddy-wekan-plugin/commit/a232834a9bf977888d4e52ff65baac5d9677e035) -
+  colour, requested by, location, last change, the card's caret, swimlane
+  name and description badge, each by its board flag; a board changed by
+  another program on the database redraws on the pages that show it, as
+  WeKan's reactive pages do;
+  [all of WeKan's card-settings-both-sides spec on Weddy](https://github.com/wekan/weddy/commit/08468576fddf651785ffdb1bfec1d809e8f990b4).
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

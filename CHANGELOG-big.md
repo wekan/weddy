@@ -624,6 +624,10 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 - [An upload goes to GridFS when Admin Panel's default storage is GridFS](https://github.com/wekan/caddy-wekan-plugin/commit/49dc8474c8a3e629f8adf192d4a8afbc6688020b) -
   as WeKan's, with WeKan's metadata, read back from there. Thanks to xet7.
 
+- [WeKan's ZIP preview: an archive's entry names in the attachment viewer](https://github.com/wekan/caddy-wekan-plugin/commit/702fdefb005170cda12c020f37c74603dee7bbda) -
+  read from its central directory, nothing inflated, within WeKan's limits.
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

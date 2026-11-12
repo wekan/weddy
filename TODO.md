@@ -22,8 +22,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   comments, attachments, custom fields - done), the board header and its menus, the board views, Admin Panel,
   Member Settings, search, templates, rules, import and export. The card
   description is edited in place, and a list ends with WeKan's "+ Add card".
-- **Attachments, the rest**: previews of documents and video, thumbnails in
-  WebP as WeKan's (pure Go writes JPEG and PNG), and the cloud stores (S3 and the others) that Node.js WeKan can
+- **Attachments, the rest**: the Office documents' preview (docx, xlsx and
+  pptx - WeKan's @wekan/office-open-xml-viewer is 12 MB, three WebAssembly
+  parsers among it, for every one of Weddy's binaries to carry: the
+  maintainer's choice whether to embed it or to render server-side),
+  thumbnails in WebP as WeKan's (pure Go writes JPEG and PNG), and the cloud stores (S3 and the others) that Node.js WeKan can
   use.
 - **Users, the rest**: outgoing e-mail, invitations, e-mail verification
   (sent at sign-up too), forgot password, avatars, and organizations' and

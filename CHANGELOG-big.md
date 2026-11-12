@@ -595,6 +595,11 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   snapshot-limits tests on Weddy](https://github.com/wekan/weddy/commit/adf2d19fe4e40a437773b17da77fd499b43e1430),
   596 tests in all. Thanks to xet7.
 
+- [A board's organizations, teams and e-mail domains, as WeKan's board methods set them](https://github.com/wekan/caddy-wekan-plugin/commit/bce014a669247b0e55bd1c63cd443515eef47275) -
+  setBoardOrgs, setBoardTeams, setBoardDomains, addBoardDomain and
+  removeBoardDomain: a board admin adds only the groups they belong to, and
+  each domain is checked and kept once. Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

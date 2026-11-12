@@ -93,8 +93,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   title, description, color, archived and a custom field's value by index, /integrations/update a webhook,
   /customFields/update a field's definition, /boards/update a member's
   role flags and /checklists/insert a checklist, and Meteor-Files' DDP
-  upload stores attachments (setBoardTeams is in; setBoardOrgs and
-  setBoardDomains are not); WeKan's client writes other
+  upload stores attachments (setBoardTeams, setBoardOrgs and the board
+  domain methods are in); WeKan's client writes other
   fields and collections this way under its allow rules, and Weddy answers
   them as Meteor does without one (403).
 

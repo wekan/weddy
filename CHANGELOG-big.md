@@ -590,6 +590,19 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 and fixes the following bugs:
 
+- [A member who leaves a board leaves its cards as in WeKan, and it is in the change history](https://github.com/wekan/caddy-wekan-plugin/commit/b98cf24c18b23ea3f297e09c939f1a5495439445) -
+  an admin's removal and quitBoard both take the person off the cards'
+  members, requesters, assigners and watchers (assignees stay, as WeKan's), the
+  lists' and the board's watchers and a private board's star, the entry
+  inactive, no admin and without grantedBy; each card's change is a History row
+  by whoever did it. Removal pulled members and assignees unrecorded, and
+  quitBoard left every card as it was. Thanks to xet7.
+- [A deleted custom field's values leave every board's cards, and it is in the change history](https://github.com/wekan/caddy-wekan-plugin/commit/66e93c2cfda7796b57d7b8cb01b3aa83d114597e) -
+  as WeKan's CustomFields.before.remove, from every board in the field's
+  boardIds, each card a History row by the deleter; the REST delete pulled them
+  from the path's board alone, unrecorded. The guard of unrecorded writes now
+  sees bulk deletes too, which leaves only the writes WeKan does not record
+  either. Thanks to xet7.
 - [WeKan's indexes on a database Weddy alone runs](https://github.com/wekan/caddy-wekan-plugin/commit/1b3127e93a42456d9fc0dd0e006b5d68d2d8c547) -
   `cmd/sync-indexes` copies WeKan's 186 `ensureIndex` calls, with their sparse,
   unique and TTL options, and Weddy creates them before its first request, so

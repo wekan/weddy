@@ -82,15 +82,6 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   A large sprint's close rolls over in the background and a large change's
   History is a batch undone whole, as WeKan's. Left: Card Settings' Scrum
   rows (WeKan's scrum.e2e card-settings test drives Blaze's Popup).
-- **WeKan's change history** (the maintainer's next choice, 2026-11-11;
-  WeKan's docs/Features/General/History/History.md): the row hash, the
-  writer gate and both chains, and a list's soft delete with undo and redo
-  are in; cards', lists', swimlanes', checklists', items' and comments'
-  edits and moves are recorded and undone, and `changeHistory.page` and
-  `restore` answer; the board's and the card's History page and Ctrl+Z /
-  Ctrl+Shift+Z, Member Settings' History, attachments' and rules' history
-  are in, and Scrum's. Left: the writes the guards in history_fields_test.go
-  still list with their reason.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has; WeKan's tests of the calendar, new board, swimlane, add-list and
   subtask editors wait for those editors.

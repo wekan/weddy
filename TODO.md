@@ -72,11 +72,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
 - **Card Settings, the rest**: Board Settings / Card has both panes with
-  every section's rows and their checkboxes, the Scrum rows included. Left:
-  the minicard and the card drawing the sides added on 2026-10-02 (requested
-  by, location, last activity, card colour, the description badge - WeKan's
-  other two card-settings-both-sides tests), dragging sections and rows into
-  each side's order, and the sections' and rows' menus.
+  every section's rows and their checkboxes, the Scrum rows included, and
+  the minicard and the card draw the sides added on 2026-10-02. Left:
+  dragging sections and rows into each side's order, and the sections' and
+  rows' menus.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has, the swimlane, add-list, new board and subtask ones included;
   WeKan's test of the calendar editor waits for the calendar view.

@@ -75,7 +75,7 @@
 70-rest-board-management.e2e.js: normal member cannot rename a board through REST
 admin-attachment-retention.e2e.js: negative: an ordinary user cannot open the retention settings
 admin-new-env-settings.e2e.js: negative: an ordinary user is offered none of them
-card-settings-both-sides.e2e.js: both Show sides list every row of the table
+card-settings-both-sides.e2e.js
 duplicate-dependencies.e2e.js: REST accepts both duplicate types and retains board boundary validation
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (ltr)
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (rtl)

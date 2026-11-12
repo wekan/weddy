@@ -618,6 +618,8 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   the card's subtasks and "Add Subtask", made on the board's subtasks board in
   the list and swimlane WeKan's landing rules choose, never on a board the
   maker may not write. Thanks to xet7.
+- [A subtask ticked done from its parent, and the done/total count](https://github.com/wekan/caddy-wekan-plugin/commit/e80829d054dbfb14e1085e1502a82ea81bcc1262) -
+  wekan/wekan#4693, by whoever may edit that subtask. Thanks to xet7.
 
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 

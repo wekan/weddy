@@ -15,7 +15,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   pop-over, comments and activities, and Problems' Recovery, Password length
   and Security Report. The other 154 are listed in caddy-wekan-plugin's
   [TEMPLATES.md](https://github.com/wekan/caddy-wekan-plugin/blob/main/TEMPLATES.md):
-  card details (members, labels, subtasks - listed and added - checklists - added, renamed,
+  card details (members, labels, subtasks - listed, added and ticked done - checklists - added, renamed,
   deleted and exported, items added, edited, checked and deleted; moved and
   copied; items given an assignee, a due date and a new
   order; not yet dragged between checklists -

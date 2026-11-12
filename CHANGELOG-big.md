@@ -610,6 +610,10 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   the member's submit-on-Enter preference, through WeKan's createListAfter.
   Thanks to xet7.
 
+- [WeKan's Create Board pop-over in the header, one board or one a line](https://github.com/wekan/caddy-wekan-plugin/commit/7482aeaece7629371c9c6fb265300a9f2a698586) -
+  for whoever may make a board, each one through the board creation policy.
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -
@@ -671,6 +675,9 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 and fixes the following bugs:
 
+- [A large Scrum close's test times out on standing still, not on the whole](https://github.com/wekan/caddy-wekan-plugin/commit/f48f8451dc24f269a3ed7e793a3c0425ef02b2b3) -
+  under the plugin's parallel tests the undo's batch job was cut off while
+  still advancing. Thanks to xet7.
 - [A member who leaves a board leaves its cards as in WeKan, and it is in the change history](https://github.com/wekan/caddy-wekan-plugin/commit/b98cf24c18b23ea3f297e09c939f1a5495439445) -
   an admin's removal and quitBoard both take the person off the cards'
   members, requesters, assigners and watchers (assignees stay, as WeKan's), the

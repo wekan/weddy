@@ -76,9 +76,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   keys - the opened card and the minicard drawn in it, and the pop-over's
   layout (panes side by side or stacked, folding, the splitter, the corner
   grip) and the sections' hamburgers - Card's move reason and the board's
-  Subtasks Settings - are in. Left: the custom fields listed and edited
-  inline in their section, the rows' menus, Card's drag settings, and Board
-  Settings / Board View's reorder.
+  Subtasks Settings - and the board's custom fields listed, edited and made
+  in their section are in. Left: the rows' menus, Card's drag settings, and
+  Board Settings / Board View's reorder.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has, the swimlane, add-list, new board and subtask ones included;
   WeKan's test of the calendar editor waits for the calendar view.

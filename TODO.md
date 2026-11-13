@@ -80,10 +80,6 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   Buddhist, Hijri ...) and the due-date popup's own calendar picker; the
   Filter sidebar's title and label filters, which WeKan's calendar filter
   test uses.
-- **WeKan's password specs**: the password policy is in, with Admin Panel /
-  Problems / Password length; WeKan's password-min-length-signup-login and
-  password-length-report specs drive its `AccountsTemplates` client and
-  its table page component, which Weddy's pages do not have.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color, archived and a custom field's value by index, /integrations/update a webhook,
   /customFields/update a field's definition, /boards/update a member's

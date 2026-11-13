@@ -711,6 +711,12 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   selecting a day; with it the last editor of Submit on Enter, the calendar's,
   and all of WeKan's editor-enter-preference spec on Weddy. Thanks to xet7.
 
+- [Passwords as WeKan's: setPassword, the required change's dialog, a page signed out when its session ends elsewhere](https://github.com/wekan/caddy-wekan-plugin/commit/79f8a7dcf49fb1aeeab0640b4431b54deacac644) -
+  WeKan's four password specs run on Weddy: sign-up with and without an
+  enforced minimum, the change an enforced minimum requires, every session
+  signed out by a password change, and the short-password report.
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

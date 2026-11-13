@@ -485,3 +485,7 @@ editor-enter-preference.e2e.js
 44-calendar-date-display.e2e.js: board calendar uses supported ltr direction without legacy option warnings
 44-calendar-date-display.e2e.js: board calendar uses supported rtl direction without legacy option warnings
 calendar-today-marker.e2e.js: board Calendar view marks today's day number
+password-min-length-signup-login.e2e.js
+password-length-report.e2e.js
+password-change-other-sessions.e2e.js
+password-submit-event.e2e.js

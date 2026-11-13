@@ -763,6 +763,8 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 and fixes the following bugs:
 
+- [Card Settings: a redraw never makes a field's form again under the user's typing](https://github.com/wekan/caddy-wekan-plugin/commit/21ba9446a2029e47fab1082116cf9bef85b22fbb) -
+  a new field was sent without the name being typed. Thanks to xet7.
 - [Card details: a field's editor opened while an earlier save is on its way stays open](https://github.com/wekan/caddy-wekan-plugin/commit/14ca658fa3e08b17bb8e34a4268b935fb8400d62) -
   the board drawn from the earlier save took it away. Thanks to xet7.
 - [Live updates: one connection per page and board, kept across redraws](https://github.com/wekan/caddy-wekan-plugin/commit/39730f0a2c3354fe8a9819d04e5f2e5df0604978) -

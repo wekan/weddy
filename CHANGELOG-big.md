@@ -691,6 +691,11 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   [WeKan's drag settings test on Weddy](https://github.com/wekan/weddy/commit/f37cde302142f22b44f47d9e8b4f9f2556fb5800).
   Thanks to xet7.
 
+- [Board Settings / Swimlane and List, and every settings column set at once](https://github.com/wekan/caddy-wekan-plugin/commit/1aa8f9b27cb9297fd84cc172134f81c43b95ddeb) -
+  WeKan's setBoardSettingsColumn with its explicit columns, a board admin's;
+  [all of WeKan's board-settings-columns spec on Weddy](https://github.com/wekan/weddy/commit/6ef21e27855d92a8c066c71b8e9316d1c5f65484).
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

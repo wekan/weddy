@@ -752,6 +752,9 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 and fixes the following bugs:
 
+- [Live updates: a change a page makes to its own user is not announced back to it](https://github.com/wekan/caddy-wekan-plugin/commit/72f1a3faafcdbb4e464bd21a16d3eb911efcb2c8) -
+  Member Settings' own toggle redrew the board a moment later and wiped the
+  card composer just opened. Thanks to xet7.
 - [Live updates: one baseline per page, so a page drawn after a change is not told of it again](https://github.com/wekan/caddy-wekan-plugin/commit/8603964f696f4fb4a6839632466384165d542723) -
   a page reloaded right after a change was told of it once more, and the
   redraw wiped an open card composer or landed mid-drag. Thanks to xet7.

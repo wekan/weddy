@@ -84,6 +84,7 @@ card-settings-sections-order.e2e.js: a checkbox in the Minicard pane is the mini
 card-settings-sections-order.e2e.js: two panes side by side, Minicard first; each scrolls on its own, collapses, and stacks when narrow
 card-settings-sections-order.e2e.js: the splitter: dragged it widens one pane, clamped, kept, reset by a double-click, moved by the keys
 card-settings-sections-order.e2e.js: the corner grip resizes Card Settings; the panes follow, and stack below two panes' width
+card-settings-sections-order.e2e.js: a hamburger opens its content under its line inside the pane, not in a popup
 settings-drag-reorder.e2e.js: Board Settings / Card reorders each side by drag and drop and by the arrow keys
 duplicate-dependencies.e2e.js: REST accepts both duplicate types and retains board boundary validation
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (ltr)

@@ -89,6 +89,19 @@ card-settings-sections-order.e2e.js: a custom field's hamburger edits it inline,
 settings-drag-reorder.e2e.js
 board-drag-settings.e2e.js: deny foreign board settings and disabled mixed drag, retain explicit menu moves
 board-settings-columns.e2e.js
+card-add-fields.e2e.js: a hamburger opens under its section's line inside the pane, not on top of Card Settings
+card-add-fields.e2e.js: Card Settings is Board Settings / Card: two panes, then the sections as checklists, each with its own checkbox
+card-add-fields.e2e.js: the checkbox is the chosen side's Show on Card / Show on Minicard, for the whole board
+card-add-fields.e2e.js: a hamburger is drawn only when it has something in it: none on Date or its rows, one on Card
+card-add-fields.e2e.js: a field with data is shown without adding it, unless the board turns it off
+card-add-fields.e2e.js: a checkbox and its label are a space apart, on the rows and in the hamburgers
+card-add-fields.e2e.js: "Scrum settings" is the section title, not repeated before each Scrum row
+card-add-fields.e2e.js: Card's hamburger: Ask for a reason is the rows' kind of checkbox, a board admin's
+card-add-fields.e2e.js: Board Settings / Card: labels whole in both panes, no sideways scroll
+card-add-fields.e2e.js: Board Settings / Card has no left menu and no menu pane any more (negative)
+card-add-fields.e2e.js: drag handles on: a row is dragged by its handle only, not by its label
+card-add-fields.e2e.js: drag handles off: the row's label is its handle
+card-add-fields.e2e.js: a row dropped on another section goes back to its own, and nothing is written
 duplicate-dependencies.e2e.js: REST accepts both duplicate types and retains board boundary validation
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (ltr)
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (rtl)

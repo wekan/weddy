@@ -674,6 +674,12 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   [WeKan's hamburger test on Weddy](https://github.com/wekan/weddy/commit/52e5918039af2d530da68997ca2f677b59f821c3).
   Thanks to xet7.
 
+- [Card Settings: the board's custom fields listed, edited and made inline](https://github.com/wekan/caddy-wekan-plugin/commit/f27e229901d0b74d2b6f405213c1bfb8c93af6fc) -
+  each side's checkbox its own flag, and Card Settings staying open through
+  its own forms;
+  [WeKan's custom fields test on Weddy](https://github.com/wekan/weddy/commit/859b2189a59640fb4322524ac428720df5c6417f).
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

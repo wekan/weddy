@@ -352,20 +352,6 @@ import-export-format-audit.e2e.js: zenkit: comments, checklists and card fields 
 checklist-single-submit.e2e.js: #6700 one checklist persists after click
 checklist-single-submit.e2e.js: #6700 one checklist persists after Enter
 checklist-single-submit.e2e.js: #6700 one checklist persists after Control+Enter
-editor-enter-preference.e2e.js: card editor follows submit-on-Enter=false
-editor-enter-preference.e2e.js: checklist editor follows submit-on-Enter=false
-editor-enter-preference.e2e.js: item editor follows submit-on-Enter=false
-editor-enter-preference.e2e.js: comment editor follows submit-on-Enter=false
-editor-enter-preference.e2e.js: title editor follows submit-on-Enter=false
-editor-enter-preference.e2e.js: copy editor follows submit-on-Enter=false
-editor-enter-preference.e2e.js: card editor follows submit-on-Enter=true
-editor-enter-preference.e2e.js: checklist editor follows submit-on-Enter=true
-editor-enter-preference.e2e.js: item editor follows submit-on-Enter=true
-editor-enter-preference.e2e.js: comment editor follows submit-on-Enter=true
-editor-enter-preference.e2e.js: title editor follows submit-on-Enter=true
-editor-enter-preference.e2e.js: copy editor follows submit-on-Enter=true
-editor-enter-preference.e2e.js: Member Settings changes the shortcut to true without reloading
-editor-enter-preference.e2e.js: Member Settings changes the shortcut to false without reloading
 latin-checklist-actions.e2e.js: Latin checklist menu distinguishes moving from copying
 checklist-item-reorder.e2e.js: #6723 third-position drop follows placeholder (handles false)
 checklist-item-reorder.e2e.js: #6723 third-position drop follows placeholder (handles true)
@@ -373,8 +359,6 @@ checklist-item-reorder.e2e.js: #6723 third-position drop follows placeholder (ha
 11-labels-duedates.e2e.js: #6615: an existing card with dates opens and remains editable
 11-labels-duedates.e2e.js: #6809: Save without picking a day saves today
 11-labels-duedates.e2e.js: changing an existing due date saves the replacement (#6607)
-editor-enter-preference.e2e.js: description editor follows submit-on-Enter=false
-editor-enter-preference.e2e.js: description editor follows submit-on-Enter=true
 03-cards-operations.e2e.js: custom fields panel opens from card details
 03-cards-operations.e2e.js: checkbox custom fields toggle and can be removed from a card
 03-cards-operations.e2e.js: currency custom fields save and offer an X beside Save
@@ -484,14 +468,6 @@ admin-only-custom-fields.e2e.js: member cannot forge admin-only fields through d
 admin-only-custom-fields.e2e.js: ordinary member copying retains public values and omits protected values
 checklist-same-board-canary-6813.e2e.js
 admin-only-custom-fields.e2e.js: blocked field attacks appear as a Problems summary without secret values
-editor-enter-preference.e2e.js: swimlane editor follows submit-on-Enter=false
-editor-enter-preference.e2e.js: swimlane editor follows submit-on-Enter=true
-editor-enter-preference.e2e.js: list editor follows submit-on-Enter=false
-editor-enter-preference.e2e.js: list editor follows submit-on-Enter=true
-editor-enter-preference.e2e.js: board editor follows submit-on-Enter=false
-editor-enter-preference.e2e.js: board editor follows submit-on-Enter=true
-editor-enter-preference.e2e.js: subtask editor follows submit-on-Enter=false
-editor-enter-preference.e2e.js: subtask editor follows submit-on-Enter=true
 subtask-landing-list.e2e.js
 structural-selection.e2e.js: mixed checklist drag across swimlanes (handles false)
 structural-selection.e2e.js: mixed checklist drag across swimlanes (handles true)
@@ -504,3 +480,8 @@ structural-selection.e2e.js: mixed drag resolves the correct collapsed checklist
 structural-selection.e2e.js: mixed drag resolves the correct collapsed swimlane destination
 structural-selection.e2e.js: drag a collapsed selected swimlane together with an independent checklist item
 structural-selection.e2e.js: drag a collapsed selected card together with an independent checklist item
+
+editor-enter-preference.e2e.js
+44-calendar-date-display.e2e.js: board calendar uses supported ltr direction without legacy option warnings
+44-calendar-date-display.e2e.js: board calendar uses supported rtl direction without legacy option warnings
+calendar-today-marker.e2e.js: board Calendar view marks today's day number

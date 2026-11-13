@@ -74,9 +74,12 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **Swimlane and list resizing**: Board Settings / Swimlane and List store
   WeKan's resize locks and same width for all lists; Weddy's lists and
   swimlanes are not resized yet, so they take effect once they are.
-- **Submit on Enter, the rest**: the preference is in every editor Weddy
-  has, the swimlane, add-list, new board and subtask ones included;
-  WeKan's test of the calendar editor waits for the calendar view.
+- **Calendar, the rest**: the board's Calendar view is in (on FullCalendar,
+  as WeKan's). Left: Calendar Mode (board-view-calendar-mode), the
+  multi-board calendar, the calendar systems of Member Settings (Jalali,
+  Buddhist, Hijri ...) and the due-date popup's own calendar picker; the
+  Filter sidebar's title and label filters, which WeKan's calendar filter
+  test uses.
 - **WeKan's password specs**: the password policy is in, with Admin Panel /
   Problems / Password length; WeKan's password-min-length-signup-login and
   password-length-report specs drive its `AccountsTemplates` client and

@@ -706,6 +706,11 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   the last of Card Settings, which now has every part of WeKan's but the
   resizing its swimlane and list locks will govern. Thanks to xet7.
 
+- [Board views: WeKan's Calendar view, on FullCalendar](https://github.com/wekan/caddy-wekan-plugin/commit/9379797acd4fd4727792a5a7d571b3843540e0ef) -
+  the cards the board shows on the calendar WeKan ships, a card made by
+  selecting a day; with it the last editor of Submit on Enter, the calendar's,
+  and all of WeKan's editor-enter-preference spec on Weddy. Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

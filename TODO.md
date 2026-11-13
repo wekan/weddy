@@ -71,9 +71,11 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   checklist menus' Export and Import are in, and the list menu's only for
   those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
-- **Swimlane and list resizing**: Board Settings / Swimlane and List store
-  WeKan's resize locks and same width for all lists; Weddy's lists and
-  swimlanes are not resized yet, so they take effect once they are.
+- **List widths, the rest**: lists and swimlanes are resized, with the
+  board's widths, same width for all lists and the locks; left are WeKan's
+  per-viewer modes - personal list widths (allowsPersonalListWidth), the Set
+  Width pop-over's own same width (setFixedListWidthEnabled, which
+  38-fixed-list-width's logged-in tests use) and automatic width.
 - **Calendar, the rest**: the board's Calendar view is in (on FullCalendar,
   as WeKan's). Left: Calendar Mode (board-view-calendar-mode), the
   multi-board calendar, the calendar systems of Member Settings (Jalali,

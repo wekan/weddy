@@ -717,6 +717,14 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   signed out by a password change, and the short-password report.
   Thanks to xet7.
 
+- [Swimlane and list resizing, as WeKan's; a Scrum edit kept over a redraw](https://github.com/wekan/caddy-wekan-plugin/commit/e295e5b1de4f14695c2f1767d42274e65f2552fd) -
+  a list's handle on its inline end and a swimlane's at its bottom: a list's
+  width the board's, set by whoever may change it, or the board's one width
+  while same width for all lists is on; a swimlane's height each user's own;
+  Board Settings' locks take the handles away. WeKan's rtl-list-resize spec
+  runs on Weddy, and the card's Scrum form keeps its choice when the board is
+  drawn again before Save. Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

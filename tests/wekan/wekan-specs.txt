@@ -487,3 +487,4 @@ password-min-length-signup-login.e2e.js
 password-length-report.e2e.js
 password-change-other-sessions.e2e.js
 password-submit-event.e2e.js
+rtl-list-resize.e2e.js

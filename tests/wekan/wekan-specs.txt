@@ -87,6 +87,7 @@ card-settings-sections-order.e2e.js: the corner grip resizes Card Settings; the 
 card-settings-sections-order.e2e.js: a hamburger opens its content under its line inside the pane, not in a popup
 card-settings-sections-order.e2e.js: a custom field's hamburger edits it inline, and the + creates one inline; Card Settings stays
 settings-drag-reorder.e2e.js
+board-drag-settings.e2e.js: deny foreign board settings and disabled mixed drag, retain explicit menu moves
 duplicate-dependencies.e2e.js: REST accepts both duplicate types and retains board boundary validation
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (ltr)
 editor-multiline-resize.e2e.js: card editor can be manually enlarged and keeps its size while typing (rtl)

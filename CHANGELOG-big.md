@@ -772,6 +772,8 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 and fixes the following bugs:
 
+- [Card details: a form opened while a redraw is on its way is opened again, with what was typed](https://github.com/wekan/caddy-wekan-plugin/commit/95c6fe052f8769cfb3be02a2e1139a2ebfcf59fc) -
+  a new checklist's form was gone before it was sent. Thanks to xet7.
 - [Card Settings: a redraw never makes a field's form again under the user's typing](https://github.com/wekan/caddy-wekan-plugin/commit/21ba9446a2029e47fab1082116cf9bef85b22fbb) -
   a new field was sent without the name being typed. Thanks to xet7.
 - [Card details: a field's editor opened while an earlier save is on its way stays open](https://github.com/wekan/caddy-wekan-plugin/commit/14ca658fa3e08b17bb8e34a4268b935fb8400d62) -

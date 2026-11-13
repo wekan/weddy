@@ -680,6 +680,12 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   [WeKan's custom fields test on Weddy](https://github.com/wekan/weddy/commit/859b2189a59640fb4322524ac428720df5c6417f).
   Thanks to xet7.
 
+- [Board Settings / Board View: WeKan's view settings, ordered by drag and by the keys](https://github.com/wekan/caddy-wekan-plugin/commit/b7d1aa0dfe545f29b77386c39e03c283f0ec932c) -
+  each view's default and shown flags of a public and a private board, from
+  WeKan's own table, checked as the REST API checks them;
+  [all of WeKan's settings-drag-reorder spec on Weddy](https://github.com/wekan/weddy/commit/29437cc4b878621636428c69bc94a08184282724).
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

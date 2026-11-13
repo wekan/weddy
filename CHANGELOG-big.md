@@ -663,6 +663,11 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   writes them; [WeKan's ordering tests on Weddy](https://github.com/wekan/weddy/commit/719a26f6b2e332de2a6972da13d6a5f0b98a2cc6).
   Thanks to xet7.
 
+- [Card Settings: the panes side by side or stacked, the splitter, folding panes and the corner grip](https://github.com/wekan/caddy-wekan-plugin/commit/73412f93c05ad02593135d66aa1e33be78fb71e9) -
+  as WeKan's pop-over, the split kept in the user's profile;
+  [WeKan's layout tests on Weddy](https://github.com/wekan/weddy/commit/4e04be2645e84aec9d4b01009bcf6184023e5b23).
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

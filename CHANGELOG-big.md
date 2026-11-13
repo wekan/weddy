@@ -702,6 +702,10 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   [all of WeKan's card-add-fields spec on Weddy](https://github.com/wekan/weddy/commit/bacfa6ea9eaa6952c1c4c7a4dcc0df4276010901).
   Thanks to xet7.
 
+- [Card Settings: the labels-text row says whether the user follows the board, with a way back](https://github.com/wekan/caddy-wekan-plugin/commit/b4c8a032349c3d50a149aaa8dc416f9d2dd993c2) -
+  the last of Card Settings, which now has every part of WeKan's but the
+  resizing its swimlane and list locks will govern. Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

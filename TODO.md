@@ -71,19 +71,9 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   checklist menus' Export and Import are in, and the list menu's only for
   those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
-- **Card Settings, the rest**: both panes with every section's rows, their
-  checkboxes and their order - sections and rows dragged and moved by the
-  keys - the opened card and the minicard drawn in it, and the pop-over's
-  layout (panes side by side or stacked, folding, the splitter, the corner
-  grip) and the sections' hamburgers - Card's move reason and the board's
-  Subtasks Settings - and the board's custom fields listed, edited and made
-  in their section are in, Board Settings / Board View with its order,
-  Board Settings / Swimlane and List, every settings column set at once,
-  one-line sections and folds kept per user - all of WeKan's card-add-fields
-  spec runs. Left: the rows' menus (the labels-text override's reset), and
-  the swimlane and list resize locks and same width taking effect on the
-  board (Weddy's lists and swimlanes are not resized yet); WeKan's other
-  drag-settings tests read jQuery UI's sortable, which Weddy's page has not.
+- **Swimlane and list resizing**: Board Settings / Swimlane and List store
+  WeKan's resize locks and same width for all lists; Weddy's lists and
+  swimlanes are not resized yet, so they take effect once they are.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has, the swimlane, add-list, new board and subtask ones included;
   WeKan's test of the calendar editor waits for the calendar view.

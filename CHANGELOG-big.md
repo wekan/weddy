@@ -696,6 +696,12 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   [all of WeKan's board-settings-columns spec on Weddy](https://github.com/wekan/weddy/commit/6ef21e27855d92a8c066c71b8e9316d1c5f65484).
   Thanks to xet7.
 
+- [Card Settings as WeKan's: one-line sections, folds kept per user, custom fields for every member, a pop-over that moves and maximizes](https://github.com/wekan/caddy-wekan-plugin/commit/298c59d9e715287187b7c3f56562311bbc81d022) -
+  an admin-only field never listed to a member who is no admin; a field
+  always on cards added to every card;
+  [all of WeKan's card-add-fields spec on Weddy](https://github.com/wekan/weddy/commit/bacfa6ea9eaa6952c1c4c7a4dcc0df4276010901).
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

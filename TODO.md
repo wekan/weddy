@@ -73,10 +73,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   Panel -> Recovery); and inbound e-mail.
 - **Card Settings, the rest**: both panes with every section's rows, their
   checkboxes and their order - sections and rows dragged and moved by the
-  keys - and the opened card and the minicard drawn in it are in. Left: the
-  pop-over's own layout (the panes side by side, each scrolling and folding,
-  the splitter, the corner grip), the sections' and rows' hamburgers and the
-  custom fields edited inline, and Board Settings / Board View's reorder.
+  keys - the opened card and the minicard drawn in it, and the pop-over's
+  layout (panes side by side or stacked, folding, the splitter, the corner
+  grip) are in. Left: the sections' and rows' hamburgers and the custom
+  fields edited inline, and Board Settings / Board View's reorder.
 - **Submit on Enter, the rest**: the preference is in every editor Weddy
   has, the swimlane, add-list, new board and subtask ones included;
   WeKan's test of the calendar editor waits for the calendar view.

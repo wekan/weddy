@@ -763,6 +763,9 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 and fixes the following bugs:
 
+- [Live updates: one connection per page and board, kept across redraws](https://github.com/wekan/caddy-wekan-plugin/commit/39730f0a2c3354fe8a9819d04e5f2e5df0604978) -
+  a change announced while the board was being drawn again was lost; and
+  Card Settings' one-line checkbox goes by what it shows. Thanks to xet7.
 - [Live updates: an open card composer waits for the redraw, and the board's custom fields are followed](https://github.com/wekan/caddy-wekan-plugin/commit/d25d8fd711d0c7b6f46102b13c8a6d174d68e7bb) -
   an outside change took the open composer away, and a field added to the
   board never reached a page that had drawn Card Settings. Thanks to xet7.

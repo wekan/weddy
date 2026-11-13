@@ -724,6 +724,11 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 and fixes the following bugs:
 
+- [Exported dates as WeKan writes them, a card's odd field never hides the card, and no title twice](https://github.com/wekan/caddy-wekan-plugin/commit/9abbe3bf1592f1d012d4509af832b4560061bf97) -
+  exports and the Scrum transfer wrote "...53.67Z" where WeKan writes
+  "...53.670Z"; a date stored as text made a card unreadable; a section's
+  heading repeated its fields' own title and pushed the card down. Thanks to
+  xet7.
 - [A live update keeps an opened part of the card details open](https://github.com/wekan/caddy-wekan-plugin/commit/f4c5317afec26b741407eda7f4e652055233a77d) -
   the Scrum fields' editor closed whenever somebody else's change re-rendered
   the board. Thanks to xet7.

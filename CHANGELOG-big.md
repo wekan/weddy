@@ -686,6 +686,11 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   [all of WeKan's settings-drag-reorder spec on Weddy](https://github.com/wekan/weddy/commit/29437cc4b878621636428c69bc94a08184282724).
   Thanks to xet7.
 
+- [Card Settings: Card's Draggable table, WeKan's setBoardDragging, and checklist items that stay put](https://github.com/wekan/caddy-wekan-plugin/commit/4fe20c853c8fbf8906bf9c722f0de1ae6fdf3b79) -
+  a board admin's, another board's refused;
+  [WeKan's drag settings test on Weddy](https://github.com/wekan/weddy/commit/f37cde302142f22b44f47d9e8b4f9f2556fb5800).
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

@@ -102,8 +102,6 @@ invite-member-email-case.e2e.js: negative: a similar but different address is no
 keyboard-nonlatin-once.e2e.js: a shortcut runs once for the d key on a Latin, a Farsi and a Cyrillic layout
 minicard-rule-button-6836.e2e.js: negative: with Show on Minicard off (the default) the minicard has no rule button
 oidc-redirect-guard.e2e.js: OIDC automatic attempt stays latched across browser callback reloads
-password-submit-event.e2e.js: password submit replay reaches the form handler after Enter
-password-submit-event.e2e.js: password submit replay reaches the form handler after click
 position-history-bleed.e2e.js: a forged history entry cannot pull another board's card in
 public-csv-export-fields.e2e.js: public exports retain all columns when fields are absent, empty or unrecognized
 public-csv-export-fields.e2e.js: selecting columns still denies private-board exports to unrelated users

@@ -741,6 +741,9 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
 
 and fixes the following bugs:
 
+- [Live updates: one baseline per page, so a page drawn after a change is not told of it again](https://github.com/wekan/caddy-wekan-plugin/commit/8603964f696f4fb4a6839632466384165d542723) -
+  a page reloaded right after a change was told of it once more, and the
+  redraw wiped an open card composer or landed mid-drag. Thanks to xet7.
 - [Exported dates as WeKan writes them, a card's odd field never hides the card, and no title twice](https://github.com/wekan/caddy-wekan-plugin/commit/9abbe3bf1592f1d012d4509af832b4560061bf97) -
   exports and the Scrum transfer wrote "...53.67Z" where WeKan writes
   "...53.670Z"; a date stored as text made a card unreadable; a section's

@@ -26,7 +26,10 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   pptx - WeKan's @wekan/office-open-xml-viewer is 12 MB, three WebAssembly
   parsers among it, for every one of Weddy's binaries to carry: the
   maintainer's choice whether to embed it or to render server-side),
-  thumbnails in WebP as WeKan's (pure Go writes JPEG and PNG), and the cloud stores (S3 and the others) that Node.js WeKan can
+  thumbnails in WebP as WeKan's (pure Go writes JPEG and PNG; lossy WebP
+  without cgo is github.com/gen2brain/webp, libwebp transpiled to Go - MIT,
+  but by default it first dlopens a system libwebp through purego, so every
+  build would need its nodynamic tag: the maintainer's choice), and the cloud stores (S3 and the others) that Node.js WeKan can
   use.
 - **Users, the rest**: outgoing e-mail, invitations, e-mail verification
   (sent at sign-up too), forgot password, avatars, and organizations' and

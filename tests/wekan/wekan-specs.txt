@@ -147,6 +147,8 @@ sanitize-html-nested-iframe.e2e.js: a board whose card holds nested iframes expo
 37-card-drag-sort.e2e.js: #3826 cards that have a parent can be reordered and the new order persists
 37-card-drag-sort.e2e.js: #5421 a fast touch drag moves the card without opening it
 38-fixed-list-width.e2e.js: anonymous/public-board: fixed width lives in localStorage and does not leak across boards
+38-fixed-list-width.e2e.js: logged-in: enabling fixed width makes all lists share one width; resize updates all
+38-fixed-list-width.e2e.js: logged-in NEGATIVE: width < 200 rejected; OFF means per-list widths are independent
 41-admin-newest-features.e2e.js: NEGATIVE: board Table view column headers are not clickable-sortable
 42-board-comments-attachments.e2e.js: NEGATIVE: a comment on a different board is not published into this board
 45-axe-accessibility.e2e.js: the signed-out pages: sign in and register

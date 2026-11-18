@@ -742,6 +742,13 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   runs on Weddy, and the card's Scrum form keeps its choice when the board is
   drawn again before Save. Thanks to xet7.
 
+- [List widths: the viewer's own modes, as WeKan's](https://github.com/wekan/caddy-wekan-plugin/commit/7966f217681f3731cfabf4b31e432732b637ab13) -
+  a personal width per list while the board allows it, and the Set width
+  pop-over's own same width for all lists, refused under 200; a list is drawn
+  at the board's same width, else the viewer's, else the viewer's own width
+  for it, else the list's. WeKan's 38-fixed-list-width logged-in tests run on
+  Weddy. Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

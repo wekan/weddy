@@ -486,6 +486,7 @@ editor-enter-preference.e2e.js
 calendar-today-marker.e2e.js
 issue-calendar-filter.e2e.js
 calendar-mode.e2e.js
+board-announcement.e2e.js
 password-min-length-signup-login.e2e.js
 password-length-report.e2e.js
 password-change-other-sessions.e2e.js

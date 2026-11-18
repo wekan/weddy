@@ -791,6 +791,16 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   stored dates stay Gregorian. WeKan's 44-calendar-date-display spec runs on
   Weddy, all 19 tests. Thanks to xet7.
 
+- [Board announcement, as WeKan's (#1566)](https://github.com/wekan/caddy-wekan-plugin/commit/83d85fa11c5504e6d08463b506bf1fea63e07bf5) -
+  a board admin's plain-text banner above the board, shown to each member
+  until they dismiss it and again after an edit. WeKan's board-announcement
+  spec runs on Weddy in its five languages. Thanks to xet7.
+
+- [The board exports keep each list's WIP limit](https://github.com/wekan/caddy-wekan-plugin/commit/14eb03d375fb302814d945b79904f85d565399c0) -
+  a stored nested document is decoded as bson.D, so reading it as bson.M
+  found nothing; every reader of stored documents now takes either, and a
+  test fails on a new one that does not. Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

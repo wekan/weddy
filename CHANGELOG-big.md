@@ -749,6 +749,12 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   for it, else the list's. WeKan's 38-fixed-list-width logged-in tests run on
   Weddy. Thanks to xet7.
 
+- [List widths: automatic width, as WeKan's (#6409)](https://github.com/wekan/caddy-wekan-plugin/commit/57c05008104ed4e261a51e114fccaeecf0726ddc) -
+  the board's, switched by who may write it, or in personal mode each
+  viewer's own; while it is on the lists share the row with no width or
+  resize handle of their own, and the Set width pop-over has the switch.
+  Weddy's 26-auto-list-width spec runs it from the pop-over. Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

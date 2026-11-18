@@ -74,9 +74,7 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
 - **Calendar, the rest**: the board's Calendar view is in (on FullCalendar,
   as WeKan's). Left: Calendar Mode (board-view-calendar-mode), the
   multi-board calendar, the calendar systems of Member Settings (Jalali,
-  Buddhist, Hijri ...) and the due-date popup's own calendar picker; the
-  Filter sidebar's title and label filters, which WeKan's calendar filter
-  test uses.
+  Buddhist, Hijri ...) and the due-date popup's own calendar picker.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color, archived and a custom field's value by index, /integrations/update a webhook,
   /customFields/update a field's definition, /boards/update a member's

@@ -755,6 +755,13 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   resize handle of their own, and the Set width pop-over has the switch.
   Weddy's 26-auto-list-width spec runs it from the pop-over. Thanks to xet7.
 
+- [Filter sidebar: the card text and label filters, as WeKan's](https://github.com/wekan/caddy-wekan-plugin/commit/2e3c56d1d65c7cc25be08802abf803d9cf017236) -
+  a card's title, description, comments and checklists, and the board's labels
+  - any or all of them, no label, or a label excluded - on the board and its
+  Calendar view, kept when the sidebar opens again; the sidebar hamburger is
+  in the header bar and the sidebar opens below it. WeKan's
+  issue-calendar-filter spec runs on Weddy. Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

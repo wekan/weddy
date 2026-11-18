@@ -22,10 +22,27 @@ history** and binaries for **every platform**. It serves **many WeKan domains**,
 each with its own data, kept by the SuperAdmin in Weddy's own **Cloud Panel**,
 and is built and tested **locally** with **EVERYTHING** tests: WeKan's and
 Gitea's own. WeKan's fixes of **CrossBoardExportBleed**, **ListLockBleed**,
-**ListLockAttachBleed**, **GroupLinkBleed**, **UploadBleed**, **StampBleed**, **AdminFieldBleed** and **FrameBleed** hold in Weddy too, and refused attacks show in **Problems**.
+**ListLockAttachBleed**, **GroupLinkBleed**, **UploadBleed**, **StampBleed**, **AdminFieldBleed**, **FrameBleed** and **RaceBleed** hold in Weddy too, and refused attacks show in **Problems**.
 WeKan's **change history** and **Scrum** sprints and reports are in Weddy too.
 
 This release fixes the following CRITICAL SECURITY ISSUES:
+
+<details>
+<summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/87d869cf220636c94718686d1f6fdf1fd5a15970">WeKan in Weddy: a card's checklists and comments go only with the card</a>. Thanks to xingmuse and xet7.</summary>
+
+[RaceBleed](https://wekan.fi/hall-of-fame/racebleed/),
+[GHSA-3vjg-3p4q-8fwh](https://github.com/wekan/wekan/security/advisories/GHSA-3vjg-3p4q-8fwh).
+Deleting a card removed its checklists, checklist items and comments first and
+the card last, keyed on its board, so a move to another board landing in
+between left the card alive there without any of them. As in WeKan, the card
+now goes first, keyed on the board and list it was looked up on, and its
+children only when that removal matched; the delete that lost is a 404, and
+the bulk delete lists the card under `notFound`. The lost race shows in Admin
+Panel -> Problems as RaceBleed and never disables the account. The tests
+replay the race, race twelve REST moves against deletes by another member,
+and pin the order in `DeleteCard`.
+
+</details>
 
 <details>
 <summary><a href="https://github.com/wekan/caddy-wekan-plugin/commit/b29d36a22ece67a92d3b97c3ec8887891d6258ec">WeKan in Weddy: every export follows Admin Panel's export switch</a>. Thanks to xet7.</summary>

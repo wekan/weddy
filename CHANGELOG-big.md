@@ -768,6 +768,12 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   week. WeKan's calendar-mode spec runs on Weddy in its five languages.
   Thanks to xet7.
 
+- [Multi Board Calendar, as WeKan's (#2469)](https://github.com/wekan/caddy-wekan-plugin/commit/fe68483a29bb0a4e232ed7cb47912602f09d31d6) -
+  the cards of every board the user is a member of, each with its board's
+  title, read-only, with the Filter; not archived, template or helper boards.
+  Weddy's 27-multiboard-calendar spec opens it from the Board View menu.
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

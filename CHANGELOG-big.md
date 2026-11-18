@@ -762,6 +762,12 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   in the header bar and the sidebar opens below it. WeKan's
   issue-calendar-filter spec runs on Weddy. Thanks to xet7.
 
+- [Calendar Mode, as WeKan's (#3194)](https://github.com/wekan/caddy-wekan-plugin/commit/4c2d31a7f87de36a37efe34060a7a090ec7ad9f1) -
+  below Calendar in the Board View menu: each due card on its local day with
+  its labels and whole title, a day's cards in the board's order, a month or a
+  week. WeKan's calendar-mode spec runs on Weddy in its five languages.
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

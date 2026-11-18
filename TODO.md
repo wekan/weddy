@@ -72,8 +72,8 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
 - **Calendar, the rest**: the board's Calendar view is in (on FullCalendar,
-  as WeKan's). Left: Calendar Mode (board-view-calendar-mode), the
-  multi-board calendar, the calendar systems of Member Settings (Jalali,
+  as WeKan's), and Calendar Mode. Left: the multi-board calendar, the
+  calendar systems of Member Settings (Jalali,
   Buddhist, Hijri ...) and the due-date popup's own calendar picker.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color, archived and a custom field's value by index, /integrations/update a webhook,

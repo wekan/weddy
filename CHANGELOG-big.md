@@ -774,6 +774,16 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   Weddy's 27-multiboard-calendar spec opens it from the Board View menu.
   Thanks to xet7.
 
+- [Date picker: today marked as WeKan's (#6751), and Today goes to today](https://github.com/wekan/caddy-wekan-plugin/commit/a4ed6936a777d738fbe2f750d7e7e66fbe277890) -
+  a green fill, a ring and an underline on every board theme, and
+  aria-current; WeKan's calendar-today-marker spec runs on Weddy. Thanks to
+  xet7.
+
+- [Date popup as WeKan's: its title bar moves it, its grip resizes it](https://github.com/wekan/caddy-wekan-plugin/commit/0c91de4566cc396f6fc064ccf6f323a6bd41681f) -
+  by pointer or arrow keys, in either text direction, the month filling the
+  popup; WeKan's date popup tests of 44-calendar-date-display run on Weddy.
+  Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -

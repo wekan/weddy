@@ -71,10 +71,6 @@ commit (then `python3 -I releases/changelog-short.py` regenerates
   checklist menus' Export and Import are in, and the list menu's only for
   those who may change the board, as Weddy's list menu is); what an import left out is reported, on its page and in Admin
   Panel -> Recovery); and inbound e-mail.
-- **Calendar, the rest**: the board's Calendar view is in (on FullCalendar,
-  as WeKan's), Calendar Mode, the Multi Board Calendar and the date popup's
-  picker. Left: the calendar systems of Member Settings (Jalali, Buddhist,
-  Hijri ...), which 44-calendar-date-display's other tests use.
 - **Meteor's collection writes, the rest**: /cards/update writes a card's
   title, description, color, archived and a custom field's value by index, /integrations/update a webhook,
   /customFields/update a field's definition, /boards/update a member's

@@ -482,10 +482,7 @@ structural-selection.e2e.js: drag a collapsed selected swimlane together with an
 structural-selection.e2e.js: drag a collapsed selected card together with an independent checklist item
 
 editor-enter-preference.e2e.js
-44-calendar-date-display.e2e.js: board calendar uses supported ltr direction without legacy option warnings
-44-calendar-date-display.e2e.js: board calendar uses supported rtl direction without legacy option warnings
-44-calendar-date-display.e2e.js: RTL date popup keeps its bottom-left grip and moves with physical pointer coordinates
-44-calendar-date-display.e2e.js: gregorian popup opens a full-width calendar with only hour/minute controls
+44-calendar-date-display.e2e.js
 calendar-today-marker.e2e.js
 issue-calendar-filter.e2e.js
 calendar-mode.e2e.js

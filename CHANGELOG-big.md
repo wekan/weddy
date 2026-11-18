@@ -784,6 +784,13 @@ fields never leaving. Four more of WeKan's own tests run against Weddy
   popup; WeKan's date popup tests of 44-calendar-date-display run on Weddy.
   Thanks to xet7.
 
+- [Calendar systems, as WeKan's (#4335)](https://github.com/wekan/caddy-wekan-plugin/commit/75470014c1bc3ce78b96e912ded89782b8b02519) -
+  Member Settings / Date chooses the format, the first day of the week and
+  the calendar - Jalali, Buddhist, Hebrew, the Hijri variants and the rest -
+  and every date, the date picker and the board calendars are drawn in it;
+  stored dates stay Gregorian. WeKan's 44-calendar-date-display spec runs on
+  Weddy, all 19 tests. Thanks to xet7.
+
 **FerretDB** - the database Weddy runs, as WeKan's queries and specs need it.
 
 - [The positional `$` update operator](https://github.com/wekan/FerretDB/commit/feb557e54bb0b95b5647875ac940225f77cbfc87) -
